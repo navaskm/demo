@@ -1,0 +1,94 @@
+.homepage-dynamic{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  .product-dynamic{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: green;
+    border-right: 2px solid gray;
+    border-bottom: 2px solid gray;
+    width: 300px;
+    height: 300px;
+    margin: 20px 4px;
+
+    // 1 to 2
+    @media (min-width: 500px) and (max-width: 600px) {
+      width: 240px;
+    }
+    @media (min-width: 600px) and (max-width: 650px) {
+      width: 270px;
+    }
+    @media (min-width: 700px) and (max-width: 770px) {
+      width: 330px;
+    }
+    @media (min-width: 770px) and (max-width: 810px) {
+      width: 365px;
+    }
+    @media (min-width: 810px) and (max-width: 840px) {
+      width: 385px;
+    }
+    @media (min-width: 840px) and (max-width: 900px) {
+      width: 400px;
+    }
+    @media (min-width: 900px) and (max-width: 939px) {
+      width: 420px;
+    }
+
+
+    //1 to 3
+    @media (min-width: 1030px) and (max-width: 1060px) {
+      width: 320px;
+    }
+    @media (min-width: 1060px) and (max-width: 1100px) {
+      width: 335px;
+    }
+    @media (min-width: 1100px) and (max-width: 1140px) {
+      width: 350px;
+    }
+    @media (min-width: 1140px) and (max-width: 1180px) {
+      width: 360px;
+    }
+    @media (min-width: 1180px) and (max-width: 1220px) {
+      width: 370px;
+    }
+    @media (min-width: 1220px) and (max-width: 1248px) {
+      width: 385px;
+    }
+
+
+    //3 to 4
+    @media (min-width: 1300px) and (max-width: 1340px) {
+      width: 310px;
+      height: 430px;
+    }
+    @media (min-width: 1340px) and (max-width: 1380px) {
+      width: 320px;
+    }
+    @media (min-width: 1380px) and (max-width: 1420px) {
+      width: 330px;
+    }
+    @media (min-width: 1420px) and (max-width: 1460px) {
+      width: 340px;
+    }
+    @media (min-width: 1460px) and (max-width: 1500px) {
+      width: 350px;
+    }
+    @media (min-width: 1500px) and (max-width: 3000px) {
+      width: 370px;
+    }
+
+    // @media (min-width: 1340px){
+    //   background-color: red;
+    // }
+
+
+    
+  }
+
+}

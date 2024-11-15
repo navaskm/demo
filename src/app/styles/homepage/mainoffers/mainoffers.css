@@ -1,0 +1,18 @@
+.sanu img {
+  height: 300px;
+  width: 100%;
+}
+
+.sanu img {
+  height: 300px;
+  width: 100%;
+}
+
+.parant {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 300px;
+  width: 100%;
+  background-color: blue;
+}/*# sourceMappingURL=mainoffers.css.map */

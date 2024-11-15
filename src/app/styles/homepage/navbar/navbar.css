@@ -1,0 +1,44 @@
+.navbar {
+  background-color: rgba(215, 216, 216, 0);
+  border-bottom: 3px solid;
+  padding: 10px;
+}
+.navbar .logo {
+  background-color: green;
+}
+.navbar .search-bar input {
+  padding: 5px 10px;
+  border-radius: 10px;
+  outline: none;
+  color: rgb(5, 7, 6);
+  font-size: large;
+  font-weight: 400;
+}
+.navbar .navbar-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.navbar .navbar-links .links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  margin-top: 17px !important;
+  font-size: large;
+  font-weight: 500;
+  width: 300px;
+}
+.navbar .navbar-links .links a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  color: green;
+  border-bottom: 2px solid transparent;
+}
+.navbar .navbar-links .links a:hover {
+  color: black;
+  border-bottom: 2px solid white;
+}/*# sourceMappingURL=navbar.css.map */

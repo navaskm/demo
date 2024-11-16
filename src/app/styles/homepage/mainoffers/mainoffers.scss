@@ -1,24 +1,36 @@
-.sanu{
+// .offer-image{
+//   background-repeat: no-repeat;
+//   background-size: 100% auto;
+//   background-position: center;
+//   height: 350px;
+//   width: 100%;
+// }
 
-  img{
-    //background-size: cover;
-    height: 300px;
-    width: 100%;
-  }
-}
-
-.sanu{
-  img{
-    height: 300px;
-    width: 100%;
-  }
-}
-
-.parant{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 300px;
+.offer-image img {
+  display: none;
   width: 100%;
-  background-color: blue;
+  height: 280px;
+}
+
+@media (max-width: 600px){
+  .offer-image .image-one{
+    display: block;
+    height: auto;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .offer-image .image-two{
+    display: block;
+    @media (max-width: 640px) {
+      height: 250px;
+    }
+  }
+}
+
+@media (min-width: 901px) {
+  .offer-image .image-three{
+    display: block;
+    height: auto;
+  }
 }

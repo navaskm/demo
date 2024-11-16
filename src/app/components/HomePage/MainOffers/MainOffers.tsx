@@ -1,7 +1,6 @@
 "use client"
 
-import { OfferImage } from './OfferImage';
-import { useEffect } from 'react';
+import { useEffect} from 'react';
 import "@/app/styles/homepage/mainoffers/mainoffers.scss";
 
 const MainOffers = () => {
@@ -10,7 +9,7 @@ const MainOffers = () => {
   }, []);
 
   return (
-    <div className="bd-example  sanu">
+    <div className="bd-example">
       <div 
         id="carouselExampleCaptions"
         className="carousel slide" 
@@ -25,19 +24,38 @@ const MainOffers = () => {
         <div className="carousel-inner">
         
           <div className="carousel-item active">
-            <OfferImage/>
+            {/* image */}
+            <div className="offer-image">
+              <img className="image-one" src="/shoes-offer-image-1.jpg" alt="offer" />
+              <img className="image-two" src="/shoes-offer-image-2.jpg" alt="offer" />
+              <img className="image-three" src="/shoes-offer-image-3.jpg" alt="offer" />
+            </div>
+            {/* <img className="image-one" src="/shoes-offer-image-1.jpg" alt="offer" /> */}
+
+              <div className="carousel-caption d-none d-md-block">
+              </div>
+          </div>
+
+          <div className="carousel-item">
+            {/* image */}
+            <div className="offer-image">
+              <img className="image-one" src="/shoes-offer-image-1.jpg" alt="offer" />
+              <img className="image-two" src="/shoes-offer-image-2.jpg" alt="offer" />
+              <img className="image-three" src="/shoes-offer-image-3.jpg" alt="offer" />
+            </div>
+            
             <div className="carousel-caption d-none d-md-block">
             </div>
           </div>
 
           <div className="carousel-item">
-            <OfferImage/>
-            <div className="carousel-caption d-none d-md-block">
+            {/* image */}
+            <div className="offer-image">
+              <img className="image-one" src="/shoes-offer-image-1.jpg" alt="offer" />
+              <img className="image-two" src="/shoes-offer-image-2.jpg" alt="offer" />
+              <img className="image-three" src="/shoes-offer-image-3.jpg" alt="offer" />
             </div>
-          </div>
-
-          <div className="carousel-item">
-            <OfferImage/>
+            
             <div className="carousel-caption d-none d-md-block">
             </div>
           </div>

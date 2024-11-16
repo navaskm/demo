@@ -5,13 +5,13 @@ import { Links } from "./Links/Links";
 
 const NavBar = () => {
   return (
-    <div className="col navbar" >
-        <Logo/>
-        <SearchBar/>
-        <Links/>
-        <Logo/>
+    <div className="navbar">
+      <Logo />
+      <SearchBar />
+      <Links />
+      <Logo/>
     </div>
-  )
-}
+  );
+};
 
 export default NavBar;

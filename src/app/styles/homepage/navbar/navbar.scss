@@ -1,51 +1,50 @@
-.navbar{
-  background-color: rgba(215, 216, 216, 0);
-  border-bottom: 3px solid;
-  padding: 10px;
+.navbar {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 6px !important;
+  gap: 20px; /* Space between components */
 
-  .logo{
-    background-color: green;
+  .logo {
+    flex: 0 1 auto;
   }
 
-  .search-bar{
-
-    input{
-      padding: 5px 10px;
+  .search-bar {
+    flex: 1; /* Take up remaining space */
+    max-width: 500px; /* Optional: Limit max width */
+    
+    input {
+      width: 100%; /* Full width of search-bar container */
+      padding: 8px 10px;
       border-radius: 10px;
       outline: none;
-      color: rgb(5, 7, 6);
-      font-size: large;
-      font-weight: 400;
+      border: 1px solid #ccc;
+      font-size: 16px;
     }
   }
 
-  .navbar-links{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-
-    .links{
+  .navbar-links {
+    flex: 0 1 auto; /* Prevent shrinking */
+    
+    .links {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      gap: 20px; /* Space between links */
       list-style: none;
-      margin-top: 17px !important;
-      font-size: large;
-      font-weight: 500;
-      width: 300px;
+      margin: 0;
+      padding: 0;
 
-      a{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
+      a {
         text-decoration: none;
         color: green;
-        border-bottom: 2px solid transparent;
-      }
-      a:hover{
-        color: black;
-        border-bottom: 2px solid white;
+        font-size: 16px;
+        transition: color 0.3s, border-bottom 0.3s;
+
+        &:hover {
+          color: black;
+          border-bottom: 2px solid green;
+        }
       }
     }
   }

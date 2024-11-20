@@ -1,3 +1,4 @@
+import { fetchProduct } from "@/app/DataFetching/productData";
 import "@/app/styles/homepage/homepagescrolling/homepagescrolling.scss";
 
 type Products = {
@@ -10,15 +11,10 @@ type Products = {
   keywords: string
 }
 
-export const fetchProduct = async (): Promise<Products[]> => {
-  const response = await fetch("https://6732f3e02a1b1a4ae1117250.mockapi.io/Products")
-  return response.json();
-}
-
 const HomePageScrolling = async () => {
 
   //await new Promise((resolve) => setTimeout(resolve,2000));
-  const products = await fetchProduct();
+  const products = await fetchProduct()
 
   return (
     <div className="homepage-scrolling">

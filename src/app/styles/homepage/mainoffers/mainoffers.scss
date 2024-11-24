@@ -26,3 +26,27 @@
     height: auto;
   }
 }
+
+.carousel-control-prev,
+.carousel-control-next{
+  filter: invert(1) !important;
+  background-color: red !important;
+  color: black !important;
+  height: 100px !important;
+  width: 70px !important;
+  border-radius: 8px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+}
+
+.carousel-control-prev {
+  left: 10px !important; /* Adjust distance from the left */
+}
+
+.carousel-control-next {
+  right: 10px !important; /* Adjust distance from the right */
+}

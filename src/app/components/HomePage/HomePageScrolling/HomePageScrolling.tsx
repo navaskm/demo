@@ -1,5 +1,7 @@
-import { fetchProduct } from "@/app/DataFetching/productData";
+import { Suspense } from "react";
+import { fetchScrollingProduct } from "@/app/DataFetching/productData";
 import "@/app/styles/homepage/homepagescrolling/homepagescrolling.scss";
+import BagsSports from "./BagSports/BagSports";
 
 type Products = {
   id:string;
@@ -8,29 +10,45 @@ type Products = {
   priceCents: string,
   rating: string,
   type: string,
-  keywords: string
+  keywords: string,
+  offer: string,
 }
 
-const HomePageScrolling = async () => {
+type Items ={
+  item: string;
+}
 
-  //await new Promise((resolve) => setTimeout(resolve,2000));
-  const products = await fetchProduct()
+const HomePageScrolling = async ({item}:Items) => {
+
+  const product = await fetchScrollingProduct();
+
+  const bags = product.filter((product:Products) => product.type == "bag");
+  const sports = product.filter((product:Products) => product.type == "sports-item");
 
   return (
     <div className="homepage-scrolling">
+
+      <div className="scrolling-title">
+        {/* <h1>Your Perfect Bag Awaits</h1> */}
+        {
+          item == 'bag'? (
+            <h1>Your Perfect Bag Awaits</h1>
+          ):(
+            <h1>Amazing Deals on Sports Gear</h1>
+          )
+        }
+      </div>
+
       {
-        products.map((product:Products) =>(
-          <div key={product.id} className="product-scrolling">
-            <h1>{product.name}</h1>
-            <img src={product.image} alt={product.name} />
-            <p>Price: {product.priceCents}</p>
-            <p>Rating: {product.rating}</p>
-            <p>Type: {product.type}</p>
-            <p>Keywords: {product.keywords}</p>
-            <p>ID: {product.id}</p>
-            <hr />
-          </div>
-        ))
+        item == 'bag'? (
+          <Suspense fallback={<p>bag.....</p>}>
+            <BagsSports product={bags} order={item}/> 
+          </Suspense>
+        ):(
+          <Suspense fallback={<p>bag.....</p>}>
+            <BagsSports product={sports} order={item}/> 
+          </Suspense>
+        )
       }
 
     </div> 

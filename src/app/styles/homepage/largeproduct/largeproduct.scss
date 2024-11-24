@@ -1,0 +1,48 @@
+.homepage-dynamic-large{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  
+  margin:0px 10px;
+  
+  .homepage-large-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-left: 8px solid #e3ecf5;
+    border-right: 8px solid #e3ecf5;
+    background-color: white;
+    margin-top: 16px;
+
+    .large-product-title{
+      h3{
+        height: 60px;
+        //background-color: red;
+        text-align: center;
+        color: rgba(143, 88, 88, 0.849);
+        font-family: "Libre Baskerville", serif;
+        font-weight: 400;
+        font-style: normal;
+        padding-top: 6px;
+      }
+    }
+
+    .product-card{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 12px;
+
+      img{
+        width: 90%;
+        height: 60%;
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
+  }
+} 

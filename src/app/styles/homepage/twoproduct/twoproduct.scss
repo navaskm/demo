@@ -1,0 +1,47 @@
+.home-page-two-product{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .container-of-two-product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    margin-top: 30px;
+    border-right: 8px solid #e3ecf5;
+    border-left: 8px solid #e3ecf5;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    .title-of-two-product{
+      h3{
+        color: red;
+      }
+    }
+
+    .image-offer-display-of-two-product{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      img{
+        width: 80%;
+        height: 70%;
+        margin-bottom: 10px;
+        border-radius: 10px;
+  
+        &:hover{
+          cursor: pointer;
+        }
+      }
+
+    }
+    .marginBottom{
+      margin-bottom: 30px;
+    }
+  }
+}

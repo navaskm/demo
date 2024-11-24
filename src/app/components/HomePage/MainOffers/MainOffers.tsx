@@ -68,7 +68,7 @@ const MainOffers = () => {
         </a>
 
         <a className="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="carousel-control-next-icon abc" aria-hidden="true"></span>
           <span className="visually-hidden">Next</span>
         </a>
         

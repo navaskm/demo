@@ -1,4 +1,4 @@
-import "@/app/styles/homepage/homepagedynamic/homepagedynamic.scss";
+import "@/app/styles/homepage/smallproducts/smallproducts.scss";
 import { fetchProduct } from "@/app/DataFetching/productData";
 
 type Products = {
@@ -11,20 +11,21 @@ type Products = {
   id: number,
 }
 
-const HomePageDynamic = async () => {
+const SmallProducts = async () => {
 
+  // small items
   const response = await fetchProduct();
   const productWatch = response.filter((product:Products) => product.type === 'watch');
   const productShoes = response.filter((product:Products) => product.type === 'shoes');
   const productForMens = response.filter((product:Products) => product.type === 'mens-clothes');
   const productForWomen = response.filter((product:Products) => product.type == 'women-clothes');
   const productJewelry = response.filter((product:Products) => product.type === 'Jewelry');
-  const productSunglass = response.filter((product:Products) => product.type === 'sunglass');
   const productSoundHub = response.filter((product:Products) => product.type === 'sound-hub');
+  const productSunglass = response.filter((product:Products) => product.type === 'sunglass');
   const productToys = response.filter((product:Products) => product.type === 'toys');
 
-  return (
-    <div className="homepage-dynamic">
+  return(
+    <div className="homepage-dynamic-small">
       
         {/* create watch */}
       <div className="parent-dynamic-images">
@@ -257,10 +258,9 @@ const HomePageDynamic = async () => {
           }           
         </div>
       </div>
-
-
     </div>
+
   )
 }
 
-export default HomePageDynamic;
+export default SmallProducts;

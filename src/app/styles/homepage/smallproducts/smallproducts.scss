@@ -1,8 +1,10 @@
+// import font-family from google fonts
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@86.1,469&family=Space+Grotesk:wght@300..700&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@86.1,469&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@86.1,469&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Space+Grotesk:wght@300..700&display=swap');
 
-.homepage-dynamic{
+// small products
+.homepage-dynamic-small{
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -148,8 +150,8 @@
             @media (min-width: 1460px) and (max-width: 1500px) {
               height: 150px;
             }
-            @media (min-width: 1500px) and (max-width: 1550px) {
-              height: auto;
+            @media (min-width: 1500px){
+              height: 155px;
             }
           }  
           .inside-row-of-image:hover{
@@ -266,6 +268,9 @@
       @media (min-width: 1500px) and (max-width: 1550px) {
         width: 360px;
       }
+      @media (min-width: 1550px){
+        width: 360px;
+      }
   
       
     }
@@ -287,8 +292,15 @@
       height: 680px;
     }
 
-    @media (min-width: 1420px){
+    @media (min-width: 1420px) and (max-width:1460px){
       height: 700px;
+    }
+
+    @media (min-width: 1460px) and (max-width:1510px){
+      height: 720px;
+    }
+    @media (min-width: 1510px){
+      height: 750px;
     }
   }
 

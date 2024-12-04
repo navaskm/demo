@@ -1,9 +1,10 @@
+//@import '../lanstoneitems/lastone';
+
 .homepage-dynamic-large{
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  
   margin:0px 10px;
   
   .homepage-large-container{
@@ -19,7 +20,6 @@
     .large-product-title{
       h3{
         height: 60px;
-        //background-color: red;
         text-align: center;
         color: rgba(143, 88, 88, 0.849);
         font-family: "Libre Baskerville", serif;
@@ -45,4 +45,14 @@
       }
     }
   }
+
+  .medium-device-display {
+    display: none;
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .medium-device-display {
+      display: flex;
+    }
+  }
+  
 } 

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@86.1,469&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Parkinsans:wght@300..800&family=Quicksand:wght@300..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Space+Grotesk:wght@300..700&display=swap');
+
 .home-page-two-product{
   display: flex;
   align-items: center;
@@ -18,7 +20,11 @@
 
     .title-of-two-product{
       h3{
-        color: red;
+        color: rgb(92, 77, 77);
+        font-family: "Parkinsans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
       }
     }
 
@@ -39,9 +45,23 @@
         }
       }
 
+      h5{
+        color: rgb(37, 194, 37);
+      }
+
     }
+    
     .marginBottom{
       margin-bottom: 30px;
+    }
+  }
+
+  .only-medium-device{
+    display: none;
+  }
+  @media (min-width: 768px) and (max-width: 991.98px){
+    .only-medium-device{
+      display: flex;
     }
   }
 }

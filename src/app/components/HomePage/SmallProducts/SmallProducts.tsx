@@ -1,5 +1,5 @@
-import "@/app/styles/homepage/smallproducts/smallproducts.scss";
-import { fetchProduct } from "@/app/DataFetching/productData";
+import '@/app/styles/homepage/smallProducts/smallproducts.scss';
+import { fetchProduct } from "@/app/DataFetching/productData"
 
 type Products = {
   name: string,
@@ -11,256 +11,272 @@ type Products = {
   id: number,
 }
 
-const SmallProducts = async () => {
+type ItemOne = {
+  product?: string,
+}
 
-  // small items
-  const response = await fetchProduct();
-  const productWatch = response.filter((product:Products) => product.type === 'watch');
-  const productShoes = response.filter((product:Products) => product.type === 'shoes');
-  const productForMens = response.filter((product:Products) => product.type === 'mens-clothes');
-  const productForWomen = response.filter((product:Products) => product.type == 'women-clothes');
-  const productJewelry = response.filter((product:Products) => product.type === 'Jewelry');
-  const productSoundHub = response.filter((product:Products) => product.type === 'sound-hub');
-  const productSunglass = response.filter((product:Products) => product.type === 'sunglass');
-  const productToys = response.filter((product:Products) => product.type === 'toys');
+const response = await fetchProduct();
+const productWatch = response.filter((watch:Products) => watch.type === 'watch');
+const productShoes = response.filter((Shoes:Products) => Shoes.type === 'shoes');
+const productForMens = response.filter((Mens:Products) => Mens.type === 'mens-clothes');
+const productForWomen = response.filter((women:Products) => women.type == 'women-clothes');
+const productJewelry = response.filter((jewelry:Products) => jewelry.type === 'Jewelry');
+const productSoundHub = response.filter((soundHub:Products) => soundHub.type === 'sound-hub');
+const productSunglass = response.filter((sunglass:Products) => sunglass.type === 'sunglass');
+const productToys = response.filter((toys:Products) => toys.type === 'toys');
 
-  return(
-    <div className="homepage-dynamic-small">
-      
-        {/* create watch */}
-      <div className="parent-dynamic-images">
+function SmallProducts({product}:ItemOne) {
+  return product !== 'one'? (
+    <div className="container-of-all-products row">
 
-        <div className="title">
+      {/* create watch*/}
+      <div className="container-of-one-product col-6 col-md-4 col-xl-3">
+        <div className='title'>
           <h3>Elevate Your Look with Timeless Watches</h3>
         </div>
-
-        <div className="product-dynamic">
+        
+        <div className='product-body'>
           {
-            productWatch.map((watch:Products) =>{
-              return(
-                <div key={watch.id} className="inside-row">
-                  <div className="image-name-display">
-                    <img className="inside-row-of-image" src={watch.image} alt={watch.name}/>
+            productWatch.map((watch:Products) => {
+              return (
+                <div key={watch.id} className="product-details-display">
+                  <img src={watch.image} alt={watch.name} />
+                  <div className='name-price-display'>
                     <h6>{watch.name}</h6>
-                  </div>
-                  <div className="price-star-delivery-display">
-                    <b><span>₹ </span>{watch.priceCents} </b>
-                    <span className="rp-logo">{watch.rating}<span className="star-logo">&#9733;</span></span>
-                    <p>free delivery</p>
+                    <div className='price-star-display'>
+                      <b><span>₹</span>{watch.priceCents}</b>
+                      <p>{watch.rating}&#9733;</p>
+                    </div>
                   </div>
                 </div>
               )
             })
-          }           
+          }
         </div>
       </div>
 
 
-      {/* create shoes */}
-      <div className="parent-dynamic-images">
-
-        <div className="title">
+      {/* create shoes  */}
+      <div className="container-of-one-product col-6 col-md-4 col-xl-3">
+        <div className='title'>
           <h3>Walk in Style: Trendy Shoes for Every Taste</h3>
         </div>
-
-        <div className="product-dynamic">
+        
+        <div className='product-body'>
           {
-            productShoes.map((shoes:Products) =>{
-              return(
-                <div key={shoes.id} className="inside-row">
-                  <div className="image-name-display">
-                    <img className="inside-row-of-image" src={shoes.image} alt={shoes.name}/>
+            productShoes.map((shoes:Products) => {
+              return (
+                <div key={shoes.id} className="product-details-display">
+                  <img src={shoes.image} alt={shoes.name} />
+                  <div className='name-price-display'>
                     <h6>{shoes.name}</h6>
-                  </div>
-                  <div className="price-star-delivery-display">
-                    <b><span>₹ </span>{shoes.priceCents} </b>
-                    <span className="rp-logo">{shoes.rating}<span className="star-logo">&#9733;</span></span>
-                    <p>free delivery</p>
+                    <div className='price-star-display'>
+                      <b><span>₹</span>{shoes.priceCents}</b>
+                      <p>{shoes.rating}&#9733;</p>
+                    </div>
                   </div>
                 </div>
               )
             })
-          }           
+          }
         </div>
       </div>
 
 
-      {/* create dress for mens */}
-      <div className="parent-dynamic-images">
-
-        <div className="title">
+      {/* create mens dress  */}
+      <div className="container-of-one-product col-6 col-md-4 col-xl-3">
+        <div className='title'>
           <h3>Timeless Fashion for the Modern Man</h3>
         </div>
-
-        <div className="product-dynamic">
+        
+        <div className='product-body'>
           {
-            productForMens.map((dress:Products) =>{
-              return(
-                <div key={dress.id} className="inside-row">
-                  <div className="image-name-display">
-                    <img className="inside-row-of-image" src={dress.image} alt={dress.name}/>
-                    <h6>{dress.name}</h6>
-                  </div>
-                  <div className="price-star-delivery-display">
-                    <b><span>₹ </span>{dress.priceCents} </b>
-                    <span className="rp-logo">{dress.rating}<span className="star-logo">&#9733;</span></span>
-                    <p>free delivery</p>
+            productForMens.map((menDress:Products) => {
+              return (
+                <div key={menDress.id} className="product-details-display">
+                  <img src={menDress.image} alt={menDress.name} />
+                  <div className='name-price-display'>
+                    <h6>{menDress.name}</h6>
+                    <div className='price-star-display'>
+                      <b><span>₹</span>{menDress.priceCents}</b>
+                      <p>{menDress.rating}&#9733;</p>
+                    </div>
                   </div>
                 </div>
               )
             })
-          }           
+          }
         </div>
       </div>
 
 
-      {/* create dress for women's */}
-      <div className="parent-dynamic-images">
-
-        <div className="title">
+      {/* create women dress */}
+      <div className="container-of-one-product col-6 col-md-4 col-xl-3">
+        <div className='title'>
           <h3>Discover the Beauty of Women's Fashion</h3>
         </div>
-
-        <div className="product-dynamic">
+        
+        <div className='product-body'>
           {
-            productForWomen.map((dress:Products) =>{
-              return(
-                <div key={dress.id} className="inside-row">
-                  <div className="image-name-display">
-                    <img className="inside-row-of-image" src={dress.image} alt={dress.name}/>
-                    <h6>{dress.name}</h6>
-                  </div>
-                  <div className="price-star-delivery-display">
-                    <b><span>₹ </span>{dress.priceCents} </b>
-                    <span className="rp-logo">{dress.rating}<span className="star-logo">&#9733;</span></span>
-                    <p>free delivery</p>
+            productForWomen.map((womenDress:Products) => {
+              return (
+                <div key={womenDress.id} className="product-details-display">
+                  <img src={womenDress.image} alt={womenDress.name} />
+                  <div className='name-price-display'>
+                    <h6>{womenDress.name}</h6>
+                    <div className='price-star-display'>
+                      <b><span>₹</span>{womenDress.priceCents}</b>
+                      <p>{womenDress.rating}&#9733;</p>
+                    </div>
                   </div>
                 </div>
               )
             })
-          }           
+          }
         </div>
       </div>
 
 
-
-      {/* create Jewelry*/}
-      <div className="parent-dynamic-images">
-
-        <div className="title">
+      {/* create Jewelry */}
+      <div className="container-of-one-product col-6 col-md-4 col-xl-3">
+        <div className='title'>
           <h3>Timeless Elegance in Every Piece</h3>
         </div>
-
-        <div className="product-dynamic">
+        
+        <div className='product-body'>
           {
-            productJewelry.map((jewelry:Products) =>{
-              return(
-                <div key={jewelry.id} className="inside-row">
-                  <div className="image-name-display">
-                    <img className="inside-row-of-image" src={jewelry.image} alt={jewelry.name}/>
-                    <h6>{jewelry.name}</h6>
-                  </div>
-                  <div className="price-star-delivery-display">
-                    <b><span>₹ </span>{jewelry.priceCents} </b>
-                    <span className="rp-logo">{jewelry.rating}<span className="star-logo">&#9733;</span></span>
-                    <p>free delivery</p>
+            productJewelry.map((Jewelry:Products) => {
+              return (
+                <div key={Jewelry.id} className="product-details-display">
+                  <img src={Jewelry.image} alt={Jewelry.name} />
+                  <div className='name-price-display'>
+                    <h6>{Jewelry.name}</h6>
+                    <div className='price-star-display'>
+                      <b><span>₹</span>{Jewelry.priceCents}</b>
+                      <p>{Jewelry.rating}&#9733;</p>
+                    </div>
                   </div>
                 </div>
               )
             })
-          }           
+          }
         </div>
       </div>
 
 
       {/* create SoundHub */}
-      <div className="parent-dynamic-images">
-
-        <div className="title">
+      <div className="container-of-one-product col-6 col-md-4 col-xl-3">
+        <div className='title'>
           <h3>For the Love of Incredible Sound</h3>
         </div>
-
-        <div className="product-dynamic">
+        
+        <div className='product-body'>
           {
-            productSoundHub.map((SoundHub:Products) =>{
-              return(
-                <div key={SoundHub.id} className="inside-row">
-                  <div className="image-name-display">
-                    <img className="inside-row-of-image" src={SoundHub.image} alt={SoundHub.name}/>
+            productSoundHub.map((SoundHub:Products) => {
+              return (
+                <div key={SoundHub.id} className="product-details-display">
+                  <img src={SoundHub.image} alt={SoundHub.name} />
+                  <div className='name-price-display'>
                     <h6>{SoundHub.name}</h6>
-                  </div>
-                  <div className="price-star-delivery-display">
-                    <b><span>₹ </span>{SoundHub.priceCents} </b>
-                    <span className="rp-logo">{SoundHub.rating}<span className="star-logo">&#9733;</span></span>
-                    <p>free delivery</p>
-                  </div>
-                </div>
-              )
-            })
-          }           
-        </div>
-      </div>
-
-
-      {/* create Toys */}
-      <div className="parent-dynamic-images hide-products">
-
-        <div className="title">
-          <h3>Fun and Learning Packed in Every Toy</h3>
-        </div>
-
-        <div className="product-dynamic">
-          {
-            productToys.map((toys:Products) =>{
-              return(
-                <div key={toys.id} className="inside-row">
-                  <div className="image-name-display">
-                    <img className="inside-row-of-image" src={toys.image} alt={toys.name}/>
-                    <h6>{toys.name}</h6>
-                  </div>
-                  <div className="price-star-delivery-display">
-                    <b><span>₹ </span>{toys.priceCents} </b>
-                    <span className="rp-logo">{toys.rating}<span className="star-logo">&#9733;</span></span>
-                    <p>free delivery</p>
+                    <div className='price-star-display'>
+                      <b><span>₹</span>{SoundHub.priceCents}</b>
+                      <p>{SoundHub.rating}&#9733;</p>
+                    </div>
                   </div>
                 </div>
               )
             })
-          }           
+          }
         </div>
       </div>
 
 
       {/* create Sunglass */}
-      <div className="parent-dynamic-images hide-products">
-
-        <div className="title">
+      <div className="container-of-one-product col-6 col-md-4 col-xl-3 only-large-device">
+        <div className='title'>
           <h3>See the World Through Stylish Lenses</h3>
         </div>
-
-        <div className="product-dynamic">
+        
+        <div className='product-body'>
           {
-            productSunglass.map((sunglass:Products) =>{
-              return(
-                <div key={sunglass.id} className="inside-row">
-                  <div className="image-name-display">
-                    <img className="inside-row-of-image" src={sunglass.image} alt={sunglass.name}/>
-                    <h6>{sunglass.name}</h6>
-                  </div>
-                  <div className="price-star-delivery-display">
-                    <b><span>₹ </span>{sunglass.priceCents} </b>
-                    <span className="rp-logo">{sunglass.rating}<span className="star-logo">&#9733;</span></span>
-                    <p>free delivery</p>
+            productSunglass.map((Sunglass:Products) => {
+              return (
+                <div key={Sunglass.id} className="product-details-display">
+                  <img src={Sunglass.image} alt={Sunglass.name} />
+                  <div className='name-price-display'>
+                    <h6>{Sunglass.name}</h6>
+                    <div className='price-star-display'>
+                      <b><span>₹</span>{Sunglass.priceCents}</b>
+                      <p>{Sunglass.rating}&#9733;</p>
+                    </div>
                   </div>
                 </div>
               )
             })
-          }           
+          }
+        </div>
+      </div>
+
+
+      {/* create Toys */}
+      <div className="container-of-one-product col-6 col-md-4 col-xl-3 only-large-device">
+        <div className='title'>
+          <h3>Fun and Learning Packed in Every Toy</h3>
+        </div>
+        
+        <div className='product-body'>
+          {
+            productToys.map((Toys:Products) => {
+              return (
+                <div key={Toys.id} className="product-details-display">
+                  <img src={Toys.image} alt={Toys.name} />
+                  <div className='name-price-display'>
+                    <h6>{Toys.name}</h6>
+                    <div className='price-star-display'>
+                      <b><span>₹</span>{Toys.priceCents}</b>
+                      <p>{Toys.rating}&#9733;</p>
+                    </div>
+                  </div>
+                </div>
+              )
+            })
+          }
+        </div>
+      </div>
+
+
+    </div>
+  ):(
+    // container-of-all-products 
+    <div className="row">
+
+          {/* create watch*/}
+      <div className="container-of-one-product col-6 col-md-4 col-xl-3">
+        <div className='title'>
+          <h3>Elevate Your Look with Timeless Watches</h3>
+        </div>
+        
+        <div className='product-body'>
+          {
+            productWatch.map((watch:Products) => {
+              return (
+                <div key={watch.id} className="product-details-display">
+                  <img src={watch.image} alt={watch.name} />
+                  <div className='name-price-display'>
+                    <h6>{watch.name}</h6>
+                    <div className='price-star-display'>
+                      <b><span>₹</span>{watch.priceCents}</b>
+                      <p>{watch.rating}&#9733;</p>
+                    </div>
+                  </div>
+                </div>
+              )
+            })
+          }
         </div>
       </div>
     </div>
-
   )
 }
 
-export default SmallProducts;
+export default SmallProducts

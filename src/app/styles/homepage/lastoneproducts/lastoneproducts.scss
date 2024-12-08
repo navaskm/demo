@@ -49,6 +49,11 @@
         &:hover{
           cursor: pointer;
         }
+        &:hover + h5{
+          cursor: pointer;
+          color: rgb(4, 100, 4);
+          transition: color 0.3s ease;
+        }
 
         // create image height
         @media (max-width: 1200px) {
@@ -71,6 +76,9 @@
 
       h5{
         color: rgb(37, 194, 37);
+        font-family: "Barlow Semi Condensed", sans-serif;
+        font-weight: 700;
+        font-style: normal;
       }
     }
     

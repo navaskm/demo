@@ -9,7 +9,7 @@ const MainOffers = () => {
   }, []);
 
   return (
-    <div className="bd-example">
+    <div className="container-of-offer-images">
       <div 
         id="carouselExampleCaptions"
         className="carousel slide" 
@@ -24,47 +24,41 @@ const MainOffers = () => {
         <div className="carousel-inner">
         
           <div className="carousel-item active">
-            {/* image */}
+            
             <div className="offer-image">
-
-              <img className="image-one" src="/shoes-offer-image-1.jpg" alt="offer" />
-              <img className="image-two" src="/shoes-offer-image-2.jpg" alt="offer" />
-              <img className="image-three" src="/shoes-offer-image-3.jpg" alt="offer" />
+              {/* shoes images */}
+              <img className="image-one" src="/OfferImage/Shoes/shoes-offer-image-1.jpg" alt="offer" />
+              <img className="image-two" src="/OfferImage/Shoes/shoes-offer-image-2.jpg" alt="offer" />
+              <img className="image-three" src="/OfferImage/Shoes/shoes-offer-image-3.jpg" alt="offer" />
 
             </div>
 
               <div className="carousel-caption d-none d-md-block">
               </div>
           </div>
-
+          
           <div className="carousel-item">
-            {/* image */}
+
             <div className="offer-image">
-
-               <img className="image-one" src="https://www.bajajmall.in/content/dam/emistoremarketplace/index/10-10-22/geetanjali/mobile-phones-diwali-page/big-banner/desk/MCLP_Row3_1_BigBanner_Desk_OnePlus10Pro_PDP_B2B.jpg" alt="" />
-
-               <img className="image-two" src="https://www.bajajmall.in/content/dam/emistoremarketplace/index/10-10-22/geetanjali/mobile-phones-diwali-page/big-banner/desk/MCLP_Row3_1_BigBanner_Desk_OnePlus10Pro_PDP_B2B.jpg" alt="" />
-
-              <img className="image-three" src="https://www.bajajmall.in/content/dam/emistoremarketplace/index/10-10-22/geetanjali/mobile-phones-diwali-page/big-banner/desk/MCLP_Row3_1_BigBanner_Desk_OnePlus10Pro_PDP_B2B.jpg" alt="" />
+                {/* phone images */}
+               <img className="image-one" src="/OfferImage/Phone/phone-offer-image-1.jpg" alt="offer" />
+               <img className="image-two" src="/OfferImage/Phone/phone-offer-image-2.jpg" alt="offer" />
+               <img className="image-three" src="/OfferImage/Phone/phone-offer-image-3.jpg" alt="offer" />
 
             </div>
-              
-              
-            {/* </div> */}
             
             <div className="carousel-caption d-none d-md-block">
             </div>
           </div>
 
           <div className="carousel-item">
-            {/* image */}
+ 
             <div className="offer-image">
+                {/* bag images */}
+              <img className="image-one" src="/OfferImage/bags/bag-offer-image-1.jpg" alt="offer" />
+              <img className="image-two" src="/OfferImage/bags/bag-offer-image-2.jpg" alt="offer" />
+              <img className="image-three" src="/OfferImage/bags/bag-offer-image-3.jpg" alt="offer" />
 
-              <img className="image-one" src="https://img.freepik.com/free-psd/eco-bag-veggies-shopping-banner-template_23-2148439629.jpg" alt="" />
-
-              <img className="image-two" src='https://1ststep.pk/cdn/shop/collections/2000px_600px_Bags.webp?v=1705063818' />
-
-              <img className="image-three" src='https://1ststep.pk/cdn/shop/collections/2000px_600px_Bags.webp?v=1705063818' />
             </div>
             
             <div className="carousel-caption d-none d-md-block">

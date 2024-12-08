@@ -1,7 +1,5 @@
 import '@/app/styles/homepage/largeproduct/largeproduct.scss';
-
 import { fetchProduct } from "@/app/DataFetching/productData";
-const response = await fetchProduct();
 
 type Products = {
   name: string,
@@ -17,7 +15,10 @@ type ItemOne = {
   product?: string,
 }
 
-// large items
+const items : Products[] = [];
+
+const response = await fetchProduct();
+// first large products
 const refrigerator = response.filter((product:Products) => product.type === 'refrigerator');
 const washingMachine = response.filter((product:Products) => product.type === 'washing-machine');
 const bed = response.filter((bed:Products) => bed.type === 'bed');
@@ -25,14 +26,16 @@ const table = response.filter((table:Products) => table.type === 'table');
 const gasCooker = response.filter((gasCooker:Products) => gasCooker.type === 'gas-cooker');
 const ac = response.filter((ac:Products) => ac.type === 'ac');
 
+items.push(...refrigerator, ...washingMachine, ...bed, ...table, ...gasCooker, ...ac);
 
-// last one item
+// last large products
 const curtain = response.filter((curtain:Products) => curtain.type === 'curtain');
 const waterHouse = response.filter((waterHouse:Products) => waterHouse.type === 'waterHouse');
 const waterTank = response.filter((waterTank:Products) => waterTank.type === 'waterTank');
 
 function LargeProduct({product}:ItemOne) {
 
+  // last large items store
   let item: Products[] | null = null;
 
   if (product == 'curtain'){
@@ -43,112 +46,46 @@ function LargeProduct({product}:ItemOne) {
     item = waterTank;
   }
 
+  // first large items display
   return product == null ? (
     <div className="homepage-dynamic-large">
 
-      {/* create Refrigerator */}
-      <div className="homepage-large-container col-6 col-md-4 col-lg-3">
-        <div className="large-product-title">
-          <h3>Refrigerator</h3>
-        </div>
-        {
-          refrigerator.map((refrigerator:Products) => {
-            return (
-              <div key={refrigerator.id} className="product-card">
-                <img src={refrigerator.image} alt={refrigerator.name} />
-              </div>
-            )
-          })
-        }
-      </div>
+      {
+        items.map(productOne => {
 
-        {/* create washing machine */}
-      <div className="homepage-large-container col-6 col-md-4 col-lg-3">
-        <div className="large-product-title">
-          <h3>Washing Machine</h3>
-        </div>
-        {
-          washingMachine.map((washingMachine:Products) => {
-            return (
-              <div key={washingMachine.id} className="product-card">
-                <img src={washingMachine.image} alt={washingMachine.name} />
-              </div>
-            )
-          })
-        }
-      </div>
+          const findProduct = (productType:string) => {
+            return items.filter((product:Products) => product.type == productType);
+          }
 
+          let oneProduct = findProduct(productOne.type);
 
-        {/* only medium device display */}
-      {/* create Bed */}
-      <div className="homepage-large-container col-6 col-md-4 col-lg-3  medium-device-display">
-        <div className="large-product-title">
-          <h3>Bed</h3>
-        </div>
-        {
-          bed.map((bed:Products) => {
-            return (
-              <div key={bed.id} className="product-card">
-                <img src={bed.image} alt={bed.name} />
-              </div>
-            )
-          })
-        }
-      </div>
+          const mediumDeviceDisplay = (productOne.type == 'table' || productOne.type == 'bed') ? 
+          'medium-device-display': null;
 
-        {/* only medium device display */}
-      {/* create Table */}
-      <div className="homepage-large-container col-6 col-md-4 col-lg-3  medium-device-display">
-        <div className="large-product-title">
-          <h3>Table</h3>
-        </div>
-        {
-          table.map((table:Products) => {
-            return (
-              <div key={table.id} className="product-card"> 
-                <img src={table.image} alt={table.name} />
+          return (
+            <div className={`homepage-large-container col-6 col-md-4 col-lg-3 ${mediumDeviceDisplay}`} key={productOne.id}>
+              <div className="large-product-title">
+                <h3>{productOne.name}</h3>
               </div>
-            )
-          })
-        }
-      </div>
-
-      {/* create gasCooker */}
-      <div className="homepage-large-container col-6 col-md-4 col-lg-3">
-        <div className="large-product-title">
-          <h3>Gas Cooker</h3>
-        </div>
-        {
-          gasCooker.map((gasCooker:Products) => {
-            return (
-              <div key={gasCooker.id} className="product-card"> 
-                <img src={gasCooker.image} alt={gasCooker.name} />
-              </div>
-            )
-          })
-        }
-      </div>
-
-      {/* create AC */}
-      <div className="homepage-large-container col-6 col-md-4 col-lg-3">
-        <div className="large-product-title">
-          <h3>AC</h3>
-        </div>
-        {
-          ac.map((ac:Products) => {
-            return (
-              <div key={ac.id} className="product-card"> 
-                <img src={ac.image} alt={ac.name} />
-              </div>
-            )
-          })
-        }
-      </div>
+              {
+                oneProduct.map((product:Products) => {
+                  return (
+                    <div key={product.id} className="product-card">
+                      <img src={product.image} alt={product.name} />
+                    </div>
+                  )
+                })
+              }
+          </div>
+          )
+        })
+      }
 
     </div>
 
   ) : (
 
+    // last large items display
     <div className="homepage-large-container col-6 col-md-4 col-lg-3">
 
       <div className="large-product-title">

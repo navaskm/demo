@@ -9,13 +9,15 @@ const TwoProducts = lazy(() => import("./components/HomePage/TwoProducts/TwoProd
 const SmallScrolling = lazy(() => import("./components/HomePage/SmallScrolling/SmallScrolling"));
 const LastOneProducts = lazy (() => import("./components/HomePage/LastOneProducts/LastOneProducts"));
 
+//import { MenuProvider } from "./components/HomePage/navbar/MenuContext/MenuContext";
+
 
 export default function Home() {
   return (
     <>
-      <Suspense fallback={<p>Loading Navbar....</p>}>
-        <NavBar />
-      </Suspense>
+        <Suspense fallback={<p>Loading Navbar....</p>}>
+          <NavBar />
+        </Suspense>
 
       <Suspense fallback={<p>Loading Offers ....</p>}>
         <MainOffers/>

@@ -1,17 +1,17 @@
 "use client";
 
-import Image from "next/image"
 import "@/app/styles/homepage/navbar/navbar.scss";
 
-export const Logo = () => {
+const CartLogo = () => {
   return (
     <div className="logo">
-      <Image 
-        src='/cart.png'
+      <h6>0</h6>
+      <img 
+        src='/Logo/cart-logo.png'
         alt="Logo"
-        width={50}
-        height={40}
       />
     </div>
   )
 }
+
+export default CartLogo;

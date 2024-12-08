@@ -34,6 +34,8 @@
       align-items: center;
       justify-content: center;
 
+      position: relative;
+
       img{
         width: 80%;
         height: 70%;
@@ -43,10 +45,18 @@
         &:hover{
           cursor: pointer;
         }
+        &:hover + h5{
+          cursor: pointer;
+          color: rgb(4, 100, 4);
+          transition: color 0.3s ease;
+        }
       }
 
       h5{
         color: rgb(37, 194, 37);
+        font-family: "Barlow Semi Condensed", sans-serif;
+        font-weight: 700;
+        font-style: normal;
       }
 
     }

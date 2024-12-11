@@ -1,9 +1,12 @@
 import "@/app/styles/homepage/navbar/navbar.scss";
+import Link from "next/link";
 
 const AppLogs = () => {
   return (
     <div className="app-logo">
-      <img src="/Logo/app-logo.png" alt="" />
+      <Link href="/">
+        <img src="/Logo/app-logo.png" alt="" />
+      </Link>
     </div>
   )
 }

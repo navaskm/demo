@@ -66,7 +66,7 @@ function TwoProducts({product}:ItemOne) {
 
           // find which item display
           const findProduct = (productType:string) => {
-            return smallItems.filter((item:Products) => item.type === productType);
+            return smallItems.filter((product:Products) => product.type == productType);
           }
           let Product = findProduct(item.type);
 

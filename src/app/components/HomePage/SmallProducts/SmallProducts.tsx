@@ -1,6 +1,7 @@
 import '@/app/styles/homepage/smallProducts/smallproducts.scss';
 import { fetchProduct } from "@/app/DataFetching/productData"
-import ClintSmallProduct from './ClintSmallProduct';
+//import ClintSmallProduct from './ClintSmallProduct';
+import Link from "next/link";
 
 type Products = {
   name: string,
@@ -46,10 +47,10 @@ function SmallProducts() {
             displayOneItem = false;
           }
 
-          const a = (product.type === 'toys' || product.type === 'sunglass')? 'only-large-device':null;
+          const largeDeviseDisplay = (product.type === 'toys' || product.type === 'sunglass')? 'only-large-device':null;
 
           return displayOneItem && (
-            <div className={`container-of-one-product col-6 col-md-4 col-xl-3 ${a}`}
+            <div className={`container-of-one-product col-6 col-md-4 col-xl-3 ${largeDeviseDisplay}`}
             key={product.id}>
 
               <div className='title'>
@@ -61,15 +62,45 @@ function SmallProducts() {
                   oneProduct.map((item:Products) => {
                     return (
                       <div key={item.id} className="product-details-display">
-                        <ClintSmallProduct item={item}/>
-                        {/* <img src={item.image} alt={item.name}/>
-                        <div className='name-price-display'>
-                          <h6>{item.name}</h6>
-                          <div className='price-star-display'>
-                            <b><span>₹</span>{item.priceCents}</b>
-                            <p>{item.rating}&#9733;</p>
-                          </div>
-                        </div> */}
+
+                        {/* image click time pass value to selected page */}
+                        <Link href={{
+                          pathname: "/components/SelectedPage",
+                          query: {
+                            name: encodeURIComponent(item.name),
+                            priceCents: item.priceCents,
+                            image: encodeURIComponent(item.image),
+                            rating: item.rating,
+                            type: item.type,
+                            id: item.id,
+                            keywords: item.keywords,
+                            title:item.title,
+                          }
+                          }}>
+                            <img src={item.image} alt={item.name}/>
+                        </Link>
+
+                          {/* this div click time pass value to selected page */}
+                        <Link style={{ textDecoration: 'none' }} href={{
+                          pathname: "/components/SelectedPage",
+                          query: {
+                            name: encodeURIComponent(item.name),
+                            priceCents: item.priceCents,
+                            image: encodeURIComponent(item.image),
+                            rating: item.rating,
+                            type: item.type,
+                            id: item.id,
+                          }
+                          }}>
+                            <div className='name-price-display'>
+                              <h6>{item.name}</h6>
+                              <div className='price-star-display'>
+                                <b><span>₹</span>{item.priceCents}</b>
+                                <p>{item.rating}&#9733;</p>
+                              </div>
+                            </div>
+                        </Link>
+
                       </div>
                     )
                   })

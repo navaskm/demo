@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inconsolata:wdth,wght@86.1,469&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Parkinsans:wght@300..800&family=Quicksand:wght@300..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Space+Grotesk:wght@300..700&display=swap');
+
 .image-features-container{
   display: flex;
   flex-wrap: wrap;
@@ -7,12 +9,11 @@
   .image-select-display-item{
     display: flex;
     //position: relative;
-    background-color: white;
+    background-color: #fff;
 
     .container-product-size{
       height: 370px;
       padding-top: 20px;
-      //background-color: gray;
       h5{
         text-align: center;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -24,20 +25,34 @@
         align-items: center;
         margin-top: 15px;
 
-        p{
+        .is-white{
           font-size: 18px;
           margin-top: 10px;
           background-color: rgb(206, 206, 206);
+          color: rgb(44, 42, 42);
           width: 80%;
           text-align: center;
           border-radius: 5px;
 
-          &:hover,
-          :active{
+          &:hover{
             cursor: pointer;
             background-color: rgb(44, 42, 42);
-            color: white;
+            color: rgb(206, 206, 206);
           }
+        }
+
+        .is-black,
+        p{
+            font-size: 18px;
+            margin-top: 10px;
+            background-color: rgb(206, 206, 206);
+            color: rgb(44, 42, 42);
+            width: 80%;
+            text-align: center;
+            border-radius: 5px;
+            background-color: rgb(44, 42, 42);
+            color: rgb(206, 206, 206);
+
         }
       }
     }
@@ -66,7 +81,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-       // background-color: red;
         transform: translate(0px, -50px);
         margin-left: -40px;
 
@@ -132,21 +146,128 @@
 
   }
 
+
+
+
+
+
+
   // features display styles
   .feature-display{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 5px;
 
-    div{
-      height: 200px;
+    @mixin div{
       width: 90%;
-      border: 3px solid rgb(214, 208, 208);
+      border: 1px solid rgb(214, 208, 208);
+      box-shadow: 0px 0px 5px gray;
       border-radius: 10px;
-      padding: 10px;
-      margin: 4px;
+      padding: 17px;
+      margin: 5px auto;
       background-color: #fff;
+
+      h2{
+        font-family: sans-serif;
+        color: rgb(83, 83, 83);
+      }
+    }
+
+    .product-basic{
+      @include div;
+      height: auto;
+      h3{
+        color: green;
+        margin-bottom: 15px;
+        b{
+          color: gray;
+          margin-left: 10px;
+          padding-bottom: 15px;
+        }
+      }
+      h5{
+        background-color: rgb(0, 180, 0);
+        color: white;
+        border-radius: 10px;
+        padding: 1px 15px;
+        display: inline;
+      }
+      p{
+        margin-top: 13px;
+        background-color: rgb(197, 197, 197);
+        padding: 0px 12px 1px 12px;
+        display: inline;
+        border-radius: 10px;
+      }
+    }
+
+    .product-details{
+      @include div;
+      height: auto;
+      p{
+        font-size: 18px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: black;
+        span{
+          color: rgb(54, 53, 53);
+          font-size: 15px;
+          font-family: "Space Grotesk", serif;
+          font-optical-sizing: auto;
+        }
+      }
+    }
+
+    .product-delivery-date{
+      @include div;
+      height: auto;
+      p{
+        //margin: 0;
+        color: black;
+        font-weight: 700;
+        span{
+          color: gray;
+          padding-left: 10px;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .product-rating-reviews{
+      @include div;
+      height: auto;
+      div{
+        border: 1px solid white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        P{
+          color: black;
+          margin: 0;
+        }
+
+        b{
+          display: inline-block;
+          width: 60%;
+          height: 10px;
+          border-radius: 10px;
+          background-color: rgb(228, 223, 223);
+          position: relative;
+          margin-right: 20%;
+          span{
+            display: inline-block;
+            height: 100%;
+            background-color: rgba(250, 60, 60, 0.664);
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 10px;
+          }
+        }
+
+      }
     }
   }
 

@@ -37,29 +37,62 @@
         align-items: center;
         flex-shrink: 0;
         margin-right: 10px;
+        //background-color: red;
+
         // style of images
-        img{
+        .image-wrapper{
           width: 90%;
-          height: 70%;
+          height: 100%;
           border-radius: 10px;
-          &:hover{
-            cursor: pointer;
-          }
-  
-          @media (max-width:1000px) {
+         // background-color: green;
+
+          img{
             width: 80%;
             height: 65%;
+            border-radius: inherit;
+            
+            &:hover{
+              cursor: pointer;
+            }
+    
+            @media (max-width:1000px) {
+              width: 80%;
+              height: 65%;
+            }
+            @media (max-width:700px) {
+              width: 60%;
+              height: 55%;
+            }
+            @media (max-width:500px) {
+              width: 50%;
+              height: 45%;
+            }
           }
-          @media (max-width:700px) {
-            width: 60%;
-            height: 55%;
+
+
+          // style of exact prize
+          h5{
+            text-align: center;
+            color: gray;
+            //color: blue;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            @media (max-width:540px) {
+              height: 60px;
+            }
           }
-          @media (max-width:500px) {
-            width: 50%;
-            height: 45%;
+          // style of offer 
+          .scrolling-image-offer{
+
+            h4{
+              text-align: center;
+              color: green;
+              font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+
           }
+
         }
-  
+
         @media (max-width:1000px) {
           width: 200px;
           margin-right: 0px;
@@ -70,23 +103,7 @@
         @media (max-width:500px) {
           width: 140px;
         }
-  
-  
-        // style of exact prize
-        h5{
-          text-align: center;
-          color: gray;
-          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-          @media (max-width:540px) {
-            height: 60px;
-          }
-        }
-        // style of offer 
-        h4{
-          text-align: center;
-          color: green;
-          font-family: Verdana, Geneva, Tahoma, sans-serif;
-        }
+        
       }
     }
 

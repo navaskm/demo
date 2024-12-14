@@ -1,6 +1,8 @@
 import '@/app/styles/homepage/twoproduct/twoproduct.scss';
 import { fetchProduct } from "@/app/DataFetching/productData";
 
+import  Link  from 'next/link';
+
 type Products = {
   name: string,
   image: string,
@@ -10,6 +12,10 @@ type Products = {
   keywords: string,
   offer:string,
   id: number,
+  company: string,
+  madein: string,
+  Feature: string,
+  size:string,
 }
 
 type ItemOne = {
@@ -92,8 +98,36 @@ function TwoProducts({product}:ItemOne) {
 
                   return (
                     <div key={Product.id} className={`image-offer-display-of-two-product ${marginBottom}`}>
-                      <img  src={Product.image} alt={Product.name} />
-                      <h5>{Product.offer}</h5>
+                      <Link 
+                      style={
+                        {
+                          textDecoration:"none",
+                          display: 'flex',
+                          flexDirection: 'column',
+                          alignItems: 'center',
+                          // width: '100%',
+                          // height: '100%',
+                        }
+                      } 
+                      href={{
+                        pathname: "/components/SelectedPage",
+                        query: {
+                          name: encodeURIComponent(Product.name),
+                          priceCents: Product.priceCents,
+                          image: encodeURIComponent(Product.image),
+                          rating: Product.rating,
+                          company: encodeURIComponent(Product.company),
+                          madein: encodeURIComponent(Product.madein),
+                          Feature: encodeURIComponent(Product.Feature),
+                          size: Product.size,
+                        }
+                      }}>
+
+                        <img  src={Product.image} alt={Product.name} />
+                        <h5>{Product.offer}</h5>
+
+                      </Link>
+                      
                     </div>
                   )
                 })
@@ -123,10 +157,28 @@ function TwoProducts({product}:ItemOne) {
           let marginBottom = index === 0 ? 'marginBottom' : null;
 
           return (
-            <div key={item.id}className={`last-products-display ${marginBottom}`}>
-            <img src={item.image} alt={item.name} />
-              <h5>{item.offer}</h5>
-            </div>
+            <Link 
+              style={{textDecoration:"none"}}
+              href={{
+                pathname: "/components/SelectedPage",
+                query: {
+                  name: encodeURIComponent(item.name),
+                  priceCents: item.priceCents,
+                  image: encodeURIComponent(item.image),
+                  rating: item.rating,
+                  company: encodeURIComponent(item.company),
+                  madein: encodeURIComponent(item.madein),
+                  Feature: encodeURIComponent(item.Feature),
+                  size: item.size,
+                }
+              }}>
+
+              <div key={item.id}className={`last-products-display ${marginBottom}`}>
+                <img src={item.image} alt={item.name} />
+                <h5>{item.offer}</h5>
+              </div>
+
+            </Link>
           )
         })
         

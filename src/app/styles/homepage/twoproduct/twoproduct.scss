@@ -57,6 +57,11 @@
         font-family: "Barlow Semi Condensed", sans-serif;
         font-weight: 700;
         font-style: normal;
+        &:hover{
+          cursor: pointer;
+          color: rgb(4, 100, 4);
+          transition: color 0.3s ease;
+        }
       }
 
     }

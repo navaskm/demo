@@ -12,6 +12,10 @@ type Products = {
   type: string,
   keywords: string,
   id: number,
+  company: string,
+  madein: string,
+  Feature: string,
+  size:string,
 }
 
 const fourItems:Products[] | [] = [];
@@ -71,10 +75,10 @@ function SmallProducts() {
                             priceCents: item.priceCents,
                             image: encodeURIComponent(item.image),
                             rating: item.rating,
-                            type: item.type,
-                            id: item.id,
-                            keywords: item.keywords,
-                            title:item.title,
+                            company: encodeURIComponent(item.company),
+                            madein: encodeURIComponent(item.madein),
+                            Feature: encodeURIComponent(item.Feature),
+                            size: item.size,
                           }
                           }}>
                             <img src={item.image} alt={item.name}/>
@@ -90,6 +94,11 @@ function SmallProducts() {
                             rating: item.rating,
                             type: item.type,
                             id: item.id,
+                            keywords: item.keywords,
+                            company: encodeURIComponent(item.company),
+                            madein: encodeURIComponent(item.madein),
+                            Feature: encodeURIComponent(item.Feature),
+                            size: item.size,
                           }
                           }}>
                             <div className='name-price-display'>

@@ -1,5 +1,6 @@
 import '@/app/styles/homepage/largeproduct/largeproduct.scss';
 import { fetchProduct } from "@/app/DataFetching/productData";
+import Link from 'next/link';
 
 type Products = {
   name: string,
@@ -9,6 +10,10 @@ type Products = {
   type: string,
   keywords: string,
   id: number,
+  company: string,
+  madein: string,
+  Feature: string,
+  size:string,
 }
 
 type ItemOne = {
@@ -68,10 +73,24 @@ function LargeProduct({product}:ItemOne) {
                 <h3>{productOne.name}</h3>
               </div>
               {
-                oneProduct.map((product:Products) => {
+                oneProduct.map((item:Products) => {
                   return (
-                    <div key={product.id} className="product-card">
-                      <img src={product.image} alt={product.name} />
+                    <div key={item.id} className="product-card">
+                      <Link href={{
+                        pathname: "/components/SelectedPage",
+                        query: {
+                          name: encodeURIComponent(item.name),
+                          priceCents: item.priceCents,
+                          image: encodeURIComponent(item.image),
+                          rating: item.rating,
+                          company: encodeURIComponent(item.company),
+                          madein: encodeURIComponent(item.madein),
+                          Feature: encodeURIComponent(item.Feature),
+                          size: item.size,
+                        }
+                      }}>
+                        <img src={item.image} alt={item.name} />
+                      </Link>
                     </div>
                   )
                 })
@@ -97,9 +116,26 @@ function LargeProduct({product}:ItemOne) {
       {
         item && item.map((item:Products) => { 
           return (
-            <div key={item.id} className="last-large-product">
-              <img src={item.image} alt={item.name} />
-            </div>
+            <Link 
+              href={{
+                pathname: "/components/SelectedPage",
+                query: {
+                  name: encodeURIComponent(item.name),
+                  priceCents: item.priceCents,
+                  image: encodeURIComponent(item.image),
+                  rating: item.rating,
+                  company: encodeURIComponent(item.company),
+                  madein: encodeURIComponent(item.madein),
+                  Feature: encodeURIComponent(item.Feature),
+                  size: item.size,
+                }
+              }}>
+
+                <div key={item.id} className="last-large-product">
+                  <img src={item.image} alt={item.name} />
+                </div>
+
+            </Link>
           )
         })
       }

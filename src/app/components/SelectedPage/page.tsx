@@ -1,6 +1,8 @@
-//"use client";
+"use client";
 
 import { TiShoppingCart } from "react-icons/ti";
+import { AiOutlineExclamationCircle } from "react-icons/ai";
+
 import NavBar from "../HomePage/navbar/NavBar";
 import '@/app/styles/selectdpage/selectpage.scss';
 
@@ -15,37 +17,47 @@ type Products = {
   type: string,
   keywords: string,
   id: number,
+  company: string,
+  madein: string,
+  Feature: string,
+  size:string,
 }
 
 const SelectItemPage = ({searchParams}:{searchParams:Products}) => {
+
+  console.log(searchParams.size);
 
   let defaultSize = true;
 
   // create size of cloths
   let sizeOfCloths = false;
-  if (searchParams?.type === 'mens-clothes' || searchParams.type === 'women-clothes') {
+  if ( searchParams.type === 'mens-clothes' || searchParams.type === 'women-clothes') {
     sizeOfCloths = true;
     defaultSize = false;
   }
 
   // create size of shoes
   let sizeOfShoes = false;
-  if (searchParams?.type === 'shoes') {
+  if (searchParams.type === 'shoes') {
     sizeOfShoes = true;
     defaultSize = false;
   }
 
-  // create size of shoes
+  // create size of sunglass
   let sizeOfSunglass = false;
-  if (searchParams?.type === 'sunglass') {
+  if (searchParams.type === 'sunglass') {
     sizeOfSunglass = true;
     defaultSize = false;
   }
 
 
-  // const selectSize = () => {
-  //   console.log('hello');
-  // }
+  const selectSize = (isWhite: string) => {
+    const elements = document.querySelectorAll('.is-black');
+    elements.forEach(element => element.classList.remove('is-black'));
+
+    const selectedElement = document.querySelector(isWhite);
+    selectedElement.classList.add('is-black');
+  };
 
   return (
       <>
@@ -60,51 +72,18 @@ const SelectItemPage = ({searchParams}:{searchParams:Products}) => {
             <div className="container-product-size col-2">
               <h5>Select Size</h5>
               <div className="container-size-list">
-
-                {/* crete size of cloths */}
                 {
-                  sizeOfCloths && (
-                    <>
-                      <p>S</p>
-                      <p>M</p>
-                      <p>L</p>
-                      <p>XL</p>
-                      <p>XXL</p>
-                    </>
-                  )
-                }
-
-                {/* crete size of shoes */}
-                {
-                  sizeOfShoes && (
-                    <>
-                      <p>IND-5</p>
-                      <p>IND-6</p>
-                      <p>IND-7</p>
-                      <p>IND-8</p>
-                      <p>IND-9</p>
-                    </>
-                  )
-                }
-
-                {/* crete size of sunglass */}
-                {
-                  sizeOfSunglass && (
-                    <>
-                      <p>XS</p>
-                      <p>S</p>
-                      <p>M</p>
-                      <p>L</p>
-                    </>
-                  )
-                }
-
-                {/* crete default size */}
-                {
-                  defaultSize && (
-                    <>
-                      <p>Free Size</p>
-                    </>
+                  searchParams.size?  (
+                        searchParams.size.map((size:string) => {
+                          return (
+                            <p 
+                              className={`is-white size-${size}`} 
+                              onClick={()=> selectSize(`.size-${size}`)}>
+                            {size}</p>
+                          )
+                        })
+                  ):(
+                    <p>Free Size</p>
                   )
                 }
 
@@ -157,40 +136,59 @@ const SelectItemPage = ({searchParams}:{searchParams:Products}) => {
           {/* features display */}
           <div className="feature-display  col-12 col-md-6">
 
-            <div>
+            <div className="product-basic">
               <h2>{decodeURIComponent(searchParams.name)}</h2>
-              <b><span>₹</span>{searchParams.priceCents}</b>
-              <p>{searchParams.rating}&#9733;</p>
+              <h3><span>₹</span>{searchParams.priceCents} <b><AiOutlineExclamationCircle /></b></h3>
+              <h5>{searchParams.rating}&#9733;</h5> <h6></h6>
               <p>free delivery</p>
             </div>
 
-            <div>
+            <div className="product-details">
               <h2>Product details</h2>
-              <p>Name: {decodeURIComponent(searchParams.name)}</p>
-              <p>Rating: {searchParams.rating}</p>
+              <p>Made in : <span>{decodeURIComponent(searchParams.madein)}</span></p>
+              <p>Company: <span>{decodeURIComponent(searchParams.company)}</span></p>
+              <p>Special Feature : <span>{decodeURIComponent(searchParams.Feature)}</span></p>
             </div>
 
-            <div>
-              <h3>check your delivery date</h3>
+            <div className="product-delivery-date">
+              <h2>Check Your Delivery Date</h2>
+              <p>Free : <span>Within 7 days, the product will reach your home.</span></p>
+
+              <p>Normal : <span>If you pay a $3 shipping cost, the product will reach your home within 5 days.</span></p>
+              
+              <p>Urgent : <span>If you pay a $5 shipping cost, the product will reach your home within 3 days.</span></p>
+
             </div>
 
-            <div>
+            <div className="product-rating-reviews">
               <h2>Product Rating & Reviews</h2>
-              <div className="d-flex">
-                <div><h2>hello</h2></div>
 
-                <div>
-                  <p>very good</p>
-                  <p>good</p>
-                  <p>poor</p>
-                </div>
-
+              <div>
+                <p>Good</p>
+                <b>
+                  <span style={{width: "65%", backgroundColor:"#6AFF6A"}}></span>
+                </b>
               </div>
+
+              <div>
+                <p>Average</p>
+                <b>
+                  <span style={{width: "50%",backgroundColor:"#FCFC7F"}}></span>
+                </b>
+              </div>
+
+              <div>
+                <p>Poor</p>
+                <b>
+                  <span style={{width: "20%",backgroundColor:"#FA3C3AA9"}}></span>
+                </b>
+              </div>
+
             </div>
             
           </div>
 
-          <SmallProducts/>
+          {/* <SmallProducts/> */}
 
         </div>
 

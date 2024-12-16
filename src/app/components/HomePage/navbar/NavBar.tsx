@@ -1,20 +1,22 @@
-// "use client"
-// import { FaBars } from "react-icons/fa";
-// import { useState } from "react";
+import { Suspense,lazy } from "react";
 
-import AppLogs from "./AppLogo/AppLogs";
-import SearchBar  from "./SearchBar/SearchBar";
-import Links from "./Links/Links";
-import Login from "./Login/Login";
-import CartLogo from "./CartLogo/CartLogo";
-import MobilHamburger from "./MobilHamburger/MobilHamburger";
+const AppLogs = lazy(() => import('./AppLogo/AppLogs'));
+const SearchBar = lazy(() => import("./SearchBar/SearchBar"));
+const Links = lazy(() => import("./Links/Links"));
+const Login = lazy(() => import("./Login/Login"));
+const CartLogo = lazy(() => import("./CartLogo/CartLogo"));
+const MobilHamburger = lazy(() => import("./MobilHamburger/MobilHamburger"));
+//import AppLogs from "./AppLogo/AppLogs";
+//import SearchBar  from "./SearchBar/SearchBar";
+//import Links from "./Links/Links";
+//import Login from "./Login/Login";
+//import CartLogo from "./CartLogo/CartLogo";
+//import MobilHamburger from "./MobilHamburger/MobilHamburger";
 
 import "@/app/styles/homepage/navbar/navbar.scss";
 
 
 const NavBar = () => {
-
-  // const [open,setOpen] = useState(false);
 
   return (
     <>
@@ -22,26 +24,36 @@ const NavBar = () => {
         <div className="navbar">
 
           {/* App logo section */}
-          <AppLogs/>
+          <Suspense fallback={<div>Loading...</div>}>
+            <AppLogs />
+          </Suspense>
 
           {/* search bar */}
-          <SearchBar />
+          <Suspense fallback={<div>Loading...</div>}>
+            <SearchBar />
+          </Suspense>
 
           {/* Links menu section  open={open}*/}
-          <Links/>
+          <Suspense fallback={<div>Loading...</div>}>
+            <Links />
+          </Suspense>
 
           {/* user Login section */}
-          <Login />
+          <Suspense fallback={<div>Loading...</div>}>
+            <Login />
+          </Suspense>
 
           {/* cart logo section view*/}
-          <CartLogo />
+          <Suspense fallback={<div>Loading...</div>}>
+            <CartLogo />
+          </Suspense>
 
           {/* mobile hamburger menu sections*/}
-          <MobilHamburger/>
-          
+          <Suspense fallback={<div>Loading...</div>}>
+            <MobilHamburger/>
+          </Suspense>
 
         </div>
-
       </nav>
     </>
   );

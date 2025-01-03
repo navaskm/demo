@@ -38,13 +38,7 @@ const ImageDisplay = ({selectedImage}:{selectedImage:Products}) => {
 
         {/* create image of product */}
         <div className="image-display">
-          {/* {selectedImage.image ? (
-            <img src={decodeURIComponent(selectedImage.image)} alt={selectedImage.name} />
-          ):(
-            null
-          )} */}
           <img src={decodeURIComponent(selectedImage.image)} alt={selectedImage.name} />
-          
         </div>
 
         {/* create quantity and add to cart of product */}

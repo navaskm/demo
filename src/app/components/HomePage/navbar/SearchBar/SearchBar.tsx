@@ -3,8 +3,8 @@ import "@/app/styles/homepage/navbar/navbar.scss";
 
 const SearchBar = () => {
   return (
-    <div className="search-bar">
-      <input 
+    <div className="searchbar-container">
+      <input
         type="text" 
         placeholder="Search product"
       />

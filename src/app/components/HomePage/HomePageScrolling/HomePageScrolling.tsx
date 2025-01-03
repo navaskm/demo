@@ -1,7 +1,7 @@
-import { Suspense } from "react";
+import { lazy,Suspense } from "react";
 import { fetchScrollingProduct } from "@/app/DataFetching/productData";
 import "@/app/styles/homepage/homepagescrolling/homepagescrolling.scss";
-import BagsSports from "./BagSports/BagSports";
+const BagsSports = lazy(() => import("./BagSports/BagSports"));
 
 type Products = {
   id:string;
@@ -29,7 +29,6 @@ const HomePageScrolling = async ({item}:Items) => {
     <div className="homepage-scrolling">
 
       <div className="scrolling-title">
-        {/* <h1>Your Perfect Bag Awaits</h1> */}
         {
           item == 'bag'? (
             <h1>Your Perfect Bag Awaits</h1>

@@ -48,12 +48,11 @@ export default function Home() {
         <SmallScrolling item='phone'/>
       </Suspense>
 
-
       {/* Add more products here */}
 
-      <Suspense fallback={<p>loading.....</p>}>
+       <Suspense fallback={<p>loading.....</p>}>
         <LastOneProducts />
-      </Suspense>
+      </Suspense> 
 
     </>
   );

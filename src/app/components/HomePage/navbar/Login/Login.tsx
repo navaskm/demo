@@ -1,9 +1,3 @@
-const Login = () => {
-  return (
-    <div className="login">
-      <button className="login-button">Login</button>
-    </div>
-  )
-}
+const Login = () => <button title="Login" className="login-button">Login</button>
 
 export default Login

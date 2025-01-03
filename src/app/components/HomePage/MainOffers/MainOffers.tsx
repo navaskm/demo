@@ -30,7 +30,6 @@ const MainOffers = () => {
               <img className="image-one" src="/OfferImage/Shoes/shoes-offer-image-1.jpg" alt="offer" />
               <img className="image-two" src="/OfferImage/Shoes/shoes-offer-image-2.jpg" alt="offer" />
               <img className="image-three" src="/OfferImage/Shoes/shoes-offer-image-3.jpg" alt="offer" />
-
             </div>
 
               <div className="carousel-caption d-none d-md-block">
@@ -44,7 +43,6 @@ const MainOffers = () => {
                <img className="image-one" src="/OfferImage/Phone/phone-offer-image-1.jpg" alt="offer" />
                <img className="image-two" src="/OfferImage/Phone/phone-offer-image-2.jpg" alt="offer" />
                <img className="image-three" src="/OfferImage/Phone/phone-offer-image-3.jpg" alt="offer" />
-
             </div>
             
             <div className="carousel-caption d-none d-md-block">
@@ -58,7 +56,6 @@ const MainOffers = () => {
               <img className="image-one" src="/OfferImage/bags/bag-offer-image-1.jpg" alt="offer" />
               <img className="image-two" src="/OfferImage/bags/bag-offer-image-2.jpg" alt="offer" />
               <img className="image-three" src="/OfferImage/bags/bag-offer-image-3.jpg" alt="offer" />
-
             </div>
             
             <div className="carousel-caption d-none d-md-block">

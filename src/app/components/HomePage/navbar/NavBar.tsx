@@ -6,15 +6,8 @@ const Links = lazy(() => import("./Links/Links"));
 const Login = lazy(() => import("./Login/Login"));
 const CartLogo = lazy(() => import("./CartLogo/CartLogo"));
 const MobilHamburger = lazy(() => import("./MobilHamburger/MobilHamburger"));
-//import AppLogs from "./AppLogo/AppLogs";
-//import SearchBar  from "./SearchBar/SearchBar";
-//import Links from "./Links/Links";
-//import Login from "./Login/Login";
-//import CartLogo from "./CartLogo/CartLogo";
-//import MobilHamburger from "./MobilHamburger/MobilHamburger";
 
 import "@/app/styles/homepage/navbar/navbar.scss";
-
 
 const NavBar = () => {
 

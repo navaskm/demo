@@ -105,8 +105,6 @@ function TwoProducts({product}:ItemOne) {
                           display: 'flex',
                           flexDirection: 'column',
                           alignItems: 'center',
-                          // width: '100%',
-                          // height: '100%',
                         }
                       } 
                       href={{
@@ -116,6 +114,9 @@ function TwoProducts({product}:ItemOne) {
                           priceCents: Product.priceCents,
                           image: encodeURIComponent(Product.image),
                           rating: Product.rating,
+                          id: Product.id,
+                          type: Product.type,
+                          keywords: Product.keywords,
                           company: encodeURIComponent(Product.company),
                           madein: encodeURIComponent(Product.madein),
                           Feature: encodeURIComponent(Product.Feature),
@@ -157,7 +158,7 @@ function TwoProducts({product}:ItemOne) {
           let marginBottom = index === 0 ? 'marginBottom' : null;
 
           return (
-            <Link 
+            <Link  key={item.id}
               style={{textDecoration:"none"}}
               href={{
                 pathname: "/components/SelectedPage",
@@ -166,6 +167,9 @@ function TwoProducts({product}:ItemOne) {
                   priceCents: item.priceCents,
                   image: encodeURIComponent(item.image),
                   rating: item.rating,
+                  id: item.id,
+                  type: item.type,
+                  keywords: item.keywords,
                   company: encodeURIComponent(item.company),
                   madein: encodeURIComponent(item.madein),
                   Feature: encodeURIComponent(item.Feature),
@@ -173,7 +177,7 @@ function TwoProducts({product}:ItemOne) {
                 }
               }}>
 
-              <div key={item.id}className={`last-products-display ${marginBottom}`}>
+              <div className={`last-products-display ${marginBottom}`}>
                 <img src={item.image} alt={item.name} />
                 <h5>{item.offer}</h5>
               </div>

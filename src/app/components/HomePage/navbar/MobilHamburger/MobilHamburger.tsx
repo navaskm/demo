@@ -6,9 +6,6 @@ import { useState, useEffect } from "react";
 
 import Links from "../Links/Links";
 
-//import { useMenuContext } from "../MenuContext/MenuContext";
-
-
 const MobilHamburger = () => {
 
   const [open, setOpen] = useState<boolean>(false);

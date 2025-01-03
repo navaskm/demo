@@ -83,6 +83,9 @@ function LargeProduct({product}:ItemOne) {
                           priceCents: item.priceCents,
                           image: encodeURIComponent(item.image),
                           rating: item.rating,
+                          id: item.id,
+                          type: item.type,
+                          keywords: item.keywords,
                           company: encodeURIComponent(item.company),
                           madein: encodeURIComponent(item.madein),
                           Feature: encodeURIComponent(item.Feature),
@@ -116,7 +119,7 @@ function LargeProduct({product}:ItemOne) {
       {
         item && item.map((item:Products) => { 
           return (
-            <Link 
+            <Link  key={item.id}
               href={{
                 pathname: "/components/SelectedPage",
                 query: {
@@ -124,6 +127,9 @@ function LargeProduct({product}:ItemOne) {
                   priceCents: item.priceCents,
                   image: encodeURIComponent(item.image),
                   rating: item.rating,
+                  id: item.id,
+                  type: item.type,
+                  keywords: item.keywords,
                   company: encodeURIComponent(item.company),
                   madein: encodeURIComponent(item.madein),
                   Feature: encodeURIComponent(item.Feature),
@@ -131,7 +137,7 @@ function LargeProduct({product}:ItemOne) {
                 }
               }}>
 
-                <div key={item.id} className="last-large-product">
+                <div className="last-large-product">
                   <img src={item.image} alt={item.name} />
                 </div>
 

@@ -46,7 +46,7 @@ function SmallScrolling({item}: Item) {
           item === 'faceWash'?(
             faceWash.map((faceWash:Products) => {
               return (
-                <Link 
+                <Link key={faceWash.id}
                 style={{textDecoration:"none"}}
                 href={{
                   pathname: "/components/SelectedPage",
@@ -55,6 +55,9 @@ function SmallScrolling({item}: Item) {
                     priceCents: faceWash.priceCents,
                     image: encodeURIComponent(faceWash.image),
                     rating: faceWash.rating,
+                    id: faceWash.id,
+                    type: faceWash.type,
+                    keywords: faceWash.keywords,
                     company: encodeURIComponent(faceWash.company),
                     madein: encodeURIComponent(faceWash.madein),
                     Feature: encodeURIComponent(faceWash.Feature),
@@ -62,7 +65,7 @@ function SmallScrolling({item}: Item) {
                   }
                 }}>
 
-                 <div key={faceWash.id} className='item-box'>
+                 <div className='item-box'>
                   <img src={faceWash.image} alt={faceWash.name} />
                     <div>
                       <p>{faceWash.name}</p>
@@ -81,7 +84,7 @@ function SmallScrolling({item}: Item) {
 
             phone.map((phone:Products) => {
               return (
-                <Link 
+                <Link key={phone.id}
                 style={{textDecoration:"none"}}
                 href={{
                   pathname: "/components/SelectedPage",
@@ -90,13 +93,16 @@ function SmallScrolling({item}: Item) {
                     priceCents: phone.priceCents,
                     image: encodeURIComponent(phone.image),
                     rating: phone.rating,
+                    id: phone.id,
+                    type: phone.type,
+                    keywords: phone.keywords,
                     company: encodeURIComponent(phone.company),
                     madein: encodeURIComponent(phone.madein),
                     Feature: encodeURIComponent(phone.Feature),
                     size: phone.size,
                   }
                 }}>
-                  <div key={phone.id} className='item-box'>
+                  <div className='item-box'>
                     <img src={phone.image} alt={phone.name} />
                     <div>
                       <p>{phone.name}</p>

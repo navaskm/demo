@@ -3,7 +3,18 @@ import { fetchScrollingProduct } from "@/app/DataFetching/productData";
 import similarProduct from '@/app/API/similar-product.json';
 
 // api similar product lines
-// watch = 1 to 233
+
+// watch = 1 to 233        = 21
+// shoes = 234 to 464      = 21
+// mens = 464 to 695       = 21
+// women = 696 to 926      = 21
+// Jewelry = 927 to 1157   = 21
+// sound-hub = 1158 to 1344= 17
+// sunglass = 1345 to 1399 = 5
+// toys = 1400 to 1498     = 9
+// refrigerator 1499 to 1586 = 8 
+// washing machine 1587 to 1674 = 8
+// gas cooker 1675 to 
 
 type Products = {
   name: string,
@@ -51,11 +62,12 @@ const SimilarProducts = async ({selectedImage}:{selectedImage:Products}) => {
         {
           finalProduct?.map((product:Products) => {
             return (
-              <div key={product.id} className="col-md-3 each-similar-product">
+              <div key={product.id} className="col-sm-6 col-md-4 col-lg-3 each-similar-product">
                 <img src={product.image} alt={product.name}/>
                 <h3>{product.name}</h3>
                 <p>{product.priceCents}</p>
                 <p>{product.rating}</p>
+                {/* <p>{product.type}</p>  */}
               </div>
             )
           })
@@ -63,7 +75,7 @@ const SimilarProducts = async ({selectedImage}:{selectedImage:Products}) => {
         {
           similarFinalProduct?.map(product => {
             return (
-              <div key={product.id} className="col-md-3 each-similar-product">
+              <div key={product.id} className="col-sm-6 col-md-4 col-lg-3 each-similar-product">
                 <img src={product.image}/>
                 <h3>{product.name}</h3>
                 <p>{product.priceCents}</p>

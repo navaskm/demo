@@ -8,6 +8,7 @@ type Products = {
   rating: string,
   priceCents:string,
   type: string,
+  title: string,
   keywords: string,
   id: number,
   company: string,
@@ -70,7 +71,7 @@ function LargeProduct({product}:ItemOne) {
           return (
             <div className={`homepage-large-container col-6 col-md-4 col-lg-3 ${mediumDeviceDisplay}`} key={productOne.id}>
               <div className="large-product-title">
-                <h3>{productOne.name}</h3>
+                <h3>{productOne.title}</h3>
               </div>
               {
                 oneProduct.map((item:Products) => {
@@ -112,7 +113,7 @@ function LargeProduct({product}:ItemOne) {
 
       <div className="large-product-title">
         {
-          item && item.length > 0 && <h3>{item[0].name}</h3>
+          item && item.length > 0 && <h3>{item[0].title}</h3>
         }
       </div>
 

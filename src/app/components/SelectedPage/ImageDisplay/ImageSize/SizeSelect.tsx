@@ -2,10 +2,10 @@
 
 type SizeSelectProps = {
   size: string;
-  key: number;
+  index: number;
 };
 
-const SizeSelect = ({size,key}:SizeSelectProps) => {
+const SizeSelect = ({size,index}:SizeSelectProps) => {
 
   const selectSize = (isWhite: string) => {
     const elements = document.querySelectorAll('.is-black');
@@ -17,7 +17,7 @@ const SizeSelect = ({size,key}:SizeSelectProps) => {
 
   return (
     <p 
-      key={key}
+      key={index}
       className={`is-white size-${size}`} 
       onClick={()=> selectSize(`.size-${size}`)}
     >{size}</p>

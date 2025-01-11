@@ -12,6 +12,7 @@ type Products = {
   keywords: string,
   offer:string,
   id: number,
+  title: string,
   company: string,
   madein: string,
   Feature: string,
@@ -87,7 +88,7 @@ function TwoProducts({product}:ItemOne) {
             <div key={item.id} className={`col-6 col-md-4 col-lg-3 container-of-two-product ${onlyMediumDevice}`}>
 
               <div className='title-of-two-product'>
-                <h3>{item.name}</h3>
+                <h3>{item.title}</h3>
               </div>
 
               {
@@ -147,7 +148,7 @@ function TwoProducts({product}:ItemOne) {
 
       <div className='title-of-two-product'>
         {
-          item && item.length > 0 && <h3>{item[0].name}</h3>
+          item && item.length > 0 && <h3>{item[0].title}</h3>
         }
       </div>
       {

@@ -1,4 +1,7 @@
+"use client"
 import { Suspense,lazy } from "react";
+import { Provider } from "react-redux";
+import store from '../../Redux/store';
 
 const AppLogs = lazy(() => import('./AppLogo/AppLogs'));
 const SearchBar = lazy(() => import("./SearchBar/SearchBar"));
@@ -38,7 +41,9 @@ const NavBar = () => {
 
           {/* cart logo section view*/}
           <Suspense fallback={<div>Loading...</div>}>
-            <CartLogo />
+            <Provider store={store}>
+              <CartLogo />
+            </Provider>
           </Suspense>
 
           {/* mobile hamburger menu sections*/}

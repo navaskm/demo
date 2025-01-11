@@ -1,9 +1,11 @@
 "use client"
 
-import { useEffect} from 'react';
+import { useEffect } from 'react';
+import Link from 'next/link';
 import "@/app/styles/homepage/mainoffers/mainoffers.scss";
 
 const MainOffers = () => {
+
   useEffect(() => {
     import('bootstrap/dist/js/bootstrap.bundle.min.js');
   }, []);
@@ -27,9 +29,40 @@ const MainOffers = () => {
             
             <div className="offer-image">
               {/* shoes images */}
-              <img className="image-one" src="/OfferImage/Shoes/shoes-offer-image-1.jpg" alt="offer" />
-              <img className="image-two" src="/OfferImage/Shoes/shoes-offer-image-2.jpg" alt="offer" />
-              <img className="image-three" src="/OfferImage/Shoes/shoes-offer-image-3.jpg" alt="offer" />
+              <Link href={{
+                pathname:"/components/SelectedPage",
+                query:{
+                  id: 1000,
+                  type: 'shoes',
+                  offer:"offerProduct"
+                }
+              }}
+              >
+                <img className="image-one" src="/OfferImage/Shoes/shoes-offer-image-1.jpg" alt="offer" />
+              </Link>
+              
+              <Link href={{
+                pathname:"/components/SelectedPage",
+                query:{
+                  id: 999,
+                  type: 'shoes',
+                  offer:"offerProduct"
+                }
+              }}>
+                <img className="image-two" src="/OfferImage/Shoes/shoes-offer-image-2.jpg" alt="offer" />
+              </Link>
+              
+              <Link href={{
+                pathname:"/components/SelectedPage",
+                query:{
+                  id: 998,
+                  type:'shoes',
+                  offer:"offerProduct"
+                }
+              }}>
+                <img className="image-three" src="/OfferImage/Shoes/shoes-offer-image-3.jpg" alt="offer" />
+              </Link>
+
             </div>
 
               <div className="carousel-caption d-none d-md-block">
@@ -40,9 +73,38 @@ const MainOffers = () => {
 
             <div className="offer-image">
                 {/* phone images */}
-               <img className="image-one" src="/OfferImage/Phone/phone-offer-image-1.jpg" alt="offer" />
-               <img className="image-two" src="/OfferImage/Phone/phone-offer-image-2.jpg" alt="offer" />
-               <img className="image-three" src="/OfferImage/Phone/phone-offer-image-3.jpg" alt="offer" />
+                <Link href={{
+                  pathname:"/components/SelectedPage",
+                  query:{
+                    id: 997,
+                    type:'phone',
+                    offer:"offerProduct"
+                  }
+                }}>
+                  <img className="image-one" src="/OfferImage/Phone/phone-offer-image-1.jpg" alt="offer" />
+                </Link>
+               
+               <Link href={{
+                pathname:"/components/SelectedPage",
+                  query:{
+                    id: 996,
+                    type:'phone',
+                    offer:"offerProduct"
+                  }
+                }}>
+                 <img className="image-two" src="/OfferImage/Phone/phone-offer-image-2.jpg" alt="offer" />
+                </Link>
+                
+                <Link href={{
+                  pathname:"/components/SelectedPage",
+                  query:{
+                    id: 995,
+                    type:'phone',
+                    offer:"offerProduct"
+                  }
+                }}>
+                 <img className="image-three" src="/OfferImage/Phone/phone-offer-image-3.jpg" alt="offer" />
+                </Link>
             </div>
             
             <div className="carousel-caption d-none d-md-block">
@@ -53,9 +115,39 @@ const MainOffers = () => {
  
             <div className="offer-image">
                 {/* bag images */}
-              <img className="image-one" src="/OfferImage/bags/bag-offer-image-1.jpg" alt="offer" />
-              <img className="image-two" src="/OfferImage/bags/bag-offer-image-2.jpg" alt="offer" />
-              <img className="image-three" src="/OfferImage/bags/bag-offer-image-3.jpg" alt="offer" />
+                <Link href={{
+                  pathname:"/components/SelectedPage",
+                  query:{
+                    id: 994,
+                    type:'bag',
+                    offer:"offerProduct"
+                  }
+                }}>
+                  <img className="image-one" src="/OfferImage/bags/bag-offer-image-1.jpg" alt="offer" />
+                </Link>
+              
+                <Link href={{
+                  pathname:"/components/SelectedPage",
+                  query:{
+                    id: 993,
+                    type:'bag',
+                    offer:"offerProduct"
+                  }
+                }}>
+                  <img className="image-two" src="/OfferImage/bags/bag-offer-image-2.jpg" alt="offer" />
+                </Link>
+              
+               <Link href={{
+                pathname:"/components/SelectedPage",
+                  query:{
+                    id: 992,
+                    type:'bag',
+                    offer:"offerProduct"
+                  }
+                }}>
+                  <img className="image-three" src="/OfferImage/bags/bag-offer-image-3.jpg" alt="offer" />
+                </Link>
+              
             </div>
             
             <div className="carousel-caption d-none d-md-block">

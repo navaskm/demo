@@ -20,9 +20,23 @@ type Products = {
   madein: string,
   Feature: string,
   size:string,
+  offer?: string,
 }
 
 const SelectItemPage = ({searchParams}:{searchParams:Products}) => {
+
+  let offerProductDisplay = searchParams.offer? true : false;
+
+  if (offerProductDisplay){
+    return (
+      <>
+          {/* offer products display */}
+        <Suspense fallback={<p>loading...</p>}>
+          <SimilarProducts selectedImage={searchParams} />
+        </Suspense>
+      </>
+    )
+  }
 
   return (
       <>

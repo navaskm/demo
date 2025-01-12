@@ -87,15 +87,22 @@
       }
 
       .container-item-quantity-cart-button{
-        display: flex;
-        align-items: center;
-        justify-content: center;
         transform: translate(0px, -50px);
+        position: relative;
+
+        p{
+          position: absolute;
+          font-size: 20px;
+          color: green;
+          text-align: center;
+          transform: translate(50px, -20px);
+        }
 
         // cart button styles
         .add-cart-button{
           cursor: pointer;
           padding: 3px 33px;
+          margin-top: 20px;
           font-size: 22;
           font-weight: 800;
           border-radius: 10px;

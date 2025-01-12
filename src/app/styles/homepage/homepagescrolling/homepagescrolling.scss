@@ -20,7 +20,6 @@
     align-items: center;
     position: relative;
 
-
     // style of all products
     .scrolling-products-bag,
     .scrolling-products-sports-item{
@@ -74,7 +73,6 @@
           h5{
             text-align: center;
             color: gray;
-            //color: blue;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             @media (max-width:540px) {
               height: 60px;

@@ -23,6 +23,14 @@ type Products = {
   offer?: string,
 }
 
+// Generate metadata dynamically based on searchParams
+export async function generateMetadata({ searchParams }: { searchParams: Products }) {
+  return {
+    title: `About ${decodeURIComponent(searchParams.name)}`,
+    description: `Explore details about ${decodeURIComponent(searchParams.name)} including features, price, and more.`,
+  };
+}
+
 const SelectItemPage = ({searchParams}:{searchParams:Products}) => {
 
   let offerProductDisplay = searchParams.offer? true : false;

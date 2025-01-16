@@ -17,115 +17,259 @@
   }
 
   h2{
-    padding-left: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 1%;
     color: rgb(85, 83, 83);
     span{
       color: black;
+      margin: 10px;
+    }
+
+    @media (min-width: 600px) {
+      padding-left: 25%;
     }
   }
 }
 
-
-// cart items section
-.cart-items-container{
-  background-color: white;
+.cart-items-payment-section-container{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 81px;
 
-  .cart-each-items{
-    width: 90%;
-    height: fit-content;
+  @media (max-width:991px) {
+    flex-direction: column;
+  }
+  
+  // cart items section
+  .cart-items-container{
+    background-color: white;
     display: flex;
     flex-direction: column;
-    border: 0.1px solid gray;
-    border-radius: 5px;
-    margin: 10px 0px;
-    padding-bottom: 10px;
-
-    h5{
-      margin-top: 10px;
-      margin-left: 10px;
-      color: rgb(1, 102, 1);
-      span{
-        color: rgb(4, 196, 4);
-      }
-    }
-
-    .cart-details-container{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      @media (max-width:768px) {
-        flex-direction: column;
-      }
-
-      .cart-details-display{
-        display: flex;
-        img{
-          object-fit: contain;
-        }
-        div{
-          margin-left: 5px;
-          h5{
-            color: rgb(77, 76, 76);
-          }
-          .price-display{
-            color: rgb(99, 98, 98);
-            span{
-              color: black;
-            }
-          }
-          p{
-            color: rgb(99, 98, 98);
-            span{
-              color: black;
-            }
-          }
-        }
-      }
-
-      .delivery-date-option-container{
-        //border: 1px solid yellow;
-      }
-    }
-  }
-
-  .scrolling-products-bag::-webkit-scrollbar{
-    display: none;
-  }
-  .scrolling-products-sports-item::-webkit-scrollbar{
-    display: none;
-  }
-}
-
-
-// payment section
-.payment-container{
-  margin-top: 200px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  .order-summary{
-    display: flex;
     align-items: center;
-    padding: 6px;
-    justify-content: space-between;
-    width: 90%;
-    height: auto;
-    border: 1px solid gray;
-    border-radius: 6px;
-    background-color: white;
+    margin-top: 81px;
 
-    .order-names{
-
+    @media (max-width:991px) {
+      margin-top: 10px;
     }
 
-    .order-prices{
+    h3{
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin-top: 10px;
+    }
+
+    .cart-each-items{
+      width: 90%;
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      border: 0.1px solid gray;
+      border-radius: 5px;
+      margin: 10px 0px;
+      padding-bottom: 10px;
+
+      h5{
+        margin-top: 10px;
+        margin-left: 10px;
+        color: rgb(1, 102, 1);
+        span{
+          color: rgb(4, 196, 4);
+          margin-left: 10px;
+        }
+      }
+
+      .cart-details-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width:768px) {
+          flex-direction: column;
+          padding-left: 10px;
+        }
+
+        .cart-details-display{
+          display: flex;
+          img{
+            object-fit: contain;
+          }
+          div{
+            margin-left: 5px;
+            h5{
+              color: rgb(77, 76, 76);
+            }
+            .price-display{
+              color: rgb(99, 98, 98);
+              span{
+                color: black;
+              }
+            }
+            p{
+              color: rgb(99, 98, 98);
+              span{
+                color: black;
+              }
+            }
+          }
+        }
+
+        .delivery-date-option-container{
+          h5{
+            padding: 0;
+          }
+
+          /* Style the custom radio button */
+          label {
+            padding: 5px 10px;
+            color: black;
+            margin-top: 10px;
+            border-radius: 5px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+          }
+
+          /* Style for checked state */
+          input[type="radio"]:checked + label {
+            background-color: #f0f0f0;
+            color: rgb(64, 64, 247);
+          }
+
+            /* Remove default appearance and style the radio button */
+          input[type="radio"] {
+            appearance: none;
+            -webkit-appearance: none; /* For WebKit browsers */
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border: 1px solid blue;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-top: 10px;
+          }
+
+          /* Style for checked state */
+          input[type="radio"]:checked {
+            background-color: blue;
+          }
+
+
+          p{
+            padding: 0;
+            margin: 0;
+            margin-left: 30px;
+            margin-bottom: 10px;
+            color: rgb(170, 168, 168);
+            font-family: 'Courier New', Courier, monospace;
+          }
+        }
+      }
+    }
+  }
+
+
+  // payment section
+  .payment-container{
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width:991px) {
+      margin-top: 83px;
+    }
+
+    @media (min-width:992px) {
+      position: fixed;
+      top: 0;
+      right: -10;
+    }
+
+    h4{
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      color: rgb(109, 108, 108);
+    }
+
+    .order-summary{
+      display: flex;
+      flex-direction: column;
+      border: 1px solid gray;
+      border-radius: 6px;
+      padding: 10px;
+      background-color: #fff;
+
+      .product-shipping-price-container{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+        color: rgb(71, 71, 71);
+
+        .order-names{
+          margin-right: 50px;
+          p{
+            margin: 0;
+            padding: 1px;
+          }
+        }
+
+        .order-prices{
+          border-bottom: 1px solid gray;
+          padding-bottom: 5px;
+          p{
+            margin: 0;
+            padding: 1px;
+          }
+        }
+
+      }
+
+      .tax-price-container{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+        margin-top: 10px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid gray;
+        color: rgb(71, 71, 71);
+
+        .order-texes{
+          p{
+            margin: 0;
+          }
+        }
+
+        .order-tax-price{
+          p{
+            margin: 0;
+          }
+        }
+      }
+
+      .total-amount-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 20px;
+        p{
+          color: red;
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 20px;
+          font-weight: 700;
+        }
+      }
+
+      button{
+        border: none;
+        padding: 10px 20px;
+        background-color: rgb(57, 57, 255);
+        border-radius: 12px;
+        color: #fff;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: 700;
+        font-family: monospace;
+      }
     }
   }
 }

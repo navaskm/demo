@@ -1,6 +1,11 @@
 .container-of-offer-images {
   margin-top: 66px;
 }
+@media (max-width: 768px) {
+  .container-of-offer-images {
+    margin-top: 160px;
+  }
+}
 
 .offer-image img {
   display: none;

@@ -1,35 +1,36 @@
-import { useSelector } from "react-redux"
+import { useSelector } from "react-redux";
+import React from "react";
 
 const PaymentPage = () => {
 
   const checkoutItems = useSelector((state:any)=> state.cart.cartBase);
   const conformItems = useSelector((state:any)=> state.cartItems.items);
 
-  console.log(conformItems);
+  // get shipping cost
+  const shippingCost = useSelector((state:any) => state.deliveryDate.shippingCost);
 
-  // if (Array.isArray(conformItems)) {
-  //   // get price of product
-  //   const prices = conformItems.map((item) => Number(item.price));
-  //   //console.log(prices);
+  // get total product price
+  const productPriceCents = React.useMemo(() => {
+    return conformItems.reduce((total: number, cartItem: any) => {
+      return total + cartItem.quantity * cartItem.price;
+    }, 0);
+  }, [conformItems]);
 
-  //   // get quantity of product
-  //   const quantities = conformItems.map((item) => Number(item.quantity));
-  //   //console.log(quantities);
+  // get total price before tax
+  const totalBeforeTax = shippingCost + productPriceCents;
 
-  //   const totalPrice = prices.reduce((sum, price) => sum + price, 0);
+  // get tax amount in cents
+  const taxCents = (totalBeforeTax / 100) * 0.1;
 
-  //   //const totalPrice = prices.reduce((sum, price) => sum + price, 0);
-  //   //console.log(totalPrice);
-  // } 
+    // Function to format prices
+    function fixed(price: number) {
+      return price.toFixed(2);
+    }
 
-  let productPriceCents = 0;
-
-  conformItems.forEach((cartItem) => {
-    //Cost of product
-    productPriceCents += cartItem.quantity * cartItem.price;
-  });
+  const totalAmount = taxCents + totalBeforeTax;
 
   return (
+
     <div className='col-12 col-lg-4 payment-container'>
       <h4>Order Summary</h4>
       <div className='order-summary'>
@@ -40,8 +41,8 @@ const PaymentPage = () => {
             <p>Shipping & handling:</p>
           </div>
           <div className='order-prices'>
-            <p>{productPriceCents}</p>
-            <p>$60.79</p>
+            <p>₹{productPriceCents}</p>
+            <p>₹{shippingCost}</p>
           </div>
         </div>
 
@@ -51,14 +52,14 @@ const PaymentPage = () => {
             <p>Estimated tax (10%):</p>
           </div>
           <div className="order-tax-price">
-            <p>89</p>
-            <p>34</p>
+            <p>{totalBeforeTax}</p>
+            <p>{fixed(taxCents)}</p>
           </div>
         </div>
 
         <div className="total-amount-container">
           <p>Total Amount</p>
-          <p>34</p>
+          <p>{fixed(totalAmount)}</p>
         </div>
 
         <button>Place your order</button>

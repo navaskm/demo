@@ -1772,7 +1772,7 @@
     "Feature": "Daikin Inverter Split AC: An energy-efficient air conditioner featuring inverter technology for precise temperature control, quiet operation, and powerful cooling, ensuring year-round comfort."
   },{
     "name": "LG Dual Inverter Split AC",
-    "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSREvfXhDCxTbOX9aR3KBp0x9gSLiydys_YDfxkSWCRVIj6t58CKBKIZsne8CAj639y4FCiPuROrYAYwtzk26uG8KLgxyzqtDtsYR0i4qW1UieLcPa5cDwatOQ",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTPx6hp_0iqNo6iq1B3hX_wp7jlKnAECHlAg&s",
     "rating": "5.2",
     "priceCents": "13499",
     "type": "ac",
@@ -1783,9 +1783,9 @@
     "Feature": "LG Dual Inverter Split AC: A high-performance air conditioner featuring Dual Inverter technology for faster cooling, energy efficiency, and quieter operation, delivering optimal comfort with advanced features."
   },{
     "name": "Samsung Wind-Free AC",
-    "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQHgZ5D06iua-yNSaDk7YgQ3mj5weWU7rwAcSep3cTQjEtNjwZZ7kb56AdOhaU4Y6iSr8dubhGg2fB0lPne0Kl056JKg0wp5HesIVWnPAQ",
+    "image": "https://images.fonearena.com/blog/wp-content/uploads/2018/02/Wind-Free-AC-31-e1519291848486.jpg",
     "rating": "",
-    "priceCents": "",
+    "priceCents": "8499",
     "type": "ac",
     "keywords": "",
     "id": "162",
@@ -1827,7 +1827,7 @@
     "Feature": "Hitachi Kashikoi Inverter AC: A smart air conditioner featuring advanced inverter technology for energy-efficient cooling, precise temperature control, and a user-friendly design for superior comfort and performance."
   },{
     "name": "Voltas Adjustable Split AC",
-    "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSaKEI7Vs73Y19ieulnkCtATdZUrYJcEM7xvItihkAP2ANG-iXwkpyEyjeLcntOQaaIi5Rh8SUVnuMqo9J_x5K56dE_f6aeb9YyxQLUNa0",
+    "image": "https://neuralsystemsindia.com/wp-content/uploads/2023/08/download-62.jpg",
     "rating": "4.6",
     "priceCents": "12499",
     "type": "ac",
@@ -2467,7 +2467,7 @@
     "name": "Kasa Smart LED Bulb by TP-Link",
     "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTjEQRPbNLXe2Qqjd58CM22Slwedhpy7W8gXzLjF6SbpWbrgPgtinTAz83TDcoyfdSRbArE4Vv4-PLeVt3JfD7UOQPj-IhEji-mXwe2czB8mFB9tyI6f0W2",
     "rating": "4.2",
-    "priceCents": "",
+    "priceCents": "329",
     "type": "bulb",
     "keywords": "",
     "id": "224",
@@ -3732,7 +3732,7 @@
     "name": "VoltMax USB Charger",
     "image": "https://m.media-amazon.com/images/I/61k8DJLNykL._AC_UF1000,1000_QL80_.jpg",
     "rating": "8.9",
-    "priceCents": "",
+    "priceCents": "380",
     "type": "phoneCharger",
     "keywords": "",
     "id": "340",

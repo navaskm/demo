@@ -81,10 +81,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding-left: 15px;
 
         @media (max-width:768px) {
           flex-direction: column;
-          padding-left: 10px;
         }
 
         .cart-details-display{
@@ -93,7 +93,7 @@
             object-fit: contain;
           }
           div{
-            margin-left: 5px;
+            margin-left: 30px;
             h5{
               color: rgb(77, 76, 76);
             }
@@ -105,8 +105,41 @@
             }
             p{
               color: rgb(99, 98, 98);
+              margin: 0;
               span{
                 color: black;
+              }
+            }
+            .quantity-plus-mines-button-display{
+              display: flex;
+              align-items: center;
+              margin: 0;
+              p{
+                span{
+                  border: 1px solid gray;
+                  margin: 5px;
+                  padding: 0px 10px;
+                  border-radius: 2px;
+                  font-size: 16px;
+                  font-weight: 600;
+                }
+                .minus-button,
+                .plus-button{
+                  border-radius: 50%;
+                  cursor: pointer;
+                  transition: background-color 0.3s ease-in-out;
+                  border: 1px solid blue;
+                  font-size: 18px;
+                  padding: 0px 7px;
+                  font-weight: 900;
+                  margin: 5px;
+                  background-color: rgb(233, 233, 233);
+                }
+
+                .not-allow-button{
+                  background-color: gray;
+                  border-radius: black;
+                }
               }
             }
           }
@@ -160,6 +193,13 @@
             font-family: 'Courier New', Courier, monospace;
           }
         }
+      }
+      .remove-cart{
+        margin-left: 10%;
+        color: black;
+        cursor: pointer;
+        width: fit-content;
+       // border: 3px solid red;
       }
     }
   }

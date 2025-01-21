@@ -26,7 +26,6 @@ const CartPage = () => {
     };
   }, []);
 
-
   return (
     <>
       <Suspense fallback={<p>loading...</p>}>

@@ -10,9 +10,13 @@ const cartSlice = createSlice({
   reducers: {
     addToCart: (state)=>{
       state.cartBase++;
+    },
+    removeFromCart: (state)=> {
+      state.cartBase--;
     }
   }
 })
 
 export default cartSlice.reducer;
 export const {addToCart} = cartSlice.actions;
+export const {removeFromCart} = cartSlice.actions;

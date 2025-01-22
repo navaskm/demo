@@ -2,10 +2,9 @@ import { useSelector, useDispatch } from "react-redux";
 import { useState, useEffect } from "react";
 import { MdRemoveShoppingCart } from "react-icons/md";
 
-import { addItem } from "../../SelectedPage/ImageDisplay/AddToCartBtn/cartSlice";
-import { addDeliveryDate } from "./cartItems";
-import { addToCart, removeFromCart } from "../../HomePage/navbar/CartLogo/cartLogoSlice";
-import { removeItemQuantity } from "../../SelectedPage/ImageDisplay/AddToCartBtn/cartSlice";
+import { addItem, removeItemQuantity, removeItem } from "../../SelectedPage/ImageDisplay/AddToCartBtn/cartSlice";
+import { addDeliveryDate, removeDeliveryDate } from "./cartItems";
+import { addToCart, removeFromCart, removeFromCartOfQuantityBase } from "../../HomePage/navbar/CartLogo/cartLogoSlice";
 
 type Products = {
   id: string;
@@ -36,16 +35,21 @@ const CartItems = () => {
 
       setSelectedOptions((prev) => ({ ...prev, ...defaultOptions }));
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [checkoutItems]);
 
-  // Dispatch delivery dates when selected options change
   useEffect(() => {
-    const uniqueUpdates = new Set(Object.entries(selectedOptions));
-    uniqueUpdates.forEach(([key, selectedOption]) => {
-      dispatch(addDeliveryDate({ id: key, selectedOption }));
+    // Filter unique keys to avoid redundant dispatches
+    Object.entries(selectedOptions).forEach(([key, selectedOption]) => {
+      const existingItem = checkoutItems.find(
+        (item) => `${item.id}-${item.selectedSize.replace(".size-", "")}` === key
+      );
+  
+      if (existingItem) {
+        dispatch(addDeliveryDate({ id: key, selectedOption }));
+      }
     });
-  }, [selectedOptions, dispatch]);
+  }, [selectedOptions, checkoutItems, dispatch]);
+  
 
   const findDeliveryDate = (deliveryDate: number) => {
     const date = new Date();
@@ -93,7 +97,16 @@ const CartItems = () => {
     }
 
   };
-  
+
+  // remove from cart 
+  const handleRemoveItem = (id: string, selectedSize: string, itemQuantity: number,selectedOption:string,dateId:string) => {
+    dispatch(removeItem({ id, selectedSize }));
+
+    let productId = dateId.replace('.size-', '');
+    dispatch(removeDeliveryDate({ productId, selectedOption }));
+
+    dispatch(removeFromCartOfQuantityBase({ quantity: itemQuantity }));
+  };
 
   return (
     <div className="col-12 col-lg-8 cart-items-container">
@@ -149,7 +162,7 @@ const CartItems = () => {
               <div className="col-12 col-md-6 delivery-date-option-container">
                 <h5>Choose a delivery option:</h5>
                 {["option1", "option2", "option3"].map((option, i) => {
-                const deliveryDate = findDeliveryDate(7 - i * 2); // Start from the latest and decrement by 3
+                const deliveryDate = findDeliveryDate(7 - i * 2);
                   return (
                     <div key={i}>
                       <input
@@ -168,7 +181,12 @@ const CartItems = () => {
               </div>
 
             </div>
-            <h5 className="remove-cart" title="Remove this item">
+            <h5 
+              className="remove-cart" 
+              title="Remove this item"
+              onClick={()=>handleRemoveItem(item.id, item.selectedSize,item.quantity,selectedOption,
+                `${item.id}-${item.selectedSize}`)}
+            >
               <MdRemoveShoppingCart />
               REMOVE
             </h5>

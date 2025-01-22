@@ -40,16 +40,12 @@ const cartSlice = createSlice({
 
     // remove item from cart
     removeItem: (state,action)=> {
-      // const existingItem = state.items.findIndex(item => item.id === action.payload.id && item.selectedSize === action.payload.selectedSize);
-      // if(existingItem){
-      //   existingItem.splice(existingItem, 1);
-      // }
       const itemIndex = state.items.findIndex(
         (item) => item.id === action.payload.id && item.selectedSize === action.payload.selectedSize
       );
     
       if (itemIndex !== -1) {
-        state.items.splice(itemIndex, 1); // Properly remove the item from the array
+        state.items.splice(itemIndex, 1);
       }
     }
 

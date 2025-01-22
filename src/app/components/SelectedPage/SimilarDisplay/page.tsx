@@ -6,43 +6,43 @@ import BackToTop from "./BackToTop/page";
 
 // api similar product lines
 
-// id = 311 is missing
+// id 311 is missing
 
 // watch = 1 to 233        = 21
-// shoes = 234 to 464      = 21
-// mens = 464 to 695       = 21
-// women = 696 to 926      = 21
-// Jewelry = 927 to 1157   = 21
-// sound-hub = 1158 to 1344= 17
-// sunglass = 1345 to 1399 = 5
-// toys = 1400 to 1498     = 9
+// shoes = 234 to 611      = 21
+// mens = 612 to 968      = 21
+// women = 969 to 1325      = 21
+// Jewelry = 1326 to 1556   = 21
+// sound-hub = 1557 to 1743 = 17
+// sunglass = 1744 to 1828 = 5
+// toys = 1830 to 1927     = 9
                   //total = 136  
 
-// refrigerator 1499 to 1586 = 8 
-// washing machine 1587 to 1674 = 8
-// gas cooker 1675 to 1762 = 8
-// AC 1763 to 1849 = 8
-// bed 1850 to 1894 = 4
-// table 1895 to 1938 = 4
+// refrigerator 1928 to 2015 = 8 
+// washing machine 2016 to 2103 = 8
+// gas cooker 2104 to 2191 = 8
+// AC 2192 to 2278 = 8
+// bed 2279 to 2323 = 4
+// table 2324 to 2367 = 4
               //total = 40 
 
-// lapTop 1939 to 2180 = 21
-// perFume 2181 to 2279 = 10
-// cooker 2280 to 2389 = 10
-// bulb 2390 to 2532 = 13
-// umbrella 2533 to 2609 = 7
-// chair 2610 to 2686 = 7
+// lapTop 2368 to 2598 = 21
+// perFume 2599 to 2708 = 10
+// cooker 2709 to 2818 = 10
+// bulb 2818 to 2961 = 13
+// umbrella 2962 to 3038 = 7
+// chair 3039 to 3115 = 7
                   //total = 68
 
-// TV 2687 to 2829 = 13
-// water hose 2830 to 2873 = 4
-// slipper 2874 to 3104 = 21
-// curtain 3105 to 3170 = 6
-// tank 3171 to 3236 = 6
-// clock 3237 to 3423 = 17
-// water bottle 3424 to 3522 = 9
-// healthy food 3523 to 3709 = 17
-// phone charger 3710 to 37 = 8
+// TV 3116 to 3258 = 13
+// water hose 3259 to 3302 = 4
+// slipper 3303 to 3680  = 21
+// curtain 3681 to 3746 = 6
+// tank 3747 to 3812 = 6
+// clock 3813 to 3999 = 17
+// water bottle 4000 to 4098 = 9
+// healthy food 4099 to 4285 = 17
+// phone charger 4286 to 4374 = 8
                     // total = 101
 
 type Products = {
@@ -150,6 +150,7 @@ const SimilarProducts = async ({selectedImage}:{selectedImage:Products}) => {
                   company: encodeURIComponent(product.company),
                   madein: encodeURIComponent(product.madein),
                   Feature: encodeURIComponent(product.Feature),
+                  size: product.size,
                 }
               }}>
                 <img src={product.image} alt={product.name}/>

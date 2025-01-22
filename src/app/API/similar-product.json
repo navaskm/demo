@@ -240,7 +240,14 @@
     "id": "21",
     "company": "Nike",
     "madein": "Qatar",
-    "Feature": "Nike Air Force 1: Iconic sneakers blending classic style with superior comfort, featuring a durable leather upper and responsive cushioning."
+    "Feature": "Nike Air Force 1: Iconic sneakers blending classic style with superior comfort, featuring a durable leather upper and responsive cushioning.",
+    "size": [
+      "IND-5",
+      "IND-6",
+      "IND-7",
+      "IND-8",
+      "IND-9"
+    ]
   },{
     "name": "Adidas Ultraboost",
     "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRliGz3BxdCg_1M-rhfEorz5nYdaOetj1lworFZA8SdklK_X1w7H_ZFjZ3a2MBGMMrRKwCp52BYD1blM8xWY1Glw4uJzo3N5FJAlVBvXrEMRysM9eelNx33ZY0",
@@ -251,7 +258,14 @@
     "id": "22",
     "company": "Adidas",
     "madein": "India",
-    "Feature": "Adidas Ultraboost: High-performance running shoes featuring responsive Boost cushioning and a breathable Primeknit upper for unmatched comfort and energy return."
+    "Feature": "Adidas Ultraboost: High-performance running shoes featuring responsive Boost cushioning and a breathable Primeknit upper for unmatched comfort and energy return.",
+    "size": [
+      "IND-5",
+      "IND-6",
+      "IND-7",
+      "IND-8",
+      "IND-9"
+    ]
   },{
     "name": "Puma Suede Classic",
     "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSBblLoD0tp1nZSfieT6Vrx0FWUQDzO6Lbtyp3CJQ4G8xX-XPwMeU5NhKZwjnNFAw-KIBdbKdZjjP141a40mEBYnW1qEZG5V5WQ8OCIgPILyGA54u4fiqu8WSA",
@@ -262,7 +276,14 @@
     "id": "23",
     "company": "Puma",
     "madein": "China",
-    "Feature": "Puma Suede Classic: Timeless sneakers with a soft suede upper, sleek design, and durable rubber sole, perfect for casual and streetwear styles."
+    "Feature": "Puma Suede Classic: Timeless sneakers with a soft suede upper, sleek design, and durable rubber sole, perfect for casual and streetwear styles.",
+    "size": [
+      "IND-5",
+      "IND-6",
+      "IND-7",
+      "IND-8",
+      "IND-9"
+    ]
   },{
     "name": "Reebok Classic Leather",
     "image": "https://atlas-content-cdn.pixelsquid.com/assets_v2/247/2470773570247070782/jpeg-600/G03.jpg?modifiedAt=1",
@@ -273,7 +294,14 @@
     "id": "24",
     "company": "Lancer",
     "madein": "Japan",
-    "Feature": "Reebok Classic Leather: Iconic sneakers with a premium leather upper, cushioned comfort, and timeless design, ideal for everyday wear."
+    "Feature": "Reebok Classic Leather: Iconic sneakers with a premium leather upper, cushioned comfort, and timeless design, ideal for everyday wear.",
+    "size": [
+      "IND-5",
+      "IND-6",
+      "IND-7",
+      "IND-8",
+      "IND-9"
+    ]
   },{
     "name": "Converse Chuck Taylor All Star",
     "image": "https://www.converse.in/media/catalog/product/5/6/560845c_01.jpg?auto=webp&format=pjpg&width=640&height=800&fit=cover",
@@ -284,7 +312,14 @@
     "id": "25",
     "company": "Nike",
     "madein": "America",
-    "Feature": "Converse Chuck Taylor All Star: Legendary sneakers with a durable canvas upper, rubber sole, and timeless design, embodying casual style and versatility."
+    "Feature": "Converse Chuck Taylor All Star: Legendary sneakers with a durable canvas upper, rubber sole, and timeless design, embodying casual style and versatility.",
+    "size": [
+      "IND-5",
+      "IND-6",
+      "IND-7",
+      "IND-8",
+      "IND-9"
+    ]
   },{
     "name": "New Balance 574",
     "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSFgg5Y5GeZtBAHEU3ON2bKOaFFYxC4Y1W3lkgh6Nsz827KXc5bXdpXGgq9NL_TRAB0D8cQqe6nLyXL20kOuX8wyyd1TAVdtMAKBJIdgOQSGS1istb-JInv",
@@ -295,7 +330,14 @@
     "id": "26",
     "company": "Adidas",
     "madein": "China",
-    "Feature": "New Balance 574: Classic sneakers combining retro style with modern comfort, featuring durable materials and ENCAP cushioning for all-day support."
+    "Feature": "New Balance 574: Classic sneakers combining retro style with modern comfort, featuring durable materials and ENCAP cushioning for all-day support.",
+    "size": [
+      "IND-5",
+      "IND-6",
+      "IND-7",
+      "IND-8",
+      "IND-9"
+    ]
   },{
     "name": "Vans Old Skool",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsDIYyXNjdGAVrbUqKR9ZcZWRtUkGW-fX9AA&s",
@@ -306,7 +348,14 @@
     "id": "27",
     "company": "Puma",
     "madein": "Germany",
-    "Feature": "Vans Old Skool: Iconic skate shoes with a durable canvas and suede upper, signature side stripe, and vulcanized rubber sole for timeless style and performance."
+    "Feature": "Vans Old Skool: Iconic skate shoes with a durable canvas and suede upper, signature side stripe, and vulcanized rubber sole for timeless style and performance.",
+    "size": [
+      "IND-5",
+      "IND-6",
+      "IND-7",
+      "IND-8",
+      "IND-9"
+    ]
   },{
     "name": "Asics Gel-Kayano",
     "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTTBWh8eEokGwGKc7vr2kmbqtGg4vtZfFvYYAzH3NVUOWQzwRlaUVuuXOlNBn87INZFVglLZcg4OkJbS6eic3ReyOjoduEY0z6EghydkroojDiah0Tk3bdfVSY",
@@ -317,7 +366,14 @@
     "id": "28",
     "company": "Lancer",
     "madein": "India",
-    "Feature": "Asics Gel-Kayano: Premium running shoes offering exceptional stability, advanced GEL cushioning, and a comfortable fit for long-distance performance."
+    "Feature": "Asics Gel-Kayano: Premium running shoes offering exceptional stability, advanced GEL cushioning, and a comfortable fit for long-distance performance.",
+    "size": [
+      "IND-5",
+      "IND-6",
+      "IND-7",
+      "IND-8",
+      "IND-9"
+    ]
   },{
     "name": "Under Armour Curry Flow",
     "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTXHwbfshsp9Hr94FjWtjP8VpcuQPXWu1VKb6FYQnPFE0bdLF25RXREQhyxrGm8M0bIIDHuU5hKT2mRuvvydm2R45klbCLVPnEXPMsfOV0",
@@ -328,7 +384,14 @@
     "id": "29",
     "company": "Adidas",
     "madein": "Japan",
-    "Feature": "Under Armour Curry Flow: High-performance basketball shoes featuring UA Flow technology for lightweight cushioning, superior traction, and explosive on-court agility."
+    "Feature": "Under Armour Curry Flow: High-performance basketball shoes featuring UA Flow technology for lightweight cushioning, superior traction, and explosive on-court agility.",
+    "size": [
+      "IND-5",
+      "IND-6",
+      "IND-7",
+      "IND-8",
+      "IND-9"
+    ]
   },{
     "name": "Timberland Classic 6-Inch Boot",
     "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSzwLcTMZAbFfPxi-Kn166BivcSz_VbgLJ2j6twY3e50GATmKEGPb6BL5_A2VpsOq5heam8BAIr2MbJwqHQMhP-ELRdENFYlXnA3Ev0n_8",
@@ -339,7 +402,14 @@
     "id": "30",
     "company": "Nike",
     "madein": "Japan",
-    "Feature": "Timberland Classic 6-Inch Boot: Durable and rugged boots made with premium leather, waterproof construction, and a comfortable padded collar, perfect for outdoor adventures and casual wear."
+    "Feature": "Timberland Classic 6-Inch Boot: Durable and rugged boots made with premium leather, waterproof construction, and a comfortable padded collar, perfect for outdoor adventures and casual wear.",
+    "size": [
+      "IND-5",
+      "IND-6",
+      "IND-7",
+      "IND-8",
+      "IND-9"
+    ]
   },{
     "name": "Skechers D'Lites",
     "image": "https://images-cdn.ubuy.qa/6482af2b1f253103fe594a41-skechers-d-lites-4-0-preto-branco.jpg",
@@ -350,7 +420,14 @@
     "id": "31",
     "company": "Puma",
     "madein": "Qatar",
-    "Feature": "Skechers D'Lites: Comfortable and stylish sneakers with a chunky design, featuring memory foam cushioning for all-day comfort and support."
+    "Feature": "Skechers D'Lites: Comfortable and stylish sneakers with a chunky design, featuring memory foam cushioning for all-day comfort and support.",
+    "size": [
+      "IND-5",
+      "IND-6",
+      "IND-7",
+      "IND-8",
+      "IND-9"
+    ]
   },{
     "name": "Jordan 1 Retro High",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCT6XuNyPgwYLaN94tHzSOj-BwpfldHaz2cQ&s",
@@ -361,7 +438,14 @@
     "id": "32",
     "company": "Lancer",
     "madein": "Russia",
-    "Feature": "Jordan 1 Retro High: Iconic high-top sneakers featuring premium leather construction, a timeless design, and superior ankle support, perfect for both style and performance."
+    "Feature": "Jordan 1 Retro High: Iconic high-top sneakers featuring premium leather construction, a timeless design, and superior ankle support, perfect for both style and performance.",
+    "size": [
+      "IND-5",
+      "IND-6",
+      "IND-7",
+      "IND-8",
+      "IND-9"
+    ]
   },{
     "name": "Clarks Desert Boot",
     "image": "https://i.etsystatic.com/8903476/r/il/62c36a/4702023971/il_fullxfull.4702023971_b015.jpg",
@@ -372,7 +456,14 @@
     "id": "33",
     "company": "Adidas",
     "madein": "America",
-    "Feature": "Clarks Desert Boot: Classic and versatile ankle boots made from premium suede or leather, featuring a crepe rubber sole for comfort and durability."
+    "Feature": "Clarks Desert Boot: Classic and versatile ankle boots made from premium suede or leather, featuring a crepe rubber sole for comfort and durability.",
+    "size": [
+      "IND-5",
+      "IND-6",
+      "IND-7",
+      "IND-8",
+      "IND-9"
+    ]
   },{
     "name": "Crocs Classic Clog",
     "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcS4EcXgg7mXEePPt9c_4WSsYU9e_18G9N-YlIh3GXsJmA8XQxoVk7WP9Uayf6AL34ftvYZkjora5OOihxSnbEgL4Y7fyXMrVWUi1IWDs8h7",
@@ -383,7 +474,14 @@
     "id": "34",
     "company": "Nike",
     "madein": "China",
-    "Feature": "Crocs Classic Clog: Comfortable and lightweight slip-on shoes made from Croslite material, offering exceptional cushioning, breathability, and easy-to-clean convenience."
+    "Feature": "Crocs Classic Clog: Comfortable and lightweight slip-on shoes made from Croslite material, offering exceptional cushioning, breathability, and easy-to-clean convenience.",
+    "size": [
+      "IND-5",
+      "IND-6",
+      "IND-7",
+      "IND-8",
+      "IND-9"
+    ]
   },{
     "name": "Birkenstock Arizona Sandals",
     "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRB02O3KxtYQXcLImD9TZoKuw-Ufud1roI_lRaMVJn2H7mShz9eOjq2oLHw0rXG_VgPSQifkzxduoobQVNVfOPut9mAQoXmcwHQfBNopQweQ5rXGyBuRAjwTw",
@@ -394,7 +492,14 @@
     "id": "35",
     "company": "Puma",
     "madein": "Germany",
-    "Feature": "Birkenstock Arizona Sandals: Adjustable, comfortable sandals featuring contoured cork footbeds that provide excellent arch support and durability for all-day wear."
+    "Feature": "Birkenstock Arizona Sandals: Adjustable, comfortable sandals featuring contoured cork footbeds that provide excellent arch support and durability for all-day wear.",
+    "size": [
+      "IND-5",
+      "IND-6",
+      "IND-7",
+      "IND-8",
+      "IND-9"
+    ]
   },{
     "name": "Salomon Speedcross",
     "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRDebCxZzblhSVDX-KPXu24rgjj73-IRUWtwWb7BoZXHXsbk89f-H46wU9cEO1tpXVsihRgzSvQAgVbdyEVzFfoBT1t7z3Rice8oJH-FO4KoNs_7twkVTyUJg",
@@ -405,7 +510,14 @@
     "id": "36",
     "company": "Lancer",
     "madein": "India",
-    "Feature": "Salomon Speedcross: High-performance trail running shoes designed for rugged terrains, featuring aggressive traction, superior grip, and responsive cushioning for enhanced stability and comfort."
+    "Feature": "Salomon Speedcross: High-performance trail running shoes designed for rugged terrains, featuring aggressive traction, superior grip, and responsive cushioning for enhanced stability and comfort.",
+    "size": [
+      "IND-5",
+      "IND-6",
+      "IND-7",
+      "IND-8",
+      "IND-9"
+    ]
   },{
     "name": "Hoka One One Clifton",
     "image": "https://www.shutterstock.com/shutterstock/photos/1934397779/display_1500/stock-photo-sinsheim-germany-product-photo-hoka-one-one-w-clifton-edge-1934397779.jpg",
@@ -416,7 +528,14 @@
     "id": "37",
     "company": "Adidas",
     "madein": "Qatar",
-    "Feature": "Hoka One One Clifton: Lightweight running shoes with plush cushioning, providing exceptional comfort, support, and a smooth ride for long-distance runners."
+    "Feature": "Hoka One One Clifton: Lightweight running shoes with plush cushioning, providing exceptional comfort, support, and a smooth ride for long-distance runners.",
+    "size": [
+      "IND-5",
+      "IND-6",
+      "IND-7",
+      "IND-8",
+      "IND-9"
+    ]
   },{
     "name": "Merrell Moab 2 Hiking Shoe",
     "image": "https://m.media-amazon.com/images/I/81HEXNlrgqL.jpg",
@@ -427,7 +546,14 @@
     "id": "38",
     "company": "Nike",
     "madein": "Russia",
-    "Feature": "Merrell Moab 2 Hiking Shoe: Durable and supportive hiking shoes with a Vibram sole for superior traction, breathable mesh upper, and cushioned footbed for comfort on rugged trails."
+    "Feature": "Merrell Moab 2 Hiking Shoe: Durable and supportive hiking shoes with a Vibram sole for superior traction, breathable mesh upper, and cushioned footbed for comfort on rugged trails.",
+    "size": [
+      "IND-5",
+      "IND-6",
+      "IND-7",
+      "IND-8",
+      "IND-9"
+    ]
   },{
     "name": "Dr. Martens 1460 Boots",
     "image": "https://www.shutterstock.com/image-photo/dr-martens-black-male-boots-600nw-2515967805.jpg",
@@ -438,7 +564,14 @@
     "id": "39",
     "company": "Puma",
     "madein": "America",
-    "Feature": "Dr. Martens 1460 Boots: Iconic leather boots with the signature yellow stitching, air-cushioned sole, and durable construction, offering style, comfort, and long-lasting wear."
+    "Feature": "Dr. Martens 1460 Boots: Iconic leather boots with the signature yellow stitching, air-cushioned sole, and durable construction, offering style, comfort, and long-lasting wear.",
+    "size": [
+      "IND-5",
+      "IND-6",
+      "IND-7",
+      "IND-8",
+      "IND-9"
+    ]
   },{
     "name": "Balenciaga Triple S Sneakers",
     "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQaZelA2fQ_NL4hEr0m2FxA4YW_69rJYfpUO6Vi1YlL5nNJryCR5D4FDbZHzCncW8HFvP93Oua432NhJORynKlqBq0ZG838",
@@ -449,7 +582,14 @@
     "id": "40",
     "company": "Lancer",
     "madein": "China",
-    "Feature": "Balenciaga Triple S Sneakers: Bold, oversized sneakers with a chunky design, combining premium materials, multiple layers, and enhanced cushioning for a high-fashion streetwear look."
+    "Feature": "Balenciaga Triple S Sneakers: Bold, oversized sneakers with a chunky design, combining premium materials, multiple layers, and enhanced cushioning for a high-fashion streetwear look.",
+    "size": [
+      "IND-5",
+      "IND-6",
+      "IND-7",
+      "IND-8",
+      "IND-9"
+    ]
   },{
     "name": "Gucci Ace Sneakers",
     "image": "https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1691081174/760774_FACMZ_9746_012_100_0000_Light-Womens-Gucci-Ace-sneaker-with-Web.jpg",
@@ -460,7 +600,14 @@
     "id": "41",
     "company": "Adidas",
     "madein": "India",
-    "Feature": "Gucci Ace Sneakers: Luxury sneakers featuring a sleek leather design, signature green and red stripes, and embroidered details, combining elegance with casual style."
+    "Feature": "Gucci Ace Sneakers: Luxury sneakers featuring a sleek leather design, signature green and red stripes, and embroidered details, combining elegance with casual style.",
+    "size": [
+      "IND-5",
+      "IND-6",
+      "IND-7",
+      "IND-8",
+      "IND-9"
+    ]
   },{
     "name": "Calvin Klein Slim Fit Dress Shirt",
     "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQWF6DQSqzzy6Bi6vMKkFWE1THieDtjjRSCbitURSiYfQ0SlUV4hmS4wfIcV6U45jUGTTaLKLjVtTd77cSOS53jmYKYv3REZfP1_U3gU-YP05rbgWJeLDEa_g",
@@ -471,7 +618,13 @@
     "id": "42",
     "company": "Van Heusen.",
     "madein": "America",
-    "Feature": "Calvin Klein Slim Fit Dress Shirt: A stylish and modern dress shirt featuring a slim fit cut, crisp fabric, and subtle detailing for a sharp, sophisticated look."
+    "Feature": "Calvin Klein Slim Fit Dress Shirt: A stylish and modern dress shirt featuring a slim fit cut, crisp fabric, and subtle detailing for a sharp, sophisticated look.",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ]
   },{
     "name": "Hugo Boss Two-Piece Suit",
     "image": "https://m.media-amazon.com/images/I/71WQ0KrHbOL._AC_UY1100_.jpg",
@@ -482,7 +635,13 @@
     "id": "43",
     "company": "Louis Philippe.",
     "madein": "China",
-    "Feature": "Hugo Boss Two-Piece Suit: A finely tailored suit crafted from premium fabric, offering a sleek, contemporary silhouette with sophisticated detailing for formal occasions."
+    "Feature": "Hugo Boss Two-Piece Suit: A finely tailored suit crafted from premium fabric, offering a sleek, contemporary silhouette with sophisticated detailing for formal occasions.",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ]
   },{
     "name": "Ralph Lauren Polo Dress Shirt",
     "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRrFrwG4jNCODw1_617rWzLRM_naKOQDk77tVA68wxZ0cgaEgBhbyPUFIFPMbHcZ16VHuUXEescm_eIimvRBuD3vUeVkZkZwjrOI4rnzayry0ltkG9wxHgWVA",
@@ -493,7 +652,13 @@
     "id": "44",
     "company": "Park Avenue.",
     "madein": "Germany",
-    "Feature": "Ralph Lauren Polo Dress Shirt: A timeless and refined dress shirt made from high-quality cotton, featuring the iconic polo player embroidery and a classic fit for a polished look."
+    "Feature": "Ralph Lauren Polo Dress Shirt: A timeless and refined dress shirt made from high-quality cotton, featuring the iconic polo player embroidery and a classic fit for a polished look.",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ]
   },{
     "name": "Tommy Hilfiger Classic Fit Shirt",
     "image": "https://cdn13.nnnow.com/web-images/large/styles/NPPD0KH0T5K/1677758583296/1.jpg",
@@ -504,7 +669,13 @@
     "id": "45",
     "company": "Raymond.",
     "madein": "India",
-    "Feature": "Tommy Hilfiger Classic Fit Shirt: A versatile, comfortable shirt made from soft cotton, offering a relaxed fit with timeless styling and the signature Tommy Hilfiger logo."
+    "Feature": "Tommy Hilfiger Classic Fit Shirt: A versatile, comfortable shirt made from soft cotton, offering a relaxed fit with timeless styling and the signature Tommy Hilfiger logo.",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ]
   },{
     "name": "J. Crew Ludlow Suit",
     "image": "https://www.jcrew.com/brand_creative/2019/201909-Sept/m-ludlow/201909_0820_m_suiting_img0m.jpg",
@@ -515,7 +686,13 @@
     "id": "46",
     "company": "Van Heusen",
     "madein": "Japan",
-    "Feature": "J. Crew Ludlow Suit: A well-tailored suit made from high-quality wool, offering a slim, modern fit with a sleek silhouette and attention to detail for a sharp, polished appearance."
+    "Feature": "J. Crew Ludlow Suit: A well-tailored suit made from high-quality wool, offering a slim, modern fit with a sleek silhouette and attention to detail for a sharp, polished appearance.",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ]
   },{
     "name": "Charles Tyrwhitt French Cuff Shirt",
     "image": "https://www.misiuacademy.com/wp-content/uploads/2020/06/DSC00781.jpg",
@@ -526,7 +703,13 @@
     "id": "47",
     "company": "Louis Philippe.",
     "madein": "Qatar",
-    "Feature": "Charles Tyrwhitt French Cuff Shirt: A luxurious dress shirt made from premium cotton, featuring elegant French cuffs and a refined, classic fit for a sophisticated, formal loo"
+    "Feature": "Charles Tyrwhitt French Cuff Shirt: A luxurious dress shirt made from premium cotton, featuring elegant French cuffs and a refined, classic fit for a sophisticated, formal loo",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ]
   },{
     "name": "Brooks Brothers Madison Fit Suit",
     "image": "https://di2ponv0v5otw.cloudfront.net/posts/2024/02/12/65ca9c90bd66cda3507c83aa/m_65cf8a69678c3afb308bb250.jpg",
@@ -537,7 +720,13 @@
     "id": "48",
     "company": "Park Avenue.",
     "madein": "Russia",
-    "Feature": "Brooks Brothers Madison Fit Suit: A timeless suit with a classic cut, crafted from fine wool, offering a comfortable fit and sophisticated styling for both formal and business occasions."
+    "Feature": "Brooks Brothers Madison Fit Suit: A timeless suit with a classic cut, crafted from fine wool, offering a comfortable fit and sophisticated styling for both formal and business occasions.",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ]
   },{
     "name": "Banana Republic Performance Stretch Shirt",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfNjv6MAvYeX3beM-NgQgoP7TLI1ktb1tHaA&s",
@@ -548,7 +737,13 @@
     "id": "49",
     "company": "Raymond.",
     "madein": "America",
-    "Feature": "Banana Republic Performance Stretch Shirt: A sleek and comfortable shirt made with stretch fabric, offering a tailored fit and enhanced flexibility for all-day wear and movement."
+    "Feature": "Banana Republic Performance Stretch Shirt: A sleek and comfortable shirt made with stretch fabric, offering a tailored fit and enhanced flexibility for all-day wear and movement.",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ]
   },{
     "name": "Levi's 511 Slim Fit Jeans",
     "image": "https://rukminim2.flixcart.com/image/850/1000/xif0q/jean/t/h/1/32-18298-1268-levi-s-original-imaget8jrfzwqhrw-bb.jpeg?q=90&crop=false",
@@ -559,7 +754,13 @@
     "id": "50",
     "company": "Van Heusen",
     "madein": "China",
-    "Feature": "Levi's 511 Slim Fit Jeans: Stylish slim-fit jeans made from durable denim, offering a modern, tailored look with just the right amount of stretch for comfort and flexibility."
+    "Feature": "Levi's 511 Slim Fit Jeans: Stylish slim-fit jeans made from durable denim, offering a modern, tailored look with just the right amount of stretch for comfort and flexibility.",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ]
   },{
     "name": "Dockers Classic Fit Khaki Pants",
     "image": "https://slimages.macysassets.com/is/image/MCY/products/3/optimized/19983773_fpx.tif?$filterlrg$&wid=327",
@@ -570,7 +771,13 @@
     "id": "51",
     "company": "Louis Philippe.",
     "madein": "Germany",
-    "Feature": "Dockers Classic Fit Khaki Pants: Versatile and comfortable khakis with a classic fit, featuring a timeless design and durable fabric perfect for both casual and business casual settings."
+    "Feature": "Dockers Classic Fit Khaki Pants: Versatile and comfortable khakis with a classic fit, featuring a timeless design and durable fabric perfect for both casual and business casual settings.",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ]
   },{
     "name": "Ted Baker London Dress Shirt",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQqQCiC3CLJR32czNF2jRLtqDkg6BvQGxYYg&s",
@@ -581,7 +788,13 @@
     "id": "52",
     "company": "Park Avenue.",
     "madein": "India",
-    "Feature": "Ted Baker London Dress Shirt: A refined and stylish dress shirt made from high-quality cotton, featuring unique detailing and a sharp, tailored fit for an elevated look."
+    "Feature": "Ted Baker London Dress Shirt: A refined and stylish dress shirt made from high-quality cotton, featuring unique detailing and a sharp, tailored fit for an elevated look.",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ]
   },{
     "name": "Ermenegildo Zegna Wool Suit",
     "image": "https://productimage.zegna.com/is/image/zegna/C22622-221225--D?wid=412&hei=549",
@@ -592,7 +805,13 @@
     "id": "53",
     "company": "Louis Philippe.",
     "madein": "Japan",
-    "Feature": "Ermenegildo Zegna Wool Suit: A luxurious suit crafted from fine wool, offering an impeccable fit, sophisticated design, and timeless elegance for the discerning gentleman."
+    "Feature": "Ermenegildo Zegna Wool Suit: A luxurious suit crafted from fine wool, offering an impeccable fit, sophisticated design, and timeless elegance for the discerning gentleman.",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ]
   },{
     "name": "Paul Smith Tailored Shirt",
     "image": "https://assets.ajio.com/medias/sys_master/root/20240513/NDso/66420d8905ac7d77bb56dfdd/-473Wx593H-410405860-55a-MODEL.jpg",
@@ -603,7 +822,13 @@
     "id": "54",
     "company": "Park Avenue.",
     "madein": "Qatar",
-    "Feature": "Paul Smith Tailored Shirt: A sophisticated shirt featuring a slim, tailored fit, crafted from premium cotton with distinctive detailing and a subtle, modern twist on classic designs."
+    "Feature": "Paul Smith Tailored Shirt: A sophisticated shirt featuring a slim, tailored fit, crafted from premium cotton with distinctive detailing and a subtle, modern twist on classic designs.",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ]
   },{
     "name": "Ralph Lauren Custom Slim Fit Chinos",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy8aFaVaE3caLRTRY1QiP5ToWQ4yLUX1yP1w&s",
@@ -614,7 +839,13 @@
     "id": "55",
     "company": "Raymond.",
     "madein": "Russia",
-    "Feature": "Ralph Lauren Custom Slim Fit Chinos: Stylish chinos with a custom slim fit, made from soft cotton with just the right amount of stretch for a comfortable, sharp look."
+    "Feature": "Ralph Lauren Custom Slim Fit Chinos: Stylish chinos with a custom slim fit, made from soft cotton with just the right amount of stretch for a comfortable, sharp look.",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ]
   },{
     "name": "Armani Collezioni Dress Shirt",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZH8zAUXr_S9U3YREGwn50OuBCGNTE05Rly7WcbPIgJdQWsBqfFO1x-JhgkLZfV3whuNk&usqp=CAU",
@@ -625,7 +856,13 @@
     "id": "56",
     "company": "Van Heusen",
     "madein": "America",
-    "Feature": "Armani Collezioni Dress Shirt: A luxurious dress shirt made from premium fabric, offering a sleek, refined fit with elegant details that exude sophistication and timeless style."
+    "Feature": "Armani Collezioni Dress Shirt: A luxurious dress shirt made from premium fabric, offering a sleek, refined fit with elegant details that exude sophistication and timeless style.",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ]
   },{
     "name": "Michael Kors Slim Fit Suit",
     "image": "https://www.tiptop.ca/cdn/shop/files/TT-5114-662-4014_lightgrey_1800x.jpg?v=1706035042",
@@ -636,7 +873,13 @@
     "id": "57",
     "company": "Louis Philippe.",
     "madein": "China",
-    "Feature": "Michael Kors Slim Fit Suit: A modern, tailored suit with a slim silhouette, crafted from high-quality fabric for a sharp, contemporary look perfect for formal and business occasions."
+    "Feature": "Michael Kors Slim Fit Suit: A modern, tailored suit with a slim silhouette, crafted from high-quality fabric for a sharp, contemporary look perfect for formal and business occasions.",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ]
   },{
     "name": "Uniqlo EZY Ankle-Length Pants",
     "image": "https://image.uniqlo.com/UQ/ST3/WesternCommon/imagesgoods/427805/item/goods_05_427805_3x4.jpg?width=600",
@@ -647,7 +890,13 @@
     "id": "58",
     "company": "Park Avenue.",
     "madein": "Germany",
-    "Feature": "Uniqlo EZY Ankle-Length Pants: Comfortable and stylish ankle-length pants made with stretch fabric, offering a relaxed fit and a sleek, modern design perfect for casual or smart-casual wear."
+    "Feature": "Uniqlo EZY Ankle-Length Pants: Comfortable and stylish ankle-length pants made with stretch fabric, offering a relaxed fit and a sleek, modern design perfect for casual or smart-casual wear.",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ]
   },{
     "name": "Banana Republic Traveler Pants",
     "image": "https://images.squarespace-cdn.com/content/v1/5437f300e4b01983f004f8c4/1473386657924-5DCEUVC29DYRKVJ648OP/image-asset.jpeg?format=500w",
@@ -658,7 +907,13 @@
     "id": "59",
     "company": "Raymond.",
     "madein": "India",
-    "Feature": "Banana Republic Traveler Pants: Versatile, wrinkle-resistant pants made from a smooth, breathable fabric, designed for comfort and a polished look that transitions effortlessly from work to weekend."
+    "Feature": "Banana Republic Traveler Pants: Versatile, wrinkle-resistant pants made from a smooth, breathable fabric, designed for comfort and a polished look that transitions effortlessly from work to weekend.",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ]
   },{
     "name": "Nike Tech Fleece Joggers",
     "image": "https://img1.theiconic.com.au/fWk2KmdKMlkPsgPkc3RFny3P-WE=/fit-in/406x512/filters:fill(ffffff):quality(90)/http%3A%2F%2Fstatic.theiconic.com.au%2Fp%2Fnike-6396-2274722-1.jpg",
@@ -669,7 +924,13 @@
     "id": "60",
     "company": "Van Heusen",
     "madein": "Japan",
-    "Feature": "Nike Tech Fleece Joggers: Comfortable and stylish joggers made from lightweight Tech Fleece fabric, offering warmth, flexibility, and a sleek, modern fit for active or casual wear."
+    "Feature": "Nike Tech Fleece Joggers: Comfortable and stylish joggers made from lightweight Tech Fleece fabric, offering warmth, flexibility, and a sleek, modern fit for active or casual wear.",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ]
   },{
     "name": "Hanes Beefy-T",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV35Qp5Y5uEmhqNVvRT6c6PzbahRqm-m8MUQ&s",
@@ -680,7 +941,13 @@
     "id": "61",
     "company": "Louis Philippe.",
     "madein": "Qatar",
-    "Feature": "Hanes Beefy-T: A durable and heavyweight t-shirt made from soft cotton, offering a classic fit and long-lasting comfort for everyday wear."
+    "Feature": "Hanes Beefy-T: A durable and heavyweight t-shirt made from soft cotton, offering a classic fit and long-lasting comfort for everyday wear.",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ]
   },{
     "name": "Uniqlo Supima Cotton T-Shirt",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOUz7iwUoCrxCu51nE2bBxWDrNN5AtqiJEwA&s",
@@ -691,7 +958,13 @@
     "id": "62",
     "company": "Park Avenue.",
     "madein": "Russia",
-    "Feature": "Uniqlo Supima Cotton T-Shirt: A premium, soft t-shirt made from high-quality Supima cotton, offering a smooth texture, durability, and a comfortable, breathable fit."
+    "Feature": "Uniqlo Supima Cotton T-Shirt: A premium, soft t-shirt made from high-quality Supima cotton, offering a smooth texture, durability, and a comfortable, breathable fit.",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ]
   },{
     "name": "A-Line Midi Dress",
     "image": "https://assets.ajio.com/medias/sys_master/root/20240728/Q2bL/66a5e8256f60443f31cfba36/-473Wx593H-461637294-orange-MODEL.jpg",
@@ -702,7 +975,13 @@
     "id": "63",
     "company": "Chanel",
     "madein": "America",
-    "Feature": "A-Line Midi Dress: A flattering dress with a fitted bodice and a gently flared skirt that hits at the mid-calf, offering a timeless and elegant silhouette suitable for various occasions."
+    "Feature": "A-Line Midi Dress: A flattering dress with a fitted bodice and a gently flared skirt that hits at the mid-calf, offering a timeless and elegant silhouette suitable for various occasions.",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ]
   },{
     "name": "Fit-and-Flare Cocktail Dress",
     "image": "https://i.etsystatic.com/5609612/r/il/109cfc/1950440768/il_570xN.1950440768_6u59.jpg",
@@ -713,7 +992,13 @@
     "id": "64",
     "company": "Gucci ",
     "madein": "China",
-    "Feature": "Fit-and-Flare Cocktail Dress: A chic and flattering dress with a fitted bodice and a flared skirt, designed to accentuate the waist and offer a graceful, feminine look for evening events."
+    "Feature": "Fit-and-Flare Cocktail Dress: A chic and flattering dress with a fitted bodice and a flared skirt, designed to accentuate the waist and offer a graceful, feminine look for evening events.",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ]
   },{
     "name": "Maxi Evening Gown",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhVnjT9lSHRepTpztaNfroOSeb04uWs0HMyw&s",
@@ -724,7 +1009,13 @@
     "id": "65",
     "company": "Hermès ",
     "madein": "Germany",
-    "Feature": "Maxi Evening Gown: An elegant, floor-length gown designed for formal events, featuring a luxurious fabric and a sophisticated silhouette that exudes timeless beauty and grace."
+    "Feature": "Maxi Evening Gown: An elegant, floor-length gown designed for formal events, featuring a luxurious fabric and a sophisticated silhouette that exudes timeless beauty and grace.",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ]
   },{
     "name": "Bodycon Dress",
     "image": "https://www.mymartini.in/pub/media/catalog/product/cache/d4994f7429ee04aaa6b8d30195df5b07/m/a/mart3104_1.jpg",
@@ -735,7 +1026,13 @@
     "id": "66",
     "company": "Zara ",
     "madein": "India",
-    "Feature": "Bodycon Dress: A figure-hugging dress that contours to the body, emphasizing curves and offering a sleek, modern look ideal for a night out or special occasions."
+    "Feature": "Bodycon Dress: A figure-hugging dress that contours to the body, emphasizing curves and offering a sleek, modern look ideal for a night out or special occasions.",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ]
   },{
     "name": "Shift Dress",
     "image": "https://cdn.laredoute.com/cdn-cgi/image/width=500,height=500,fit=pad,dpr=1/products/2/e/d/2edcf4faf8df3b59e263a50dd1a2b40b.jpg",
@@ -746,7 +1043,13 @@
     "id": "67",
     "company": "Chanel",
     "madein": "Japan",
-    "Feature": "Shift Dress: A loose-fitting, straight-cut dress that falls gently from the shoulders, offering a comfortable and versatile style that can be dressed up or down for various occasions."
+    "Feature": "Shift Dress: A loose-fitting, straight-cut dress that falls gently from the shoulders, offering a comfortable and versatile style that can be dressed up or down for various occasions.",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ]
   },{
     "name": "Empire Waist Dress",
     "image": "https://m.media-amazon.com/images/I/61tVGOUWqNL._AC_UY1100_.jpg",
@@ -757,7 +1060,13 @@
     "id": "68",
     "company": "Gucci",
     "madein": "Qatar",
-    "Feature": "Empire Waist Dress: A dress with a high waistline just below the bust, creating a flowing skirt that flatters the figure, perfect for both casual and formal occasions."
+    "Feature": "Empire Waist Dress: A dress with a high waistline just below the bust, creating a flowing skirt that flatters the figure, perfect for both casual and formal occasions.",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ]
   },{
     "name": "Wrap Dress",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqA_rKJS9xa8JCrz2d7RGf_X22jaynxFii6g&s",
@@ -768,7 +1077,13 @@
     "id": "69",
     "company": "Hermès",
     "madein": "Russia",
-    "Feature": "Wrap Dress: A dress featuring a front closure that wraps around the body and ties at the waist, offering a flattering, adjustable fit and a feminine silhouette."
+    "Feature": "Wrap Dress: A dress featuring a front closure that wraps around the body and ties at the waist, offering a flattering, adjustable fit and a feminine silhouette.",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ]
   },{
     "name": "Sundress",
     "image": "https://static01.nyt.com/images/2024/06/26/multimedia/sundress-fjcp/sundress-fjcp-mobileMasterAt3x-v2.jpg",
@@ -779,7 +1094,13 @@
     "id": "70",
     "company": "Zara",
     "madein": "America",
-    "Feature": "Sundress: A light and airy dress, typically sleeveless, perfect for warm weather, featuring a relaxed fit and often made from breathable fabrics for comfort and style."
+    "Feature": "Sundress: A light and airy dress, typically sleeveless, perfect for warm weather, featuring a relaxed fit and often made from breathable fabrics for comfort and style.",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ]
   },{
     "name": "Off-the-Shoulder Dress",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbp7fqMcndCtqxwoOljzqtbn81VGqIqPSTsA&s",
@@ -790,7 +1111,13 @@
     "id": "71",
     "company": "Chanel",
     "madein": "China",
-    "Feature": "Off-the-Shoulder Dress: A stylish dress that exposes the shoulders, offering a flattering neckline and a feminine, elegant look perfect for both casual and formal occasions."
+    "Feature": "Off-the-Shoulder Dress: A stylish dress that exposes the shoulders, offering a flattering neckline and a feminine, elegant look perfect for both casual and formal occasions.",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ]
   },{
     "name": "Belted Trench Dress",
     "image": "https://cdn-images.farfetch-contents.com/24/05/49/19/24054919_54250067_600.jpg",
@@ -801,7 +1128,13 @@
     "id": "72",
     "company": "Gucci",
     "madein": "Germany",
-    "Feature": "Belted Trench Dress: A sophisticated dress inspired by the classic trench coat, featuring a waist-defining belt and a tailored fit, perfect for a chic, polished look."
+    "Feature": "Belted Trench Dress: A sophisticated dress inspired by the classic trench coat, featuring a waist-defining belt and a tailored fit, perfect for a chic, polished look.",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ]
   },{
     "name": "Ball Gown",
     "image": "https://i.pinimg.com/736x/fb/d2/de/fbd2de9e7893ba67216f26d38093e8de.jpg",
@@ -812,7 +1145,13 @@
     "id": "73",
     "company": "Hermès",
     "madein": "India",
-    "Feature": "Ball Gown: A luxurious, floor-length gown with a fitted bodice and a voluminous skirt, designed for formal events and evening occasions, exuding elegance and grandeur."
+    "Feature": "Ball Gown: A luxurious, floor-length gown with a fitted bodice and a voluminous skirt, designed for formal events and evening occasions, exuding elegance and grandeur.",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ]
   },{
     "name": "Peplum Dress",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_bVQFdzoKsONXzqcugWpDBrXVaa24fgt-fw&s",
@@ -823,7 +1162,13 @@
     "id": "74",
     "company": "Zara",
     "madein": "Japan",
-    "Feature": "Peplum Dress: A dress featuring a fitted silhouette with a flared, ruffled layer at the waist, adding structure and creating a flattering, feminine shape."
+    "Feature": "Peplum Dress: A dress featuring a fitted silhouette with a flared, ruffled layer at the waist, adding structure and creating a flattering, feminine shape.",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ]
   },{
     "name": "Midi Slip Dress",
     "image": "https://reistor.in/cdn/shop/files/Midi_Slip_Dress_in_Black_Stripes.jpg?v=1725533160&width=1440",
@@ -834,7 +1179,13 @@
     "id": "75",
     "company": "Chanel",
     "madein": "Qatar",
-    "Feature": "Midi Slip Dress: A sleek, minimalist dress with a soft, flowing silhouette that falls to the mid-calf, offering a chic and effortlessly elegant look, often with delicate straps and a smooth fabric."
+    "Feature": "Midi Slip Dress: A sleek, minimalist dress with a soft, flowing silhouette that falls to the mid-calf, offering a chic and effortlessly elegant look, often with delicate straps and a smooth fabric.",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ]
   },{
     "name": "Tulle Skirt Dress",
     "image": "https://i.etsystatic.com/9340124/r/il/257c93/1118892974/il_570xN.1118892974_qk6y.jpg",
@@ -845,7 +1196,13 @@
     "id": "76",
     "company": "Gucci",
     "madein": "Russia",
-    "Feature": "Tulle Skirt Dress: A whimsical dress featuring a voluminous tulle skirt, often paired with a fitted bodice, offering a dreamy, feminine look perfect for formal events or celebrations."
+    "Feature": "Tulle Skirt Dress: A whimsical dress featuring a voluminous tulle skirt, often paired with a fitted bodice, offering a dreamy, feminine look perfect for formal events or celebrations.",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ]
   },{
     "name": "Cocktail Sheath Dress",
     "image": "https://m.media-amazon.com/images/I/91Qv-Wyy+GL._AC_UY1100_.jpg",
@@ -856,7 +1213,13 @@
     "id": "77",
     "company": "Hermès",
     "madein": "America",
-    "Feature": "Cocktail Sheath Dress: A sleek, form-fitting dress that falls to the knee, perfect for cocktail parties or evening events, offering a sophisticated and elegant silhouette."
+    "Feature": "Cocktail Sheath Dress: A sleek, form-fitting dress that falls to the knee, perfect for cocktail parties or evening events, offering a sophisticated and elegant silhouette.",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ]
   },{
     "name": "Ruffle Detail Dress",
     "image": "https://assets.ajio.com/medias/sys_master/root/20230602/isaR/64794ef742f9e729d71005f7/-473Wx593H-461942994-beige-MODEL.jpg",
@@ -867,7 +1230,13 @@
     "id": "78",
     "company": "Zara",
     "madein": "China",
-    "Feature": "Ruffle Detail Dress: A dress featuring decorative ruffles along the neckline, sleeves, or hem, adding texture and a playful, feminine touch to a chic, elegant silhouette."
+    "Feature": "Ruffle Detail Dress: A dress featuring decorative ruffles along the neckline, sleeves, or hem, adding texture and a playful, feminine touch to a chic, elegant silhouette.",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ]
   },{
     "name": "Maxi Boho Dress",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8kCGNYyVB5kfeJ94XonlAVqshsXxrMdinZw&s",
@@ -878,7 +1247,13 @@
     "id": "79",
     "company": "Chanel",
     "madein": "Germany",
-    "Feature": "Maxi Boho Dress: A flowy, floor-length dress with relaxed, bohemian-inspired details such as paisley prints, fringe, or lace, perfect for a laid-back, free-spirited style."
+    "Feature": "Maxi Boho Dress: A flowy, floor-length dress with relaxed, bohemian-inspired details such as paisley prints, fringe, or lace, perfect for a laid-back, free-spirited style.",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ]
   },{
     "name": "Sweater Dress",
     "image": "https://assets.ajio.com/medias/sys_master/root/20231016/dp7t/652c50c8ddf77915193f5870/-473Wx593H-466711854-olive-MODEL.jpg",
@@ -889,7 +1264,13 @@
     "id": "80",
     "company": "Gucci",
     "madein": "India",
-    "Feature": "Sweater Dress: A cozy and stylish dress made from soft, knit fabric, offering warmth and comfort while providing a flattering silhouette for casual or semi-formal occasions."
+    "Feature": "Sweater Dress: A cozy and stylish dress made from soft, knit fabric, offering warmth and comfort while providing a flattering silhouette for casual or semi-formal occasions.",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ]
   },{
     "name": "Tunic Dress",
     "image": "https://yashgallery.com/cdn/shop/files/AK-128_2.jpg?v=1709724259",
@@ -900,7 +1281,13 @@
     "id": "81",
     "company": "Hermès",
     "madein": "Germany",
-    "Feature": "Tunic Dress: A relaxed, loose-fitting dress that typically falls above the knee or mid-thigh, offering comfort and versatile styling, often paired with leggings or jeans."
+    "Feature": "Tunic Dress: A relaxed, loose-fitting dress that typically falls above the knee or mid-thigh, offering comfort and versatile styling, often paired with leggings or jeans.",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ]
   },{
     "name": "Chiffon Bridesmaid Dress",
     "image": "https://designformal.com/cdn/shop/products/wisteria-chiffon-ruched-one-shoulder-bridesmaid-dress.jpg",
@@ -911,7 +1298,13 @@
     "id": "82",
     "company": "Zara",
     "madein": "India",
-    "Feature": "Chiffon Bridesmaid Dress: A light and airy dress made from soft chiffon fabric, offering an elegant, flowy silhouette perfect for bridesmaids, often featuring delicate draping and a graceful design."
+    "Feature": "Chiffon Bridesmaid Dress: A light and airy dress made from soft chiffon fabric, offering an elegant, flowy silhouette perfect for bridesmaids, often featuring delicate draping and a graceful design.",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ]
   },{
     "name": "Shift Mini Dress",
     "image": "https://n-img1.junaroad.com/uiproducts/18277749/zoom_0-1645867921.jpg",
@@ -922,7 +1315,13 @@
     "id": "83",
     "company": "Gucci",
     "madein": "Japan",
-    "Feature": "Shift Mini Dress: A short, loose-fitting dress with a straight-cut design that falls above the knee, offering a comfortable yet stylish look, perfect for casual or semi-formal occasions."
+    "Feature": "Shift Mini Dress: A short, loose-fitting dress with a straight-cut design that falls above the knee, offering a comfortable yet stylish look, perfect for casual or semi-formal occasions.",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ]
   },{
     "name": "Swarovski Solitaire Ring",
     "image": "https://cdn-media.glamira.com/media/product/newgeneration/view/1/sku/alfrida3-n/diamond/sapphire-Swarovsky_AAAAA/alloycolour/yellow.jpg",
@@ -1351,7 +1750,13 @@
     "id": "122",
     "company": "Ray-Ban",
     "madein": "india",
-    "Feature": "Ray-Ban Wayfarer: Iconic sunglasses with a bold, square frame design, offering timeless style and durable construction, paired with high-quality lenses for excellent sun protection and clarity."
+    "Feature": "Ray-Ban Wayfarer: Iconic sunglasses with a bold, square frame design, offering timeless style and durable construction, paired with high-quality lenses for excellent sun protection and clarity.",
+    "size": [
+      "ES",
+      "S",
+      "M",
+      "L"
+    ]
   },{
     "name": "Oakley Frogskins",
     "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSR3ONcTR47Ah74A-CTj1y9PrypUQWp5mlH_Uj4BxyR3TfjUBABcABw2AOtucS9LquBICfSv9-eIx3ltZWGglNQTdOsLs4DnNGAMv1nV66qFuVuOkEsEbBV_Q",
@@ -1362,7 +1767,13 @@
     "id": "123",
     "company": "Oakley",
     "madein": "America",
-    "Feature": "Oakley Frogskins: Classic sunglasses featuring a lightweight, durable frame and high-performance lenses, offering a stylish and sporty look with superior UV protection and optical clarity."
+    "Feature": "Oakley Frogskins: Classic sunglasses featuring a lightweight, durable frame and high-performance lenses, offering a stylish and sporty look with superior UV protection and optical clarity.",
+    "size": [
+      "ES",
+      "S",
+      "M",
+      "L"
+    ]
   },{
     "name": "Maui Jim Peahi",
     "image": "https://m.media-amazon.com/images/I/61FaUHePykL._AC_UY1100_.jpg",
@@ -1373,7 +1784,13 @@
     "id": "124",
     "company": "Persol",
     "madein": "Germany",
-    "Feature": "Maui Jim Peahi: Sporty sunglasses with a lightweight, durable frame and PolarizedPlus2 lenses, providing excellent clarity, color enhancement, and protection from harmful UV rays for active outdoor lifestyles."
+    "Feature": "Maui Jim Peahi: Sporty sunglasses with a lightweight, durable frame and PolarizedPlus2 lenses, providing excellent clarity, color enhancement, and protection from harmful UV rays for active outdoor lifestyles.",
+    "size": [
+      "ES",
+      "S",
+      "M",
+      "L"
+    ]
   },{
     "name": "Prada Linea Rossa PS 53QS",
     "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTttEM1wcZUxX_4IFqUDTUopk7bjAPoKC0r_SO9tNip3ALJ4kxbV6IDvoSpgAS0ZPgl6t7l9eUyVYnJT2ogzuJanBsej4ddYVLHoSkvD0R-1mSSWIg9QaQtqiU&usqp=CAE",
@@ -1384,7 +1801,13 @@
     "id": "125",
     "company": "prada",
     "madein": "Japan",
-    "Feature": "Prada Linea Rossa PS 53QS: Stylish sunglasses featuring a sleek, modern design with high-quality lenses, offering both UV protection and a fashionable look with the signature sporty touch of the Prada Linea Rossa collection."
+    "Feature": "Prada Linea Rossa PS 53QS: Stylish sunglasses featuring a sleek, modern design with high-quality lenses, offering both UV protection and a fashionable look with the signature sporty touch of the Prada Linea Rossa collection.",
+    "size": [
+      "ES",
+      "S",
+      "M",
+      "L"
+    ]
   },{
     "name": "Persol 714 Steve McQueen",
     "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTybZC7BgZIlnMe5Z1tc7MGDFpJ07Vg_2BFtj6LJq0OwmaehOkQkeBtRKdEA5fmT6wvZEkaUq2cfFHxkxTsZiz-3fectVCZc3HjUL8XbHoI2YAKASr5YBtiGQ&usqp=CAE",
@@ -1395,7 +1818,13 @@
     "id": "126",
     "company": "Persol",
     "madein": "Japan",
-    "Feature": "Persol 714 Steve McQueen: Iconic sunglasses featuring a classic folding design, made with high-quality acetate and Meflecto temples for a comfortable, flexible fit, exuding timeless style inspired by Steve McQueen."
+    "Feature": "Persol 714 Steve McQueen: Iconic sunglasses featuring a classic folding design, made with high-quality acetate and Meflecto temples for a comfortable, flexible fit, exuding timeless style inspired by Steve McQueen.",
+    "size": [
+      "ES",
+      "S",
+      "M",
+      "L"
+    ]
   },{
     "name": "Car",
     "image": "https://c8.alamy.com/comp/HTPJD8/little-mclaren-p1tm-electric-car-for-kids-battery-powered-toy-supercar-HTPJD8.jpg",
@@ -2880,7 +3309,14 @@
     "id": "261",
     "company": "Tirumala",
     "madein": "India",
-    "Feature": "CozyCloud Memory Foam Slippers provide plush comfort with a soft memory foam insole, a cozy fleece lining for warmth, and a durable non-slip sole, perfect for all-day relaxation at home."
+    "Feature": "CozyCloud Memory Foam Slippers provide plush comfort with a soft memory foam insole, a cozy fleece lining for warmth, and a durable non-slip sole, perfect for all-day relaxation at home.",
+    "size": [
+      "IND-5",
+      "IND-6",
+      "IND-7",
+      "IND-8",
+      "IND-9"
+    ]
   },{
     "name": "UltraSoft Indoor Fur Slippers",
     "image": "https://m.media-amazon.com/images/I/51IjF7qTYtL._AC_UY1000_.jpg",
@@ -2891,7 +3327,14 @@
     "id": "262",
     "company": "Birkenstock",
     "madein": "America",
-    "Feature": "UltraSoft Indoor Fur Slippers offer luxurious comfort with a plush fur lining, a cushioned insole for support, and a lightweight non-slip sole, making them perfect for cozy indoor wear."
+    "Feature": "UltraSoft Indoor Fur Slippers offer luxurious comfort with a plush fur lining, a cushioned insole for support, and a lightweight non-slip sole, making them perfect for cozy indoor wear.",
+    "size": [
+      "IND-5",
+      "IND-6",
+      "IND-7",
+      "IND-8",
+      "IND-9"
+    ]
   },{
     "name": "AquaGrip Anti-Slip Slippers",
     "image": "https://m.media-amazon.com/images/I/51pSGzNTsXL._AC_UY1000_.jpg",
@@ -2902,7 +3345,14 @@
     "id": "263",
     "company": "Relaxo",
     "madein": "Japan",
-    "Feature": "AquaGrip Anti-Slip Slippers feature a water-resistant design, a textured anti-slip sole for superior grip, and a cushioned footbed for all-day comfort, ideal for both indoor and outdoor use."
+    "Feature": "AquaGrip Anti-Slip Slippers feature a water-resistant design, a textured anti-slip sole for superior grip, and a cushioned footbed for all-day comfort, ideal for both indoor and outdoor use.",
+    "size": [
+      "IND-5",
+      "IND-6",
+      "IND-7",
+      "IND-8",
+      "IND-9"
+    ]
   },{
     "name": "PlushHaven Open-Toe Slippers",
     "image": "https://images-cdn.ubuy.co.in/66c6f1906c335e6fef5b8b57-dl-open-toe-slippers-for-women-indoor.jpg",
@@ -2913,7 +3363,14 @@
     "id": "264",
     "company": "Ubuy",
     "madein": "Dubai",
-    "Feature": "PlushHaven Open-Toe Slippers offer breathable comfort with a soft plush lining, a memory foam cushioned insole for support, and a durable non-slip sole, perfect for cozy and stylish indoor wear."
+    "Feature": "PlushHaven Open-Toe Slippers offer breathable comfort with a soft plush lining, a memory foam cushioned insole for support, and a durable non-slip sole, perfect for cozy and stylish indoor wear.",
+    "size": [
+      "IND-5",
+      "IND-6",
+      "IND-7",
+      "IND-8",
+      "IND-9"
+    ]
   },{
     "name": "ComfiFlex Orthopedic Slippers",
     "image": "https://rukminim2.flixcart.com/image/850/1000/xif0q/slipper-flip-flop/u/d/c/8-uk5-flip-flop-doctor-ortho-plus-comfy-blue-red-original-imah7pd33ukhzhjd.jpeg?q=90&crop=false",
@@ -2924,7 +3381,14 @@
     "id": "265",
     "company": "Birkenstock",
     "madein": "China",
-    "Feature": "ComfiFlex Orthopedic Slippers provide exceptional support with an ergonomic design, memory foam cushioning, and arch support, ensuring maximum comfort and relief for tired feet during indoor use."
+    "Feature": "ComfiFlex Orthopedic Slippers provide exceptional support with an ergonomic design, memory foam cushioning, and arch support, ensuring maximum comfort and relief for tired feet during indoor use.",
+    "size": [
+      "IND-5",
+      "IND-6",
+      "IND-7",
+      "IND-8",
+      "IND-9"
+    ]
   },{
     "name": "LuxeShear Woolen Slippers",
     "image": "https://m.media-amazon.com/images/I/51lL4-wyh4L._AC_UY1000_.jpg",
@@ -2935,7 +3399,14 @@
     "id": "266",
     "company": "Relaxo",
     "madein": "Dubai",
-    "Feature": "LuxeShear Woolen Slippers combine premium wool for natural warmth and breathability, a plush cushioned insole for comfort, and a durable non-slip sole, offering cozy elegance for indoor relaxation."
+    "Feature": "LuxeShear Woolen Slippers combine premium wool for natural warmth and breathability, a plush cushioned insole for comfort, and a durable non-slip sole, offering cozy elegance for indoor relaxation.",
+    "size": [
+      "IND-2",
+      "IND-3",
+      "IND-4",
+      "IND-5",
+      "IND-6"
+    ]
   },{
     "name": "RelaxStep Spa Slippers",
     "image": "https://m.media-amazon.com/images/I/812LnkrikfL.jpg",
@@ -2946,7 +3417,14 @@
     "id": "267",
     "company": "Tirumala",
     "madein": "Iran",
-    "Feature": "RelaxStep Spa Slippers feature a cushioned footbed with massaging nodules, a plush, spa-like feel, and a non-slip sole, providing ultimate comfort and relaxation for your feet after a long day."
+    "Feature": "RelaxStep Spa Slippers feature a cushioned footbed with massaging nodules, a plush, spa-like feel, and a non-slip sole, providing ultimate comfort and relaxation for your feet after a long day.",
+    "size": [
+      "IND-4",
+      "IND-6",
+      "IND-7",
+      "IND-8",
+      "IND-9"
+    ]
   },{
     "name": "EcoLite Bamboo Slippers",
     "image": "https://m.media-amazon.com/images/I/71Om3vzk+8L._AC_UF894,1000_QL80_.jpg",
@@ -2957,7 +3435,14 @@
     "id": "268",
     "company": "Birkenstock",
     "madein": "Qatar",
-    "Feature": "EcoLite Bamboo Slippers are made from sustainable bamboo fabric, offering a breathable, odor-resistant design with a cushioned insole for comfort and a lightweight, non-slip sole for daily use."
+    "Feature": "EcoLite Bamboo Slippers are made from sustainable bamboo fabric, offering a breathable, odor-resistant design with a cushioned insole for comfort and a lightweight, non-slip sole for daily use.",
+    "size": [
+      "IND-5",
+      "IND-6",
+      "IND-7",
+      "IND-8",
+      "IND-9"
+    ]
   },{
     "name": "SoleMate Arch Support Slippers",
     "image": "https://www.sole-mate.uk/cdn/shop/files/sli4_1000x1000.jpg?v=1718372852",
@@ -2968,7 +3453,14 @@
     "id": "269",
     "company": "Relaxo",
     "madein": "Russia",
-    "Feature": "SoleMate Arch Support Slippers feature contoured arch support for optimal foot alignment, memory foam cushioning for comfort, and a durable non-slip sole, providing all-day relief and stability for tired feet."
+    "Feature": "SoleMate Arch Support Slippers feature contoured arch support for optimal foot alignment, memory foam cushioning for comfort, and a durable non-slip sole, providing all-day relief and stability for tired feet.",
+    "size": [
+      "IND-5",
+      "IND-6",
+      "IND-7",
+      "IND-8",
+      "IND-9"
+    ]
   },{
     "name": "VelvetEase Indoor Slippers",
     "image": "https://rukminim2.flixcart.com/image/850/1000/jpbic280/slipper-flip-flop/m/r/v/807-ladies-slipper-39-irsoe-purple-original-imafbhchanasktzr.jpeg?q=90&crop=false",
@@ -2979,7 +3471,14 @@
     "id": "270",
     "company": "Tirumala",
     "madein": "America",
-    "Feature": "VelvetEase Indoor Slippers offer a soft velvet exterior with a plush lining for luxurious comfort, a cushioned footbed for support, and a lightweight, non-slip sole, perfect for cozy indoor relaxation."
+    "Feature": "VelvetEase Indoor Slippers offer a soft velvet exterior with a plush lining for luxurious comfort, a cushioned footbed for support, and a lightweight, non-slip sole, perfect for cozy indoor relaxation.",
+    "size": [
+      "IND-1",
+      "IND-2",
+      "IND-3",
+      "IND-4",
+      "IND-5"
+    ]
   },{
     "name": "FoamCush Cozy Slippers",
     "image": "https://images-cdn.ubuy.co.in/66d701b862271b1588619961-womens-slippers-memory-foam-slippers.jpg",
@@ -2990,7 +3489,14 @@
     "id": "271",
     "company": "Ubuy",
     "madein": "Russia",
-    "Feature": "FoamCush Cozy Slippers feature a thick foam insole for superior comfort, a soft, warm lining to keep feet cozy, and a flexible, non-slip sole, making them perfect for all-day indoor wear."
+    "Feature": "FoamCush Cozy Slippers feature a thick foam insole for superior comfort, a soft, warm lining to keep feet cozy, and a flexible, non-slip sole, making them perfect for all-day indoor wear.",
+    "size": [
+      "IND-1",
+      "IND-2",
+      "IND-3",
+      "IND-4",
+      "IND-5"
+    ]
   },{
     "name": "ChillZone Fleece Slippers",
     "image": "https://m.media-amazon.com/images/I/61BDq4hHZKL._AC_UY1000_.jpg",
@@ -3001,7 +3507,14 @@
     "id": "272",
     "company": "Birkenstock",
     "madein": "Columbia",
-    "Feature": "ChillZone Fleece Slippers provide ultimate warmth with a soft fleece lining, a cushioned insole for comfort, and a durable non-slip sole, ideal for cozy relaxation during colder months."
+    "Feature": "ChillZone Fleece Slippers provide ultimate warmth with a soft fleece lining, a cushioned insole for comfort, and a durable non-slip sole, ideal for cozy relaxation during colder months.",
+    "size": [
+      "IND-1",
+      "IND-2",
+      "IND-3",
+      "IND-4",
+      "IND-5"
+    ]
   },{
     "name": "WarmWalk Sherpa Slippers",
     "image": "https://m.media-amazon.com/images/I/61C5PJUMZQL._AC_UY1000_.jpg",
@@ -3012,7 +3525,14 @@
     "id": "273",
     "company": "Relaxo",
     "madein": "Japan",
-    "Feature": "WarmWalk Sherpa Slippers offer luxurious warmth with a thick Sherpa lining, a soft cushioned footbed for comfort, and a non-slip sole for stability, perfect for keeping your feet cozy during colder days."
+    "Feature": "WarmWalk Sherpa Slippers offer luxurious warmth with a thick Sherpa lining, a soft cushioned footbed for comfort, and a non-slip sole for stability, perfect for keeping your feet cozy during colder days.",
+    "size": [
+      "IND-2",
+      "IND-3",
+      "IND-4",
+      "IND-5",
+      "IND-6"
+    ]
   },{
     "name": "AirLite Breathable Slippers",
     "image": "https://m.media-amazon.com/images/I/61946xJD9kL._AC_UY1000_.jpg",
@@ -3023,7 +3543,14 @@
     "id": "274",
     "company": "Tirumala",
     "madein": "Germany",
-    "Feature": "AirLite Breathable Slippers feature a lightweight, breathable design with mesh fabric for ventilation, a cushioned footbed for comfort, and a flexible non-slip sole, providing all-day comfort and breathability."
+    "Feature": "AirLite Breathable Slippers feature a lightweight, breathable design with mesh fabric for ventilation, a cushioned footbed for comfort, and a flexible non-slip sole, providing all-day comfort and breathability.",
+    "size": [
+      "IND-5",
+      "IND-6",
+      "IND-7",
+      "IND-8",
+      "IND-9"
+    ]
   },{
     "name": "UrbanChic Slide Slippers",
     "image": "https://rukminim2.flixcart.com/image/850/1000/l4bn5ow0/kids-sandal/n/0/y/6-urbg148-urbantrendy-original-imagf8zzuuzjazmy.jpeg?q=90&crop=false",
@@ -3034,7 +3561,14 @@
     "id": "275",
     "company": "Ubuy",
     "madein": "Qatar",
-    "Feature": "UrbanChic Slide Slippers offer a stylish slip-on design with a cushioned insole for comfort, a soft fabric upper for a relaxed feel, and a durable, non-slip sole, perfect for casual, everyday wear."
+    "Feature": "UrbanChic Slide Slippers offer a stylish slip-on design with a cushioned insole for comfort, a soft fabric upper for a relaxed feel, and a durable, non-slip sole, perfect for casual, everyday wear.",
+    "size": [
+      "IND-5",
+      "IND-6",
+      "IND-7",
+      "IND-8",
+      "IND-9"
+    ]
   },{
     "name": "SpringStep Floral Print Slippers",
     "image": "https://i.pinimg.com/736x/4d/79/aa/4d79aa25f2aa84e051cce95fe486ad8b.jpg",
@@ -3045,7 +3579,14 @@
     "id": "276",
     "company": "Relaxo",
     "madein": "Germany",
-    "Feature": "SpringStep Floral Print Slippers feature a vibrant floral design, a soft cushioned insole for all-day comfort, and a non-slip sole, combining style and comfort for cozy indoor wear."
+    "Feature": "SpringStep Floral Print Slippers feature a vibrant floral design, a soft cushioned insole for all-day comfort, and a non-slip sole, combining style and comfort for cozy indoor wear.",
+    "size": [
+      "IND-5",
+      "IND-6",
+      "IND-7",
+      "IND-8",
+      "IND-9"
+    ]
   },{
     "name": "GlideSoft Rubber Slippers",
     "image": "https://5.imimg.com/data5/SELLER/Default/2024/6/430156265/PR/EE/EO/27554231/img-20240527-152608-photoroom-png-photoroom.png",
@@ -3056,7 +3597,14 @@
     "id": "277",
     "company": "Tirumala",
     "madein": "Russia",
-    "Feature": "GlideSoft Rubber Slippers offer a sleek rubber exterior for water resistance, a cushioned insole for added comfort, and a non-slip sole for superior traction, making them perfect for indoor and outdoor use."
+    "Feature": "GlideSoft Rubber Slippers offer a sleek rubber exterior for water resistance, a cushioned insole for added comfort, and a non-slip sole for superior traction, making them perfect for indoor and outdoor use.",
+    "size": [
+      "IND-5",
+      "IND-6",
+      "IND-7",
+      "IND-8",
+      "IND-9"
+    ]
   },{
     "name": "AquaStep Quick-Dry Slippers",
     "image": "https://www.jiomart.com/images/product/original/rvecoxmmn6/cozy-wear-slippers-quick-dry-flip-flop-slides-water-resistant-wet-grip-soles-g-208-blue-10-product-images-rvecoxmmn6-0-202312091205.jpg?im=Resize=(1000,1000)",
@@ -3067,7 +3615,14 @@
     "id": "278",
     "company": "Birkenstock",
     "madein": "Russia",
-    "Feature": "AquaStep Quick-Dry Slippers are designed with a fast-drying fabric, a lightweight, water-resistant construction, and a non-slip sole, making them ideal for use around water or for quick transitions from wet to dry environments."
+    "Feature": "AquaStep Quick-Dry Slippers are designed with a fast-drying fabric, a lightweight, water-resistant construction, and a non-slip sole, making them ideal for use around water or for quick transitions from wet to dry environments.",
+    "size": [
+      "IND-5",
+      "IND-6",
+      "IND-7",
+      "IND-8",
+      "IND-9"
+    ]
   },{
     "name": "FlexStride Lightweight Slippers",
     "image": "https://rukminim2.flixcart.com/image/850/1000/kddf6a80/slipper-flip-flop/5/n/o/12-8075-slipper-cassiey-green-grey-original-imafuacyrynzkpnt.jpeg?q=90&crop=false",
@@ -3078,7 +3633,14 @@
     "id": "279",
     "company": "Relaxo",
     "madein": "Japan",
-    "Feature": "FlexStride Lightweight Slippers offer a flexible, lightweight design with a cushioned footbed for comfort, a soft upper material for a snug fit, and a non-slip sole, perfect for all-day wear and easy movement."
+    "Feature": "FlexStride Lightweight Slippers offer a flexible, lightweight design with a cushioned footbed for comfort, a soft upper material for a snug fit, and a non-slip sole, perfect for all-day wear and easy movement.",
+    "size": [
+      "IND-5",
+      "IND-6",
+      "IND-7",
+      "IND-8",
+      "IND-9"
+    ]
   },{
     "name": "CloudStep Bliss Slippers",
     "image": "https://m.media-amazon.com/images/I/6103Uf0056L._AC_AC_SY300_QL15_.jpg",
@@ -3089,7 +3651,14 @@
     "id": "280",
     "company": "Slippons",
     "madein": "India",
-    "Feature": "CloudStep Bliss Slippers provide cloud-like comfort with a plush memory foam insole, a soft and cozy lining for warmth, and a durable, non-slip sole, offering ultimate relaxation for your feet."
+    "Feature": "CloudStep Bliss Slippers provide cloud-like comfort with a plush memory foam insole, a soft and cozy lining for warmth, and a durable, non-slip sole, offering ultimate relaxation for your feet.",
+    "size": [
+      "IND-5",
+      "IND-6",
+      "IND-7",
+      "IND-8",
+      "IND-9"
+    ]
   },{
     "name": "PureComfort Relaxation Slippers",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqq1FER3ZLBy9j8Vf4DosYLFpAyvrsWCAUeg&s",
@@ -3100,7 +3669,14 @@
     "id": "281",
     "company": "Slippons",
     "madein": "India",
-    "Feature": "PureComfort Relaxation Slippers feature a memory foam footbed for personalized comfort, a soft, breathable upper for cozy wear, and a non-slip sole, perfect for unwinding and relaxing after a long day."
+    "Feature": "PureComfort Relaxation Slippers feature a memory foam footbed for personalized comfort, a soft, breathable upper for cozy wear, and a non-slip sole, perfect for unwinding and relaxing after a long day.",
+    "size": [
+      "IND-5",
+      "IND-6",
+      "IND-7",
+      "IND-8",
+      "IND-9"
+    ]
   },{
     "name": "EleganceLux Blackout Curtains",
     "image": "https://m.media-amazon.com/images/I/91h6K3SHl7L.jpg",

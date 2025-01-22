@@ -2,52 +2,60 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   shippingCost: 0,
+  deliveryDate:[]
 }
-
-const deliveryDate=[];
 
 const deliveryDateSlice = createSlice({
   name: 'deliveryDate',
   initialState,
   reducers: {
-    // add delivery date
-    addDeliveryDate: (state, action)=> {
-
-      const existingItem = deliveryDate.find(deliveryDate => deliveryDate.id === action.payload.id);
-      if(existingItem){
-
-        if(action.payload.selectedOption === 'option2'){
-          existingItem.shippingConst = 10
-        }else if (action.payload.selectedOption === 'option3'){
-          existingItem.shippingConst = 18
-        }else{
-          existingItem.shippingConst = 0
-        }
-
-      }else{
-        deliveryDate.push({ ...action.payload, shippingConst: 0 });
+    // add shipping cost
+    addDeliveryDate: (state, action) => {
+      const { id, selectedOption } = action.payload;
+    
+      const existingItem = state.deliveryDate.find((item) => item.id === id);
+      if (existingItem) {
+        // Update the existing item's shipping cost
+        existingItem.selectedOption = selectedOption;
+        existingItem.shippingConst = 
+          selectedOption === 'option2' ? 10 : 
+          selectedOption === 'option3' ? 18 : 0;
+      } else {
+        // Add a new item only if it doesn't exist
+        state.deliveryDate.push({
+          id,
+          selectedOption,
+          shippingConst: 
+            selectedOption === 'option2' ? 10 : 
+            selectedOption === 'option3' ? 18 : 0,
+        });
       }
-
-      let shippingConst =0;
-      deliveryDate.forEach((item) => {
-        shippingConst += item.shippingConst
-      })
-
-      state.shippingCost = shippingConst;
+    
+      // Recalculate shipping cost
+      state.shippingCost = state.deliveryDate.reduce(
+        (total, item) => total + item.shippingConst,
+        0
+      );
     },
 
-    // remove delivery date
-    removeDeliveryDate: (state, action)=> {
-      let option = action.payload.selectedOption;
-      console.log(option);
-      if (option === 'option2'){
-        state.shippingCost -= 10
-      }else if(option === 'option3'){
-        state.shippingCost -= 18
+    // remove shipping cost
+    removeDeliveryDate: (state, action) => {
+
+      const { productId } = action.payload;
+
+      const index = state.deliveryDate.findIndex((item) => item.id === productId);
+      
+      if (index !== -1) {
+        state.deliveryDate.splice(index, 1); // Remove the item
       }
 
-      console.log(state.shippingCost);
-    }
+      // Recalculate shippingCost
+      state.shippingCost = state.deliveryDate.reduce(
+        (total, item) => total + item.shippingConst,
+        0
+      );
+
+    },
     
   }
 })

@@ -76,8 +76,6 @@ const CartItems = () => {
         dispatch(addToCart());
       }else{
         alert("You cannot add more than 10 items of the same size for this product.");
-        // const plusButtonColorChange = document.querySelector('.plus-button')
-        // plusButtonColorChange?.classList.add('not-allow-button')
         return;
       }
 
@@ -135,11 +133,13 @@ const CartItems = () => {
                       <button 
                         className="minus-button"
                         onClick={() => changeQuantity("-", item.id, item.selectedSize)}
+                        disabled={item.quantity <=1}
                       >-</button>
                       <span className="item-quantity">{item.quantity}</span>
                       <button 
                         className="plus-button"
                         onClick={() => changeQuantity("+", item.id, item.selectedSize)}
+                        disabled={item.quantity >=10}
                       >+</button>
                     </p>
                   </div>

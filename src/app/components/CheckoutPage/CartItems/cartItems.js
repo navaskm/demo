@@ -10,6 +10,7 @@ const deliveryDateSlice = createSlice({
   name: 'deliveryDate',
   initialState,
   reducers: {
+    // add delivery date
     addDeliveryDate: (state, action)=> {
 
       const existingItem = deliveryDate.find(deliveryDate => deliveryDate.id === action.payload.id);
@@ -33,10 +34,23 @@ const deliveryDateSlice = createSlice({
       })
 
       state.shippingCost = shippingConst;
-      
+    },
+
+    // remove delivery date
+    removeDeliveryDate: (state, action)=> {
+      let option = action.payload.selectedOption;
+      console.log(option);
+      if (option === 'option2'){
+        state.shippingCost -= 10
+      }else if(option === 'option3'){
+        state.shippingCost -= 18
+      }
+
+      console.log(state.shippingCost);
     }
+    
   }
 })
 
 export default deliveryDateSlice.reducer;
-export const { addDeliveryDate } = deliveryDateSlice.actions;
+export const { addDeliveryDate,removeDeliveryDate } = deliveryDateSlice.actions;

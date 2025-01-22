@@ -13,10 +13,12 @@ const cartSlice = createSlice({
     },
     removeFromCart: (state)=> {
       state.cartBase--;
+    },
+    removeFromCartOfQuantityBase: (state,action)=> {
+      state.cartBase -= action.payload.quantity;
     }
   }
 })
 
 export default cartSlice.reducer;
-export const {addToCart} = cartSlice.actions;
-export const {removeFromCart} = cartSlice.actions;
+export const {addToCart,removeFromCart,removeFromCartOfQuantityBase} = cartSlice.actions;

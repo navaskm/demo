@@ -8,6 +8,8 @@ const cartSlice = createSlice({
   name: 'cartItems',
   initialState,
   reducers: {
+
+    // add item to cart with quantity 1 
     addItem: (state,action)=> {
 
       // Check if item already exists in the cart and increment its quantity if it does, otherwise add it to the cart.
@@ -22,6 +24,8 @@ const cartSlice = createSlice({
       }
       
     },
+
+    // minus remove cart quantity
     removeItemQuantity: (state,action)=> {
 
       // Check if item already exists in the cart and increment its quantity if it does, otherwise add it to the cart.
@@ -32,11 +36,25 @@ const cartSlice = createSlice({
           existingItem.quantity--;
         }
       }
-      
+    },
+
+    // remove item from cart
+    removeItem: (state,action)=> {
+      // const existingItem = state.items.findIndex(item => item.id === action.payload.id && item.selectedSize === action.payload.selectedSize);
+      // if(existingItem){
+      //   existingItem.splice(existingItem, 1);
+      // }
+      const itemIndex = state.items.findIndex(
+        (item) => item.id === action.payload.id && item.selectedSize === action.payload.selectedSize
+      );
+    
+      if (itemIndex !== -1) {
+        state.items.splice(itemIndex, 1); // Properly remove the item from the array
+      }
     }
+
   }
 })
 
 export default cartSlice.reducer;
-export const { addItem } = cartSlice.actions;
-export const { removeItemQuantity } = cartSlice.actions;
+export const { addItem,removeItemQuantity,removeItem } = cartSlice.actions;

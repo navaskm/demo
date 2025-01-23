@@ -91,11 +91,11 @@ const SimilarProducts = async ({selectedImage}:{selectedImage:Products}) => {
   return (
     <div className="container-of-similar-product">
       {
-        selectedImage.offer? <h3>Best offer for you</h3>:<h3>Similar Products</h3>
+        selectedImage.offer? <h3 className="offer-title">Best offer for you</h3>:<h3>Similar Products</h3>
       }
 
       {
-        selectedImage.offer?  null:<BackToTop/>
+        selectedImage.offer ? null : <BackToTop/>
       }
 
       <div className="container-of-each-similar-product">

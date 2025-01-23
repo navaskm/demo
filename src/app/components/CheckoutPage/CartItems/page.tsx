@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useState, useEffect } from "react";
 import { MdRemoveShoppingCart } from "react-icons/md";
+import Link from 'next/link'
 
 import { addItem, removeItemQuantity, removeItem } from "../../SelectedPage/ImageDisplay/AddToCartBtn/cartSlice";
 import { addDeliveryDate, removeDeliveryDate } from "./cartItems";
@@ -108,7 +109,7 @@ const CartItems = () => {
     dispatch(removeFromCartOfQuantityBase({ quantity: itemQuantity }));
   };
 
-  return (
+  return checkoutItems.length != 0 ? (
     <div className="col-12 col-lg-8 cart-items-container">
       <h3>Review your order</h3>
       {checkoutItems.map((item: Products, index: number) => {
@@ -194,7 +195,15 @@ const CartItems = () => {
         );
       })}
     </div>
-  );
+  ):(
+    // items is 0 at the time this work
+    <div className="empty-cart-container">
+        <img src="/EmptyCart/emptyImage.png" alt="" />
+        <h5>Your cart is empty!</h5>
+        <p>Add items to it now.</p>
+        <Link href="/" style={{textDecoration:"none",color:"white"}}>Start Shopping</Link>
+    </div>
+  )
 };
 
 export default CartItems;

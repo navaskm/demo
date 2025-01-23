@@ -34,7 +34,8 @@ const MainOffers = () => {
                 query:{
                   id: 1000,
                   type: 'shoes',
-                  offer:"offerProduct"
+                  offer:"offerProduct",
+                  name:"Shoes Offer"
                 }
               }}
               >
@@ -46,7 +47,8 @@ const MainOffers = () => {
                 query:{
                   id: 999,
                   type: 'shoes',
-                  offer:"offerProduct"
+                  offer:"offerProduct",
+                  name:"Shoes Offer"
                 }
               }}>
                 <img className="image-two" src="/OfferImage/Shoes/shoes-offer-image-2.jpg" alt="offer" />
@@ -57,7 +59,8 @@ const MainOffers = () => {
                 query:{
                   id: 998,
                   type:'shoes',
-                  offer:"offerProduct"
+                  offer:"offerProduct",
+                  name:"Shoes Offer"
                 }
               }}>
                 <img className="image-three" src="/OfferImage/Shoes/shoes-offer-image-3.jpg" alt="offer" />
@@ -78,7 +81,8 @@ const MainOffers = () => {
                   query:{
                     id: 997,
                     type:'phone',
-                    offer:"offerProduct"
+                    offer:"offerProduct",
+                    name:"Phone Offer"
                   }
                 }}>
                   <img className="image-one" src="/OfferImage/Phone/phone-offer-image-1.jpg" alt="offer" />
@@ -89,7 +93,8 @@ const MainOffers = () => {
                   query:{
                     id: 996,
                     type:'phone',
-                    offer:"offerProduct"
+                    offer:"offerProduct",
+                    name:"Phone Offer"
                   }
                 }}>
                  <img className="image-two" src="/OfferImage/Phone/phone-offer-image-2.jpg" alt="offer" />
@@ -100,7 +105,8 @@ const MainOffers = () => {
                   query:{
                     id: 995,
                     type:'phone',
-                    offer:"offerProduct"
+                    offer:"offerProduct",
+                    name:"Phone Offer"
                   }
                 }}>
                  <img className="image-three" src="/OfferImage/Phone/phone-offer-image-3.jpg" alt="offer" />
@@ -120,7 +126,8 @@ const MainOffers = () => {
                   query:{
                     id: 994,
                     type:'bag',
-                    offer:"offerProduct"
+                    offer:"offerProduct",
+                    name:"Bag Offer"
                   }
                 }}>
                   <img className="image-one" src="/OfferImage/bags/bag-offer-image-1.jpg" alt="offer" />
@@ -131,7 +138,8 @@ const MainOffers = () => {
                   query:{
                     id: 993,
                     type:'bag',
-                    offer:"offerProduct"
+                    offer:"offerProduct",
+                    name:"Bag Offer"
                   }
                 }}>
                   <img className="image-two" src="/OfferImage/bags/bag-offer-image-2.jpg" alt="offer" />
@@ -142,7 +150,8 @@ const MainOffers = () => {
                   query:{
                     id: 992,
                     type:'bag',
-                    offer:"offerProduct"
+                    offer:"offerProduct",
+                    name:"Bag Offer"
                   }
                 }}>
                   <img className="image-three" src="/OfferImage/bags/bag-offer-image-3.jpg" alt="offer" />

@@ -29,7 +29,7 @@ const PaymentPage = () => {
 
   const totalAmount = taxCents + totalBeforeTax;
 
-  return (
+  return conformItems.length !== 0 ? (
 
     <div className='col-12 col-lg-4 payment-container'>
       <h4>Order Summary</h4>
@@ -66,7 +66,7 @@ const PaymentPage = () => {
 
       </div>
     </div>
-  )
+  ):null
 }
 
 export default PaymentPage

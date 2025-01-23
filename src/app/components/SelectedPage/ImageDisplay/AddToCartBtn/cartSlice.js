@@ -1,7 +1,16 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice,current } from "@reduxjs/toolkit";
+
+// Load cart items from localStorage or initialize to an empty array
+const loadFromLocalStorage = () => {
+  if (typeof window !== "undefined") {
+    const savedItems = localStorage.getItem("cartItems");
+    return savedItems ? JSON.parse(savedItems) : [];
+  }
+  return []; // Default value if running on the server
+};
 
 const initialState = {
-  items: [],
+  items: loadFromLocalStorage(),
 };
 
 const cartSlice = createSlice({
@@ -22,6 +31,9 @@ const cartSlice = createSlice({
       } else {
         state.items.push({ ...action.payload, quantity: 1 });
       }
+
+      // Save updated state to localStorage
+      localStorage.setItem("cartItems", JSON.stringify(current(state.items)));
       
     },
 
@@ -31,11 +43,12 @@ const cartSlice = createSlice({
       // Check if item already exists in the cart and increment its quantity if it does, otherwise add it to the cart.
       const existingItem = state.items.find(item => item.id === action.payload.id && item.selectedSize === action.payload.selectedSize);
       // minus remove cart quantity
-      if(existingItem) {
-        if(existingItem.quantity > 1){
-          existingItem.quantity--;
-        }
+      if(existingItem && existingItem.quantity > 1) {
+        existingItem.quantity--;
       }
+
+      // Save updated state to localStorage
+      localStorage.setItem("cartItems", JSON.stringify(current(state.items)));
     },
 
     // remove item from cart
@@ -47,6 +60,9 @@ const cartSlice = createSlice({
       if (itemIndex !== -1) {
         state.items.splice(itemIndex, 1);
       }
+
+      // Save updated state to localStorage
+      localStorage.setItem("cartItems", JSON.stringify(current(state.items)));
     }
 
   }

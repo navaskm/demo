@@ -1,8 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+// Helper function to load state from localStorage
+const loadFromLocalStorage = () => {
+  if (typeof window !== "undefined") {
+    const savedData = localStorage.getItem("deliveryDate");
+    return savedData ? JSON.parse(savedData) : [];
+  }
+  return [];
+};
+
 const initialState = {
   shippingCost: 0,
-  deliveryDate:[]
+  deliveryDate:loadFromLocalStorage(),
 }
 
 const deliveryDateSlice = createSlice({
@@ -36,6 +45,10 @@ const deliveryDateSlice = createSlice({
         (total, item) => total + item.shippingConst,
         0
       );
+
+      // Save to localStorage
+      localStorage.setItem("deliveryDate", JSON.stringify(state.deliveryDate));
+
     },
 
     // remove shipping cost
@@ -54,6 +67,9 @@ const deliveryDateSlice = createSlice({
         (total, item) => total + item.shippingConst,
         0
       );
+
+      // Save to localStorage
+      localStorage.setItem("deliveryDate", JSON.stringify(state.deliveryDate));
 
     },
     

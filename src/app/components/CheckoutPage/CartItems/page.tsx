@@ -46,7 +46,16 @@ const CartItems = () => {
       );
   
       if (existingItem) {
-        dispatch(addDeliveryDate({ id: key, selectedOption }));
+        console.log(existingItem);
+        // Use CSS.escape to make the key valid for querySelector
+        let deliveryDate = document.querySelector(`.${CSS.escape(key)}`)?.textContent;
+
+        let name = existingItem.name;
+        let image = existingItem.image;
+        let price = existingItem.price;
+        let quantity = existingItem.quantity;
+
+        dispatch(addDeliveryDate({ id: key, selectedOption, conformDate: deliveryDate, name, image, price, quantity}));
       }
     });
   }, [selectedOptions, checkoutItems, dispatch]);
@@ -80,7 +89,6 @@ const CartItems = () => {
       if (item && item.quantity < 10) {
         dispatch(addToCart());
       }else{
-        alert("You cannot add more than 10 items of the same size for this product.");
         return;
       }
 
@@ -92,14 +100,13 @@ const CartItems = () => {
       if (item && item.quantity > 1) {
         dispatch(removeFromCart());
       }else{
-        alert("The minimum quantity for this product is 1. You cannot reduce it further.");
         return;
       }
     }
 
   };
 
-  // remove from cart 
+  // remove from cart
   const handleRemoveItem = (id: string, selectedSize: string, itemQuantity: number,selectedOption:string,dateId:string) => {
     dispatch(removeItem({ id, selectedSize }));
 
@@ -126,7 +133,7 @@ const CartItems = () => {
           <div key={index} className="cart-each-items">
             <h5>
               Delivery date:{" "}
-              <span>
+              <span className={`${item.id}-${productSize}`}>
                 {deliveryDate.dayName}, {deliveryDate.monthName} {deliveryDate.today}
               </span>
             </h5>

@@ -8,7 +8,7 @@ function Links({open}:Menu) {
     <ul className={`nav-links ${open? 'active':''}`}>
       <li><Link href="/">Home</Link></li>
       <li><Link href="/components/CheckoutPage">Cart</Link></li>
-      <li><Link href="/components/SelectedPage">contact</Link></li>
+      <li><Link href="/components/OrderPage">Your order</Link></li>
     </ul>
   )
 }

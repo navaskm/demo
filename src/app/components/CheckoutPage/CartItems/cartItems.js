@@ -20,12 +20,17 @@ const deliveryDateSlice = createSlice({
   reducers: {
     // add shipping cost
     addDeliveryDate: (state, action) => {
-      const { id, selectedOption } = action.payload;
+      const { id, selectedOption, conformDate, name, image, price, quantity } = action.payload;
     
       const existingItem = state.deliveryDate.find((item) => item.id === id);
       if (existingItem) {
         // Update the existing item's shipping cost
         existingItem.selectedOption = selectedOption;
+        existingItem.conformDate = conformDate;
+        existingItem.name = name;
+        existingItem.image = image;
+        existingItem.price = price;
+        existingItem.quantity = quantity;
         existingItem.shippingConst = 
           selectedOption === 'option2' ? 10 : 
           selectedOption === 'option3' ? 18 : 0;
@@ -34,6 +39,11 @@ const deliveryDateSlice = createSlice({
         state.deliveryDate.push({
           id,
           selectedOption,
+          name,
+          image,
+          price,
+          quantity,
+          conformDate,
           shippingConst: 
             selectedOption === 'option2' ? 10 : 
             selectedOption === 'option3' ? 18 : 0,

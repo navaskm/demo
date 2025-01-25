@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import React from "react";
+import { useRouter } from "next/navigation";
 
 const PaymentPage = () => {
 
@@ -28,6 +29,13 @@ const PaymentPage = () => {
     }
 
   const totalAmount = taxCents + totalBeforeTax;
+
+  // order button clicked time work
+  const route = useRouter();
+
+  const handleOrder = () => {
+    route.push("/components/OrderPage");
+  }
 
   return conformItems.length !== 0 ? (
 
@@ -62,7 +70,11 @@ const PaymentPage = () => {
           <p>{fixed(totalAmount)}</p>
         </div>
 
-        <button>Place your order</button>
+        
+        <button 
+          onClick={handleOrder}
+          title="Order"
+        >Place your order</button>
 
       </div>
     </div>

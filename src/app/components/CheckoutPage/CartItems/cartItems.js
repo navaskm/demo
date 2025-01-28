@@ -9,10 +9,18 @@ const loadFromLocalStorage = () => {
   return [];
 };
 
+const loadUserOrderFromLocalStorage = () => {
+  if(typeof window !== 'undefined'){
+    const savedData = localStorage.getItem("userOrder");
+    return savedData ? JSON.parse(savedData): [];
+  }
+  return [];
+}
+
 const initialState = {
   shippingCost: 0,
   deliveryDate:loadFromLocalStorage(),
-  userOrder: [],
+  userOrder: loadUserOrderFromLocalStorage(),
 }
 
 const deliveryDateSlice = createSlice({
@@ -88,7 +96,12 @@ const deliveryDateSlice = createSlice({
     },
 
     userOrder: (state) => {
-      state.userOrder = state.deliveryDate
+       // Merge userOrder with deliveryDate
+      const validDeliveryDate = Array.isArray(state.deliveryDate) ? state.deliveryDate : [];
+      state.userOrder = [...state.userOrder, ...validDeliveryDate];
+
+      // Save to localStorage
+      localStorage.setItem("userOrder", JSON.stringify(state.userOrder));
     }
     
   }

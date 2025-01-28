@@ -44,6 +44,7 @@ const OrderItems = () => {
   const againClickHandle = (itemId:string) =>{
    const element= document.querySelector(`.again-clicked-${itemId}`);
 
+   
    element?.classList.add("add-green")
 
     if (element) {
@@ -74,12 +75,12 @@ const OrderItems = () => {
           <h3>Arriving on: {date}</h3>
           {items.map((item:OrderItems, index:number) => {
 
-            const SelectedSize = item.size.replace(".size-", "");
+            const SelectedSize = item.size?.replace(".size-", "");
 
             return(
               <div className={`each-item-container ${index == 0?'item-first':null}`} key={index}>
 
-              <img src={decodeURIComponent(item.image)} alt={item.name} />
+              <img src={item.image && decodeURIComponent(item.image)} alt={item.name} />
 
               <div className="item-details-display">
                 

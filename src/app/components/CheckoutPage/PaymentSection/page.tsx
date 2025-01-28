@@ -3,6 +3,8 @@ import React from "react";
 import { useRouter } from "next/navigation";
 
 import { userOrder } from "../CartItems/cartItems";
+import { removeAllItem } from "../../SelectedPage/ImageDisplay/AddToCartBtn/cartSlice";
+import { removeAllQuantity } from "../../HomePage/navbar/CartLogo/cartLogoSlice";
 
 const PaymentPage = () => {
 
@@ -38,8 +40,10 @@ const PaymentPage = () => {
   const dispatch = useDispatch();
   
   const handleOrder = () => {
-     dispatch(userOrder());
+    dispatch(userOrder());
     route.push("/components/OrderPage");
+    dispatch(removeAllItem());
+    dispatch(removeAllQuantity());
   }
 
   return conformItems.length !== 0 ? (

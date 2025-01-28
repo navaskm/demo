@@ -12,6 +12,7 @@ const loadFromLocalStorage = () => {
 const initialState = {
   shippingCost: 0,
   deliveryDate:loadFromLocalStorage(),
+  userOrder: [],
 }
 
 const deliveryDateSlice = createSlice({
@@ -20,20 +21,22 @@ const deliveryDateSlice = createSlice({
   reducers: {
     // add shipping cost
     addDeliveryDate: (state, action) => {
-      const { id, selectedOption, conformDate, name, image, price, quantity } = action.payload;
+      const { id, selectedOption, conformDate, name, image, price, quantity, size } = action.payload;
     
       const existingItem = state.deliveryDate.find((item) => item.id === id);
       if (existingItem) {
-        // Update the existing item's shipping cost
+
         existingItem.selectedOption = selectedOption;
         existingItem.conformDate = conformDate;
         existingItem.name = name;
         existingItem.image = image;
         existingItem.price = price;
         existingItem.quantity = quantity;
+        existingItem.size = size;
         existingItem.shippingConst = 
           selectedOption === 'option2' ? 10 : 
           selectedOption === 'option3' ? 18 : 0;
+
       } else {
         // Add a new item only if it doesn't exist
         state.deliveryDate.push({
@@ -44,6 +47,7 @@ const deliveryDateSlice = createSlice({
           price,
           quantity,
           conformDate,
+          size,
           shippingConst: 
             selectedOption === 'option2' ? 10 : 
             selectedOption === 'option3' ? 18 : 0,
@@ -82,9 +86,13 @@ const deliveryDateSlice = createSlice({
       localStorage.setItem("deliveryDate", JSON.stringify(state.deliveryDate));
 
     },
+
+    userOrder: (state) => {
+      state.userOrder = state.deliveryDate
+    }
     
   }
 })
 
 export default deliveryDateSlice.reducer;
-export const { addDeliveryDate,removeDeliveryDate } = deliveryDateSlice.actions;
+export const { addDeliveryDate,removeDeliveryDate,userOrder } = deliveryDateSlice.actions;

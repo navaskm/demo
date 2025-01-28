@@ -12,7 +12,8 @@ import "@/app/styles/checkoutpage/checkout.scss";
 
 const CartPage = () => {
 
-  const [screenWidth,setScreenWidth] = useState(window.innerWidth);
+  //const [screenWidth,setScreenWidth] = useState(window.innerWidth);
+  const [screenWidth, setScreenWidth] = useState(0);
 
   useEffect(() => {
     // Update screenWidth only after the component is mounted on the client
@@ -55,6 +56,7 @@ const CartPage = () => {
           </div>
         )
       }
+
     </>
   )
 }

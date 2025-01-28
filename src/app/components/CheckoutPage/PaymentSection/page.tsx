@@ -1,6 +1,8 @@
-import { useSelector } from "react-redux";
+import { useSelector,useDispatch } from "react-redux";
 import React from "react";
 import { useRouter } from "next/navigation";
+
+import { userOrder } from "../CartItems/cartItems";
 
 const PaymentPage = () => {
 
@@ -33,7 +35,10 @@ const PaymentPage = () => {
   // order button clicked time work
   const route = useRouter();
 
+  const dispatch = useDispatch();
+  
   const handleOrder = () => {
+     dispatch(userOrder());
     route.push("/components/OrderPage");
   }
 

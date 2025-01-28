@@ -46,7 +46,6 @@ const CartItems = () => {
       );
   
       if (existingItem) {
-        console.log(existingItem);
         // Use CSS.escape to make the key valid for querySelector
         let deliveryDate = document.querySelector(`.${CSS.escape(key)}`)?.textContent;
 
@@ -54,8 +53,9 @@ const CartItems = () => {
         let image = existingItem.image;
         let price = existingItem.price;
         let quantity = existingItem.quantity;
+        let size = existingItem.selectedSize;
 
-        dispatch(addDeliveryDate({ id: key, selectedOption, conformDate: deliveryDate, name, image, price, quantity}));
+        dispatch(addDeliveryDate({ id: key, selectedOption, conformDate: deliveryDate, name, image, price, quantity, size}));
       }
     });
   }, [selectedOptions, checkoutItems, dispatch]);

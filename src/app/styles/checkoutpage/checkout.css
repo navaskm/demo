@@ -77,11 +77,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-left: 15px;
 }
 @media (max-width: 768px) {
   .cart-items-payment-section-container .cart-items-container .cart-each-items .cart-details-container {
     flex-direction: column;
-    padding-left: 10px;
   }
 }
 .cart-items-payment-section-container .cart-items-container .cart-each-items .cart-details-container .cart-details-display {
@@ -92,7 +92,7 @@
      object-fit: contain;
 }
 .cart-items-payment-section-container .cart-items-container .cart-each-items .cart-details-container .cart-details-display div {
-  margin-left: 5px;
+  margin-left: 30px;
 }
 .cart-items-payment-section-container .cart-items-container .cart-each-items .cart-details-container .cart-details-display div h5 {
   color: rgb(77, 76, 76);
@@ -105,9 +105,42 @@
 }
 .cart-items-payment-section-container .cart-items-container .cart-each-items .cart-details-container .cart-details-display div p {
   color: rgb(99, 98, 98);
+  margin: 0;
 }
 .cart-items-payment-section-container .cart-items-container .cart-each-items .cart-details-container .cart-details-display div p span {
   color: black;
+}
+.cart-items-payment-section-container .cart-items-container .cart-each-items .cart-details-container .cart-details-display div .quantity-plus-mines-button-display {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+.cart-items-payment-section-container .cart-items-container .cart-each-items .cart-details-container .cart-details-display div .quantity-plus-mines-button-display p span {
+  border: 1px solid gray;
+  margin: 5px;
+  padding: 0px 20px;
+  border-radius: 2px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.cart-items-payment-section-container .cart-items-container .cart-each-items .cart-details-container .cart-details-display div .quantity-plus-mines-button-display p .minus-button,
+.cart-items-payment-section-container .cart-items-container .cart-each-items .cart-details-container .cart-details-display div .quantity-plus-mines-button-display p .plus-button {
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  border: 1px solid rgb(99, 99, 255);
+  font-size: 18px;
+  padding: 0px 7px;
+  font-weight: 900;
+  margin: 5px;
+  background-color: rgb(233, 233, 233);
+}
+.cart-items-payment-section-container .cart-items-container .cart-each-items .cart-details-container .cart-details-display div .quantity-plus-mines-button-display p .plus-button:disabled,
+.cart-items-payment-section-container .cart-items-container .cart-each-items .cart-details-container .cart-details-display div .quantity-plus-mines-button-display p .minus-button:disabled {
+  cursor: not-allowed;
+  border: 1px solid rgb(156, 151, 151);
+  background-color: white;
+  color: rgb(156, 151, 151);
 }
 .cart-items-payment-section-container .cart-items-container .cart-each-items .cart-details-container .delivery-date-option-container {
   /* Style the custom radio button */
@@ -151,6 +184,13 @@
   margin-bottom: 10px;
   color: rgb(170, 168, 168);
   font-family: "Courier New", Courier, monospace;
+}
+.cart-items-payment-section-container .cart-items-container .cart-each-items .remove-cart {
+  margin-left: 10%;
+  color: black;
+  cursor: pointer;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .cart-items-payment-section-container .payment-container {
   margin-top: 200px;
@@ -244,4 +284,33 @@
   font-size: 20px;
   font-weight: 700;
   font-family: monospace;
+}
+
+.empty-cart-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  margin-top: 10px;
+  background-color: #fff;
+  padding-bottom: 20px;
+  border: 1px solid rgb(219, 219, 219);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.empty-cart-container p {
+  color: rgb(158, 158, 158);
+}
+.empty-cart-container a {
+  background-color: rgb(57, 57, 255);
+  padding: 5px 20px;
+  border-radius: 5px;
+  font-size: large;
+  font-weight: 600;
+}
+@media (max-width: 580px) {
+  .empty-cart-container {
+    margin-top: 20px;
+  }
 }/*# sourceMappingURL=checkout.css.map */

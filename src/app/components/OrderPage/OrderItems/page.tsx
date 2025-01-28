@@ -79,6 +79,17 @@ const OrderItems = () => {
 
   }
 
+
+  const formatDate = (dateString: string) => {
+    return new Date(dateString);
+  };
+
+  const isPastDate = (date: string) => {
+    const today = new Date();
+    const conformDate = formatDate(date);
+    return conformDate > today;
+  };
+
   return (
     <div className="order-item-container">
 
@@ -86,57 +97,72 @@ const OrderItems = () => {
         <h1>Your Orders</h1>
       </div>
 
-      {Object.entries(groupedItems).map(([date, items], groupIndex) => (
+      {Object.entries(groupedItems).map(([date, items], groupIndex) => {
+
+        // Check if any item in the group has a past delivery date
+        const isReceived = items.some((item) => isPastDate(item.conformDate));
+
+        return (
+
         <div
-          className="same-date-item-container"
+          className={`same-date-item-container ${isReceived? 'item-received':null}`}
           key={groupIndex}
         >
-          <h3>Arriving on: {date}</h3>
+
+          {/* Conditional rendering for delivery date or received message */}
+          {isReceived ? (
+            <h2>Congratulations! Your item has been successfully delivered.</h2>
+          ) : (
+            <h3>Arriving on: {date}</h3>
+          )}
+
+
           {items.map((item:OrderItems, index:number) => {
 
             const SelectedSize = item.size?.replace(".size-", "");
 
             return(
+
               <div className={`each-item-container ${index == 0?'item-first':null}`} key={index}>
 
-              <img src={item.image && decodeURIComponent(item.image)} alt={item.name} />
+                <img src={item.image && decodeURIComponent(item.image)} alt={item.name} />
 
-              <div className="item-details-display">
-                
-                <div className="item-details">
-                  <h5>{decodeURIComponent(item.name)}</h5>
-                  <p>Quantity : <span>{item.quantity}</span></p>
-                  {
-                    item.size && <p>Size : <span>{SelectedSize}</span></p>
-                  }
+                <div className="item-details-display">
+                  
+                  <div className="item-details">
+                    <h5>{decodeURIComponent(item.name)}</h5>
+                    <p>Quantity : <span>{item.quantity}</span></p>
+                    {
+                      item.size && <p>Size : <span>{SelectedSize}</span></p>
+                    }
 
-                  <button
-                    className={`again-clicked-${item.id}`}
-                    onClick={() => againClickHandle(item.name, item.image, item.price, item.id, item.size)}
-                  >
-                    {buttonState[item.id] === "added" ? (
-                      <strong>&#x2713; Added</strong>
-                    ) : (
-                      <>
-                        <img src="/ByItAgain/by-it-again.png" alt="" />
-                        By it again
-                      </>
-                    )}
+                    <button
+                      className={`again-clicked-${item.id}`}
+                      onClick={() => againClickHandle(item.name, item.image, item.price, item.id, item.size)}
+                    >
+                      {buttonState[item.id] === "added" ? (
+                        <strong>&#x2713; Added</strong>
+                      ) : (
+                        <>
+                          <img src="/ByItAgain/by-it-again.png" alt="" />
+                          By it again
+                        </>
+                      )}
+                    </button>
+
+
+                  </div>
+
+                  <button className="track-button">
+                  Track Package
                   </button>
-
-
                 </div>
 
-                <button className="track-button">
-                Track Package
-                </button>
               </div>
-
-            </div>
             )
           })}
         </div>
-      ))}
+      )})}
 
     </div>
   )

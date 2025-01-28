@@ -28,9 +28,6 @@ const AddToCartBtn = ({name,image,price,id,size,selectedSize}) => {
       (item) => item.id === id && item.selectedSize === selectedSize
     );
 
-    console.log(name)
-    console.log(id);
-
     // Prevent adding more than 10 of the same product
     if (existingItem && existingItem.quantity >= 10) {
       alert("You cannot add more than 10 of the same product.");

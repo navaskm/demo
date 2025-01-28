@@ -1,0 +1,92 @@
+.container-order-page .order-item-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container-order-page .order-item-container .title-order-items h1 {
+  color: black;
+}
+.container-order-page .order-item-container .same-date-item-container {
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid rgb(180, 179, 179);
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.container-order-page .order-item-container .same-date-item-container h3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: rgb(3, 102, 3);
+  background-color: rgb(224, 222, 222);
+  padding: 10px;
+}
+.container-order-page .order-item-container .same-date-item-container .each-item-container {
+  padding: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+.container-order-page .order-item-container .same-date-item-container .each-item-container img {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+}
+.container-order-page .order-item-container .same-date-item-container .each-item-container .item-details-display {
+  display: flex;
+}
+.container-order-page .order-item-container .same-date-item-container .each-item-container .item-details-display .item-details {
+  width: 300px;
+}
+.container-order-page .order-item-container .same-date-item-container .each-item-container .item-details-display .item-details p {
+  margin: 0;
+  color: black;
+}
+.container-order-page .order-item-container .same-date-item-container .each-item-container .item-details-display .item-details p span {
+  color: rgb(87, 86, 86);
+}
+.container-order-page .order-item-container .same-date-item-container .each-item-container .item-details-display .item-details button {
+  width: 150px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background-color: yellow;
+  border-radius: 5px;
+}
+.container-order-page .order-item-container .same-date-item-container .each-item-container .item-details-display .item-details button img {
+  height: 30px;
+  width: 30px;
+}
+.container-order-page .order-item-container .same-date-item-container .each-item-container .item-details-display .item-details .add-green {
+  color: green;
+}
+.container-order-page .order-item-container .same-date-item-container .each-item-container .item-details-display .track-button {
+  height: 30px;
+  width: 200px;
+  border: 1px solid rgb(72, 72, 250);
+  border-radius: 6px;
+  background-color: white;
+  margin-top: 10%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.container-order-page .order-item-container .same-date-item-container .each-item-container .item-details-display .track-button:hover {
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15), 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+.container-order-page .order-item-container .same-date-item-container .each-item-container .item-details-display .track-button:active {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: translateY(1px);
+}
+@media (max-width: 768px) {
+  .container-order-page .order-item-container .same-date-item-container .each-item-container .item-details-display {
+    flex-direction: column;
+  }
+}
+.container-order-page .order-item-container .same-date-item-container .item-first {
+  margin-top: 55px;
+}/*# sourceMappingURL=orderpage.css.map */

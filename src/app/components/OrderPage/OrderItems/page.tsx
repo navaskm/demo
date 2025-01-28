@@ -1,5 +1,8 @@
-import { useSelector } from "react-redux";
+import { useSelector,useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
+
+import { addToCart } from "../../HomePage/navbar/CartLogo/cartLogoSlice";
+import { addItem } from "../../SelectedPage/ImageDisplay/AddToCartBtn/cartSlice";
 
 type OrderItems = {
   image: string;
@@ -14,6 +17,10 @@ type OrderItems = {
 const OrderItems = () => {
 
   const [isClient, setIsClient] = useState(false);
+  const [buttonState, setButtonState] = useState<{ [key: string]: string }>({});
+
+  const checkoutItems = useSelector((state:any) => state.cartItems.items);
+  const dispatch = useDispatch();
 
     // Ensure rendering happens only on the client
     useEffect(() => {
@@ -41,22 +48,34 @@ const OrderItems = () => {
     {}
   );
 
-  const againClickHandle = (itemId:string) =>{
-   const element= document.querySelector(`.again-clicked-${itemId}`);
+  const againClickHandle = (name:string,image:string,price:string,id:string,selectedSize:string) =>{
 
-   
-   element?.classList.add("add-green")
+     // Check if the product is already in the cart
+     const existingItem = checkoutItems.find(
+      (item) => item.id === id && item.selectedSize === selectedSize
+    );
 
-    if (element) {
-      element.innerHTML =  `<strong>&#x2713; Added</strong>`;
+    // Prevent adding more than 10 of the same product
+    if (existingItem && existingItem.quantity >= 10) {
+      alert("You cannot add more than 10 of the same product.");
+      return;
     }
 
-    // Set a new timeout to clear the text
+   // Update button state
+   setButtonState((prev) => ({
+    ...prev,
+    [id]: "added", // "added" state to show that it was added
+    }));
+
     setTimeout(() => {
-      element?.classList.remove("add-green");
-      element.innerHTML = ` <img src="/ByItAgain/by-it-again.png" alt="" />
-                    By it again`
+      setButtonState((prev) => ({
+        ...prev,
+        [id]: "default", // Reset to default after 2 seconds
+      }));
     }, 2000);
+
+    dispatch(addToCart());
+    dispatch(addItem({name,image,price,id,selectedSize}))
 
   }
 
@@ -90,13 +109,22 @@ const OrderItems = () => {
                   {
                     item.size && <p>Size : <span>{SelectedSize}</span></p>
                   }
-                  <button 
+
+                  <button
                     className={`again-clicked-${item.id}`}
-                    onClick={()=>againClickHandle(item.id)}
+                    onClick={() => againClickHandle(item.name, item.image, item.price, item.id, item.size)}
                   >
-                    <img src="/ByItAgain/by-it-again.png" alt="" />
-                    By it again
+                    {buttonState[item.id] === "added" ? (
+                      <strong>&#x2713; Added</strong>
+                    ) : (
+                      <>
+                        <img src="/ByItAgain/by-it-again.png" alt="" />
+                        By it again
+                      </>
+                    )}
                   </button>
+
+
                 </div>
 
                 <button className="track-button">

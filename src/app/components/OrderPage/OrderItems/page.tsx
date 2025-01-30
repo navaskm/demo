@@ -1,8 +1,10 @@
 import { useSelector,useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 import { addToCart } from "../../HomePage/navbar/CartLogo/cartLogoSlice";
 import { addItem } from "../../SelectedPage/ImageDisplay/AddToCartBtn/cartSlice";
+import { hydrateOrder } from "../../CheckoutPage/CartItems/cartItems";
 
 type OrderItems = {
   image: string;
@@ -21,6 +23,15 @@ const OrderItems = () => {
 
   const checkoutItems = useSelector((state:any) => state.cartItems.items);
   const dispatch = useDispatch();
+
+  // add local storage in to the store
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const deliveryDate = JSON.parse(localStorage.getItem("deliveryDate") || "[]");
+      const userOrder = JSON.parse(localStorage.getItem("userOrder") || "[]");
+      dispatch(hydrateOrder({ deliveryDate, userOrder }));
+    }
+  }, [dispatch]);
 
     // Ensure rendering happens only on the client
     useEffect(() => {
@@ -150,12 +161,25 @@ const OrderItems = () => {
                       )}
                     </button>
 
-
                   </div>
 
-                  <button className="track-button">
-                  Track Package
-                  </button>
+                  <Link 
+                    href={{
+                      pathname :'/components/TrackingPage',
+                      query:{
+                        name: item.name,
+                        image: item.image,
+                        date: item.conformDate,
+                        size: item.size,
+                        quantity: item.quantity,
+                      }
+                    }}
+                  >
+                    <button className="track-button">
+                      Track Package
+                    </button>
+                  </Link>
+                  
                 </div>
 
               </div>

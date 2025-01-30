@@ -12,8 +12,7 @@ import "@/app/styles/checkoutpage/checkout.scss";
 
 const CartPage = () => {
 
-  //const [screenWidth,setScreenWidth] = useState(window.innerWidth);
-  const [screenWidth, setScreenWidth] = useState(0);
+  const [screenWidth, setScreenWidth] = useState<number | null>(null);
 
   useEffect(() => {
     // Update screenWidth only after the component is mounted on the client
@@ -28,36 +27,29 @@ const CartPage = () => {
   }, []);
 
   return (
-    <>
+    <Provider store={store}>
       <Suspense fallback={<p>loading...</p>}>
-        <Provider store={store}>
-            <TopBarOfCartPage/>
-          </Provider>
+        <TopBarOfCartPage/>
       </Suspense>
 
-      {
-        screenWidth < 991? (
-          <div className="cart-items-payment-section-container" style={{display:'flex'}}>
-            <Suspense fallback={<div>Loading...</div>}>
-              <Provider store={store}>
-                <PaymentPage/>
-                <CartItems/>
-              </Provider>
-            </Suspense>
-          </div>
-        ):(
-          <div className="cart-items-payment-section-container" style={{display:'flex'}}>
-            <Suspense fallback={<div>Loading...</div>}>
-              <Provider store={store}>
-                <CartItems/>
-                <PaymentPage/>
-              </Provider>
-            </Suspense>
-          </div>
-        )
-      }
-
-    </>
+      {screenWidth !== null && (
+      <div className="cart-items-payment-section-container" style={{ display: 'flex' }}>
+        <Suspense fallback={<div>Loading...</div>}>
+          {screenWidth < 991 ? (
+            <>
+              <PaymentPage />
+              <CartItems />
+            </>
+          ) : (
+            <>
+              <CartItems />
+              <PaymentPage />
+            </>
+          )}
+        </Suspense>
+      </div>
+    )}
+    </Provider>
   )
 }
 

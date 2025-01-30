@@ -35,7 +35,7 @@ const ImageDisplay = () => {
     
       {/* create size list of product */}
       {
-        size && size.length >0 && (
+        size && size.length >1 && (
         <div className="container-product-size col-2">
           <h5>Select Size</h5>
           <div className="container-size-list">

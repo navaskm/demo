@@ -1,16 +1,7 @@
-import { createSlice,current } from "@reduxjs/toolkit";
-
-// Load cart items from localStorage or initialize to an empty array
-const loadFromLocalStorage = () => {
-  if (typeof window !== "undefined") {
-    const savedItems = localStorage.getItem("cartItems");
-    return savedItems ? JSON.parse(savedItems) : [];
-  }
-  return []; // Default value if running on the server
-};
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  items: loadFromLocalStorage(),
+  items:[],
 };
 
 const cartSlice = createSlice({
@@ -18,9 +9,13 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
 
+    cartItemHydrate: (state, action) => {
+      state.items = action.payload.items;
+    },
+
+
     // add item to cart with quantity 1 
     addItem: (state,action)=> {
-
       // Check if item already exists in the cart and increment its quantity if it does, otherwise add it to the cart.
       const existingItem = state.items.find(item => item.id === action.payload.id && item.selectedSize === action.payload.selectedSize);
 
@@ -33,7 +28,9 @@ const cartSlice = createSlice({
       }
 
       // Save updated state to localStorage
-      localStorage.setItem("cartItems", JSON.stringify(current(state.items)));
+      if (typeof window !== "undefined") {
+        localStorage.setItem("cartItems", JSON.stringify(state.items));
+      }
       
     },
 
@@ -48,7 +45,9 @@ const cartSlice = createSlice({
       }
 
       // Save updated state to localStorage
-      localStorage.setItem("cartItems", JSON.stringify(current(state.items)));
+      if (typeof window !== "undefined") {
+        localStorage.setItem("cartItems", JSON.stringify(state.items));
+      }
     },
 
     // remove item from cart
@@ -62,18 +61,22 @@ const cartSlice = createSlice({
       }
 
       // Save updated state to localStorage
-      localStorage.setItem("cartItems", JSON.stringify(current(state.items)));
+      if (typeof window !== "undefined") {
+        localStorage.setItem("cartItems", JSON.stringify(state.items));
+      }
     },
 
     removeAllItem: (state) => {
       state.items = [];
 
       // Save updated state to localStorage
-      localStorage.setItem("cartItems", JSON.stringify(state.items));
+      if (typeof window !== "undefined") {
+        localStorage.setItem("cartItems", JSON.stringify(state.items));
+      }
     }
 
   }
 })
 
 export default cartSlice.reducer;
-export const { addItem,removeItemQuantity,removeItem,removeAllItem } = cartSlice.actions;
+export const { cartItemHydrate,addItem,removeItemQuantity,removeItem,removeAllItem } = cartSlice.actions;

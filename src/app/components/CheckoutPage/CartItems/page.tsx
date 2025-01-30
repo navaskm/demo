@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { MdRemoveShoppingCart } from "react-icons/md";
 import Link from 'next/link'
 
-import { addItem, removeItemQuantity, removeItem } from "../../SelectedPage/ImageDisplay/AddToCartBtn/cartSlice";
+import { cartItemHydrate, addItem, removeItemQuantity, removeItem } from "../../SelectedPage/ImageDisplay/AddToCartBtn/cartSlice";
 import { addDeliveryDate, removeDeliveryDate } from "./cartItems";
 import { addToCart, removeFromCart, removeFromCartOfQuantityBase } from "../../HomePage/navbar/CartLogo/cartLogoSlice";
 
@@ -22,6 +22,14 @@ const CartItems = () => {
   const checkoutItems = useSelector((state: any) => state.cartItems.items);
   const dispatch = useDispatch();
 
+  // add local storage in to the store
+    useEffect(() => {
+      if (typeof window !== "undefined") {
+        const items = JSON.parse(localStorage.getItem("cartItems") || "[]");
+        dispatch(cartItemHydrate({ items }));
+      }
+    }, [dispatch]);
+
   // Initialize default delivery options
   useEffect(() => {
     if (checkoutItems.length > 0) {
@@ -39,26 +47,35 @@ const CartItems = () => {
   }, [checkoutItems]);
 
   useEffect(() => {
-    // Filter unique keys to avoid redundant dispatches
     Object.entries(selectedOptions).forEach(([key, selectedOption]) => {
       const existingItem = checkoutItems.find(
         (item) => `${item.id}-${item.selectedSize.replace(".size-", "")}` === key
       );
   
       if (existingItem) {
-        // Use CSS.escape to make the key valid for querySelector
-        let deliveryDate = document.querySelector(`.${CSS.escape(key)}`)?.textContent;
-
-        let name = existingItem.name;
-        let image = existingItem.image;
-        let price = existingItem.price;
-        let quantity = existingItem.quantity;
-        let size = existingItem.selectedSize;
-
-        dispatch(addDeliveryDate({ id: key, selectedOption, conformDate: deliveryDate, name, image, price, quantity, size}));
+        // Instead of document.querySelector, compute delivery date in state
+        let deliveryDate = findDeliveryDate(
+          selectedOption === "option1" ? 7 : selectedOption === "option2" ? 5 : 3
+        );
+  
+        let { name, image, price, quantity, selectedSize } = existingItem;
+  
+        dispatch(
+          addDeliveryDate({
+            id: key,
+            selectedOption,
+            conformDate: `${deliveryDate.dayName}, ${deliveryDate.monthName} ${deliveryDate.today}`, // Use computed value instead of querying DOM
+            name,
+            image,
+            price,
+            quantity,
+            size: selectedSize,
+          })
+        );
       }
     });
   }, [selectedOptions, checkoutItems, dispatch]);
+  
   
 
   const findDeliveryDate = (deliveryDate: number) => {
@@ -145,9 +162,12 @@ const CartItems = () => {
                   <b className="price-display">
                     Price: <span>${item.price}</span>
                   </b>
-                  <p>
+                  {
+                    item.selectedSize && <p>
                     Size: <span>{productSize}</span>
                   </p>
+                  }
+                  
                   <div className="quantity-plus-mines-button-display">
                     <p>
                       Quantity:{" "}

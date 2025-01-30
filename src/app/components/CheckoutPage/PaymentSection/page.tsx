@@ -1,13 +1,16 @@
 import { useSelector,useDispatch } from "react-redux";
 import React from "react";
 import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 import { userOrder } from "../CartItems/cartItems";
 import { removeAllItem } from "../../SelectedPage/ImageDisplay/AddToCartBtn/cartSlice";
 import { removeAllQuantity } from "../../HomePage/navbar/CartLogo/cartLogoSlice";
+import { hydrate } from "../../HomePage/navbar/CartLogo/cartLogoSlice";
 
 const PaymentPage = () => {
 
+  const dispatch = useDispatch();
   const checkoutItems = useSelector((state:any)=> state.cart.cartBase);
   const conformItems = useSelector((state:any)=> state.cartItems.items);
 
@@ -20,6 +23,13 @@ const PaymentPage = () => {
       return total + cartItem.quantity * cartItem.price;
     }, 0);
   }, [conformItems]);
+
+  useEffect(() => {
+      if (typeof window !== "undefined") {
+        const cartBase = JSON.parse(localStorage.getItem("cartBase") || '0');
+        dispatch(hydrate({ cartBase }));
+      }
+    }, [dispatch]);
 
   // get total price before tax
   const totalBeforeTax = shippingCost + productPriceCents;
@@ -36,14 +46,12 @@ const PaymentPage = () => {
 
   // order button clicked time work
   const route = useRouter();
-
-  const dispatch = useDispatch();
   
   const handleOrder = () => {
     dispatch(userOrder());
-    route.push("/components/OrderPage");
     dispatch(removeAllItem());
     dispatch(removeAllQuantity());
+    route.push("/components/OrderPage");
   }
 
   return conformItems.length !== 0 ? (

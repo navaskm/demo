@@ -1,32 +1,21 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-// Helper function to load state from localStorage
-const loadFromLocalStorage = () => {
-  if (typeof window !== "undefined") {
-    const savedData = localStorage.getItem("deliveryDate");
-    return savedData ? JSON.parse(savedData) : [];
-  }
-  return [];
-};
-
-const loadUserOrderFromLocalStorage = () => {
-  if(typeof window !== 'undefined'){
-    const savedData = localStorage.getItem("userOrder");
-    return savedData ? JSON.parse(savedData): [];
-  }
-  return [];
-}
-
 const initialState = {
   shippingCost: 0,
-  deliveryDate:loadFromLocalStorage(),
-  userOrder: loadUserOrderFromLocalStorage(),
+  deliveryDate:[],
+  userOrder: [],
 }
 
 const deliveryDateSlice = createSlice({
   name: 'deliveryDate',
   initialState,
   reducers: {
+
+    hydrateOrder: (state, action) => {
+      state.deliveryDate = action.payload.deliveryDate;
+      state.userOrder = action.payload.userOrder;
+    },
+
     // add shipping cost
     addDeliveryDate: (state, action) => {
       const { id, selectedOption, conformDate, name, image, price, quantity, size } = action.payload;
@@ -41,7 +30,7 @@ const deliveryDateSlice = createSlice({
         existingItem.price = price;
         existingItem.quantity = quantity;
         existingItem.size = size;
-        existingItem.shippingConst = 
+        existingItem.shipping = 
           selectedOption === 'option2' ? 10 : 
           selectedOption === 'option3' ? 18 : 0;
 
@@ -56,7 +45,7 @@ const deliveryDateSlice = createSlice({
           quantity,
           conformDate,
           size,
-          shippingConst: 
+          shipping: 
             selectedOption === 'option2' ? 10 : 
             selectedOption === 'option3' ? 18 : 0,
         });
@@ -64,12 +53,14 @@ const deliveryDateSlice = createSlice({
     
       // Recalculate shipping cost
       state.shippingCost = state.deliveryDate.reduce(
-        (total, item) => total + item.shippingConst,
+        (total, item) => total + item.shipping,
         0
       );
 
       // Save to localStorage
-      localStorage.setItem("deliveryDate", JSON.stringify(state.deliveryDate));
+      if (typeof window !== "undefined") {
+        localStorage.setItem("deliveryDate", JSON.stringify(state.deliveryDate));
+      }
 
     },
 
@@ -86,12 +77,14 @@ const deliveryDateSlice = createSlice({
 
       // Recalculate shippingCost
       state.shippingCost = state.deliveryDate.reduce(
-        (total, item) => total + item.shippingConst,
+        (total, item) => total + item.shipping,
         0
       );
 
       // Save to localStorage
-      localStorage.setItem("deliveryDate", JSON.stringify(state.deliveryDate));
+      if (typeof window !== "undefined") {
+        localStorage.setItem("deliveryDate", JSON.stringify(state.deliveryDate));
+      }
 
     },
 
@@ -101,11 +94,13 @@ const deliveryDateSlice = createSlice({
       state.userOrder = [...state.userOrder, ...validDeliveryDate];
 
       // Save to localStorage
-      localStorage.setItem("userOrder", JSON.stringify(state.userOrder));
+      if (typeof window !== "undefined") {
+        localStorage.setItem("userOrder", JSON.stringify(state.userOrder));
+      }
     }
     
   }
 })
 
 export default deliveryDateSlice.reducer;
-export const { addDeliveryDate,removeDeliveryDate,userOrder } = deliveryDateSlice.actions;
+export const { hydrateOrder,addDeliveryDate,removeDeliveryDate,userOrder } = deliveryDateSlice.actions;

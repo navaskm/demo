@@ -6,8 +6,6 @@ import BackToTop from "./BackToTop/page";
 
 // api similar product lines
 
-// id 311 is missing
-
 // watch = 1 to 233        = 21
 // shoes = 234 to 611      = 21
 // mens = 612 to 968      = 21
@@ -39,11 +37,11 @@ import BackToTop from "./BackToTop/page";
 // slipper 3303 to 3680  = 21
 // curtain 3681 to 3746 = 6
 // tank 3747 to 3812 = 6
-// clock 3813 to 3999 = 17
+// clock 3813 to 3999 = 18
 // water bottle 4000 to 4098 = 9
 // healthy food 4099 to 4285 = 17
 // phone charger 4286 to 4374 = 8
-                    // total = 101
+                    // total = 102
 
 type Products = {
   name: string,

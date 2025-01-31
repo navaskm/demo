@@ -5,6 +5,8 @@ import Link from "next/link";
 import { addToCart } from "../../HomePage/navbar/CartLogo/cartLogoSlice";
 import { addItem } from "../../SelectedPage/ImageDisplay/AddToCartBtn/cartSlice";
 import { hydrateOrder } from "../../CheckoutPage/CartItems/cartItems";
+import TopBarOfCartPage from "../../CheckoutPage/TopBar/page";
+import EmptyCart from "../../CheckoutPage/CartItems/EmptyCart/page";
 
 type OrderItems = {
   image: string;
@@ -101,12 +103,10 @@ const OrderItems = () => {
     return conformDate > today;
   };
 
-  return (
+  return conformDeliveryDate.length !== 0 ? (
     <div className="order-item-container">
 
-      <div className="title-order-items">
-        <h1>Your Orders</h1>
-      </div>
+      <TopBarOfCartPage order='useOrder'/>
 
       {Object.entries(groupedItems).map(([date, items], groupIndex) => {
 
@@ -189,6 +189,11 @@ const OrderItems = () => {
       )})}
 
     </div>
+  ):(
+    <>
+      <h1>YOUR ORDER IS EMPTY</h1>
+      <EmptyCart/>
+    </>
   )
 }
 

@@ -1,11 +1,11 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useState, useEffect } from "react";
 import { MdRemoveShoppingCart } from "react-icons/md";
-import Link from 'next/link'
 
 import { cartItemHydrate, addItem, removeItemQuantity, removeItem } from "../../SelectedPage/ImageDisplay/AddToCartBtn/cartSlice";
 import { addDeliveryDate, removeDeliveryDate } from "./cartItems";
 import { addToCart, removeFromCart, removeFromCartOfQuantityBase } from "../../HomePage/navbar/CartLogo/cartLogoSlice";
+import EmptyCart from "./EmptyCart/page";
 
 type Products = {
   id: string;
@@ -223,13 +223,8 @@ const CartItems = () => {
       })}
     </div>
   ):(
-    // items is 0 at the time this work
-    <div className="empty-cart-container">
-        <img src="/EmptyCart/emptyImage.png" alt="" />
-        <h5>Your cart is empty!</h5>
-        <p>Add items to it now.</p>
-        <Link href="/" style={{textDecoration:"none",color:"white"}}>Start Shopping</Link>
-    </div>
+    // cart empty at the time this component work
+    <EmptyCart/>
   )
 };
 

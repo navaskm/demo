@@ -1,7 +1,11 @@
 import Link from "next/link"
 import { useSelector } from "react-redux"
 
-const TopBarOfCartPage = () => {
+type Order = {
+  order?: string,
+}
+
+const TopBarOfCartPage = ({order}:Order) => {
 
   const checkoutItems = useSelector((state:any)=> state.cart.cartBase);
   const carItems = useSelector((state: any) => state.cartItems.items);
@@ -13,7 +17,11 @@ const TopBarOfCartPage = () => {
       </Link>
 
       {
-        carItems.length !== 0 ? (
+        order?(
+          <h2>
+            Your Orders
+          </h2>
+        ): carItems.length !== 0 ? (
           <h2>
             Check Out <span>{checkoutItems}</span> Items
           </h2>
@@ -23,6 +31,8 @@ const TopBarOfCartPage = () => {
           </h2>
         )
       }
+
+
 
     </div>
   )

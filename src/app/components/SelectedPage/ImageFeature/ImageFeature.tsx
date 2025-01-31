@@ -30,8 +30,8 @@ const ImageFeature = ({selectedImage}:{selectedImage:Products}) => {
       <div className="product-delivery-date">
         <h2>Check Your Delivery Date</h2>
         <p>Free : <span>Within 7 days, the product will reach your home.</span></p>
-        <p>Normal : <span>If you pay a $3 shipping cost, the product will reach your home within 5 days.</span></p>
-        <p>Urgent : <span>If you pay a $5 shipping cost, the product will reach your home within 3 days.</span></p>
+        <p>Normal : <span>If you pay a ₹10 shipping cost, the product will reach your home within 5 days.</span></p>
+        <p>Urgent : <span>If you pay a ₹18 shipping cost, the product will reach your home within 3 days.</span></p>
       </div>
 
       <div className="product-rating-reviews">

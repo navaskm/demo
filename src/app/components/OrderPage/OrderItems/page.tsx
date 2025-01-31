@@ -35,10 +35,10 @@ const OrderItems = () => {
     }
   }, [dispatch]);
 
-    // Ensure rendering happens only on the client
-    useEffect(() => {
-      setIsClient(true);
-    }, []);
+  // Ensure rendering happens only on the client
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const conformDeliveryDate = useSelector((state: any) => state.deliveryDate.userOrder);
 
@@ -61,7 +61,7 @@ const OrderItems = () => {
     {}
   );
 
-  const againClickHandle = (name:string,image:string,price:string,id:string,selectedSize:string) =>{
+  const againClickHandle = (name:string,image:string,price:string,id:string,selectedSize:string,conformDate:string) =>{
 
      // Check if the product is already in the cart
      const existingItem = checkoutItems.find(
@@ -88,7 +88,7 @@ const OrderItems = () => {
     }, 2000);
 
     dispatch(addToCart());
-    dispatch(addItem({name,image,price,id,selectedSize}))
+    dispatch(addItem({name,image,price,id,selectedSize,conformDate}))
 
   }
 
@@ -149,7 +149,7 @@ const OrderItems = () => {
 
                     <button
                       className={`again-clicked-${item.id}`}
-                      onClick={() => againClickHandle(item.name, item.image, item.price, item.id, item.size)}
+                      onClick={() => againClickHandle(item.name, item.image, item.price, item.id, item.size,item.conformDate)}
                     >
                       {buttonState[item.id] === "added" ? (
                         <strong>&#x2713; Added</strong>

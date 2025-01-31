@@ -15,8 +15,6 @@ const AddToCartBtn = ({name,image,price,id,size,selectedSize}) => {
 
   const AddToCart = ()=>{
 
-    console.log(size.length);
-
     // user not use size then this work. after user select a size
     if(size.length > 2 &&  selectedSize === ''){
       alert('Choose a size');

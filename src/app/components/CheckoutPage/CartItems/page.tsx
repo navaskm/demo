@@ -203,6 +203,17 @@ const CartItems = () => {
                       <label>
                         {`${deliveryDate.dayName}, ${deliveryDate.monthName} ${deliveryDate.today}`}
                       </label>
+                      
+                      {
+                        i == 0?(
+                          <p>FREE Shipping</p>
+                        ): i == 1?(
+                          <p>₹10 - Shipping</p>
+                        ):(
+                          <p>₹18 - Shipping</p>
+                        )
+                      }
+                      
                     </div>
                   );
                 })}

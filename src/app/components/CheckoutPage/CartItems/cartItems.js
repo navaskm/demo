@@ -89,13 +89,28 @@ const deliveryDateSlice = createSlice({
     },
 
     userOrder: (state) => {
-       // Merge userOrder with deliveryDate
       const validDeliveryDate = Array.isArray(state.deliveryDate) ? state.deliveryDate : [];
-      state.userOrder = [...state.userOrder, ...validDeliveryDate];
 
-      // Save to localStorage
+      const formatDate = (date) => new Date(date).toISOString().split("T")[0];
+
+      const newOrders = validDeliveryDate.filter((newItem) => 
+        !state.userOrder.some((existingItem) => {
+          return (
+            existingItem.id === newItem.id &&
+            formatDate(existingItem.conformDate) === formatDate(newItem.conformDate)
+          );
+        })
+      );
+
+    
+      state.userOrder = [...state.userOrder, ...newOrders];
+    
+      // Clear deliveryDate after order confirmation
+      state.deliveryDate = [];
+    
       if (typeof window !== "undefined") {
         localStorage.setItem("userOrder", JSON.stringify(state.userOrder));
+        localStorage.setItem("deliveryDate", JSON.stringify(state.deliveryDate));
       }
     }
     

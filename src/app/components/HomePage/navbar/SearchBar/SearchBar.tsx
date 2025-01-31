@@ -1,6 +1,8 @@
 'use client';
+
 import { CiSearch } from "react-icons/ci";
 import { useState,useEffect } from "react";
+import Link from "next/link";
 
 import { fetchProduct,fetchScrollingProduct } from "@/app/DataFetching/productData";
 import similarProducts from '@/app/API/similar-product.json';
@@ -9,12 +11,20 @@ import "@/app/styles/homepage/navbar/navbar.scss";
 type Search = {
   id: number,
   name: string,
+  image: string,
+  size: string,
+  priceCents: string,
+  rating: string,
+  madein: string,
+  Feature: string,
+  type: string,
+  company: string,
 }
 
 const SearchBar =  () => {
 
   const [scrolling, setScrolling] = useState([]);
-  const [scrollingSearchData, setScrollingSearchData] = useState('');
+  const [searchData, setSearchData] = useState('');
 
   useEffect(()=> {
 
@@ -35,8 +45,8 @@ const SearchBar =  () => {
 
   },[])
 
-  const scrollingName = scrolling.filter((item:object)=>
-    item.name.toLocaleLowerCase().includes(scrollingSearchData.toLocaleLowerCase())
+  const productName = scrolling.filter((product:object)=>
+    product.name.toLocaleLowerCase().includes(searchData.toLocaleLowerCase())
   )
 
   return (
@@ -44,19 +54,38 @@ const SearchBar =  () => {
       <input
         type="text" 
         placeholder="Search product"
-        onChange={(e)=> setScrollingSearchData(e.target.value)}
+        onChange={(e)=> setSearchData(e.target.value)}
       />
       <button>
         <CiSearch/>
       </button>
 
      {
-      scrollingSearchData && scrollingName.length > 0 && (
+      searchData && productName.length > 0 && (
         <div className="result-box">
           {
-            scrollingName.map((user:Search) => (
-              <ul key={user.id}>
-                <li>{user.name}</li>
+            productName.map((product:Search) => (
+              <ul key={product.id}>
+                <Link
+                  style={{textDecoration:"none"}}
+                  href={{
+                    pathname:"/components/SelectedPage",
+                    query:{
+                      name: encodeURIComponent(product.name),
+                      priceCents: product.priceCents,
+                      image: encodeURIComponent(product.image),
+                      rating: product.rating,
+                      id: product.id,
+                      type: product.type,
+                      company: encodeURIComponent(product.company),
+                      madein: encodeURIComponent(product.madein),
+                      Feature: encodeURIComponent(product.Feature),
+                      size: product.size,
+                    }
+                  }}
+                >
+                  <li>{product.name}</li>
+                </Link>
               </ul>
             ))
           }

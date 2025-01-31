@@ -54,7 +54,7 @@ switch (diffInDays) {
     
   case 3:
     conformUser.width ='60%';
-    conformUser.heading = 'Order Shipped - In Transit';
+    conformUser.heading = 'Order Ready for Shipment';
     break;
 
   case 2:

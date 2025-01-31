@@ -16,5 +16,4 @@ export const fetchScrollingProduct = async () => {
   return scrollingProduct;
 }
 
-
 //?timestamp=${Date.now()}

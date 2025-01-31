@@ -43,6 +43,8 @@ import BackToTop from "./BackToTop/page";
 // phone charger 4286 to 4374 = 8
                     // total = 102
 
+// all total id is = 345
+
 type Products = {
   name: string,
   title:string,

@@ -8,6 +8,9 @@ import '@/app/styles/orderpage/orderpage.scss';
 const OrderPage = () => {
   return (
     <div className="container-order-page">
+
+      <title>Your Orders</title>
+
       <Provider store={store}>
         <OrderItems />
       </Provider>

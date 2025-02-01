@@ -1,5 +1,6 @@
 import Link from "next/link"
 import '@/app/styles/trackingpage/tracking.scss';
+import TrackId from "./TrackId";
 
 type Products = {
   name: string,
@@ -7,6 +8,14 @@ type Products = {
   date: string,
   quantity: number,
   size: string,
+}
+
+// Generate metadata dynamically based on searchParams
+export async function generateMetadata({ searchParams }: { searchParams: Products }) {
+  return {
+    title: `Tracking ${decodeURIComponent(searchParams.name)}`,
+    description: `Track ${decodeURIComponent(searchParams.name)} Product`,
+  };
 }
 
 const TrackingPage= ({ searchParams }: { searchParams: Products }) => {
@@ -80,6 +89,7 @@ switch (diffInDays) {
 
   return (
     <div className="container">
+
       <div className="order-content">
 
         <Link href='/components/OrderPage'>View All Orders</Link>
@@ -113,7 +123,7 @@ switch (diffInDays) {
 
       <div className="track-id-container">
         <h5>Shipped with UPS</h5>
-        <p>Tracking ID : <span>7655473838</span></p>
+        <TrackId name={decodeURIComponent(searchParams.name)}/>
       </div>
 
     </div>

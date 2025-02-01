@@ -28,6 +28,9 @@ const CartPage = () => {
 
   return (
     <Provider store={store}>
+
+      <title>Check Your Items</title>
+
       <Suspense fallback={<p>loading...</p>}>
         <TopBarOfCartPage/>
       </Suspense>

@@ -1,7 +1,7 @@
 "use client";
 import { useState,useEffect } from "react";
 
-const TrackId = ({name}) => {
+const TrackId = ({name}:{name:string}) => {
 
   const [trackingID, setTrackingID] = useState<string>("");
 
@@ -15,7 +15,7 @@ const TrackId = ({name}) => {
         localStorage.setItem(name, storedID);
       }
 
-      setTrackingID(storedID); // Update state
+      setTrackingID(storedID);
     }
   }, [name]);
 

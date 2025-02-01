@@ -1,4 +1,12 @@
 import { Suspense, lazy } from "react";
+import { SkeletonTheme } from "react-loading-skeleton";
+
+//Loading imports
+import NavbarSkeleton from "./components/HomePage/navbar/Skeleton/NavbarSkeleton";
+import MainOfferSkeleton from "./components/HomePage/MainOffers/Skeleton/MainOfferSkeleton";
+import SmallProductsSkeleton from "./components/HomePage/SmallProducts/Skeleton/SmallProductsSkeleton";
+import ScrollingSkeleton from "./components/HomePage/HomePageScrolling/Skeleton/ScrollingSkeleton";
+import LargeProductSkeleton from "./components/HomePage/LargeProducts/Skeleton/LargeProductSkeleton";
 
 const NavBar = lazy(() => import("./components/HomePage/navbar/NavBar"));
 const MainOffers = lazy(() => import ("./components/HomePage/MainOffers/MainOffers"));
@@ -9,51 +17,50 @@ const TwoProducts = lazy(() => import("./components/HomePage/TwoProducts/TwoProd
 const SmallScrolling = lazy(() => import("./components/HomePage/SmallScrolling/SmallScrolling"));
 const LastOneProducts = lazy (() => import("./components/HomePage/LastOneProducts/LastOneProducts"));
 
-//import { MenuProvider } from "./components/HomePage/navbar/MenuContext/MenuContext";
-
 export default function Home() {
   return (
     <>
-      <Suspense fallback={<p>Loading Navbar....</p>}>
+    <SkeletonTheme baseColor="#aed4fa" highlightColor="#525252">
+      <Suspense fallback={<NavbarSkeleton/>}>
         <NavBar />
       </Suspense>
 
-      <Suspense fallback={<p>Loading Offers ....</p>}>
+      <Suspense fallback={<MainOfferSkeleton/>}>
         <MainOffers/>
       </Suspense>
 
-      <Suspense fallback={<p>loading products ....</p>}>
+      <Suspense fallback={<SmallProductsSkeleton/>}>
         <SmallProducts />
       </Suspense>
         
-      <Suspense fallback={<p>Loading bags......</p>}>
+      <Suspense fallback={<ScrollingSkeleton/>}>
         <HomePageScrolling item='bag'/>
       </Suspense>
-      <Suspense fallback={<p>Loading bags......</p>}>
+      <Suspense fallback={<ScrollingSkeleton/>}>
         <HomePageScrolling item='sports-item'/>
       </Suspense>
 
-      <Suspense fallback={<p>Loading largeProducts</p>}>
+      <Suspense fallback={<LargeProductSkeleton/>}>
         <LargeProduct />
       </Suspense>
 
-      <Suspense fallback={<p>Loading two products</p>}>
+      <Suspense fallback={<LargeProductSkeleton/>}>
         <TwoProducts />
       </Suspense>
 
-      <Suspense fallback={<p>Loading small scrolling</p>}>
+      <Suspense fallback={<ScrollingSkeleton/>}>
         <SmallScrolling item='faceWash' />
       </Suspense>
-      <Suspense fallback={<p>Loading small scrolling</p>}>
+      <Suspense fallback={<ScrollingSkeleton/>}>
         <SmallScrolling item='phone'/>
       </Suspense>
 
       {/* Add more products here */}
 
-       <Suspense fallback={<p>loading.....</p>}>
+       <Suspense fallback={<LargeProductSkeleton/>}>
         <LastOneProducts />
       </Suspense> 
-
+      </SkeletonTheme>
     </>
   );
 }

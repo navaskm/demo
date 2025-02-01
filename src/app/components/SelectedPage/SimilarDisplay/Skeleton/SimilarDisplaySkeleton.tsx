@@ -1,16 +1,15 @@
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 
-const SmallProductsSkeleton = () => {
+const SimilarProductsSkeleton = () => {
   return (
-    <div className="container-of-all-products row">
-      {[...Array(8)].map((_, index) => ( // Loop to display multiple skeleton cards
+    <div className="container-of-all-products row" >
+      {[...Array(12)].map((_, index) => ( // Loop to display multiple skeleton cards
         <div key={index} className="container-of-one-product col-6 col-md-4 col-xl-3">
             <h3><Skeleton height={25} width="60%" /></h3>
             <div className="product-details-display">
-              <div  style={{ display: 'flex', flexDirection: 'row',gap: '2px' ,backgroundColor:"black"}}>
-                <Skeleton height={100} width={100} count={2}  style={{ display: 'inline-block'}}/>
-                <Skeleton height={100} width={100} count={2} style={{ display: 'inline-block' }}/>
+              <div  style={{ display: 'flex', flexDirection: 'row',gap: '2px' }}>
+                <Skeleton height={100} width={200}/>
               </div>
 
               <div className="name-price-display">
@@ -27,4 +26,4 @@ const SmallProductsSkeleton = () => {
   );
 };
 
-export default SmallProductsSkeleton;
+export default SimilarProductsSkeleton;

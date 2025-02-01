@@ -1,5 +1,9 @@
 import { lazy,Suspense } from "react";
 
+import NavbarSkeleton from "../HomePage/navbar/Skeleton/NavbarSkeleton";
+import ImageDisplaySkeleton from "./ImageDisplay/Skeleton/ImageDisplaySkeleton";
+import SimilarProductsSkeleton from "./SimilarDisplay/Skeleton/SimilarDisplaySkeleton";
+
 const NavBar = lazy(() => import("../HomePage/navbar/NavBar"));
 const ImageDisplay = lazy(() => import("./ImageDisplay/ImageDisplay"));
 const ImageFeature = lazy(() => import("./ImageFeature/ImageFeature"));
@@ -39,7 +43,7 @@ const SelectItemPage = ({searchParams}:{searchParams:Products}) => {
     return (
       <>
           {/* offer products display */}
-        <Suspense fallback={<p>loading...</p>}>
+        <Suspense fallback={<SimilarProductsSkeleton/>}>
           <SimilarProducts selectedImage={searchParams} />
         </Suspense>
       </>
@@ -48,24 +52,26 @@ const SelectItemPage = ({searchParams}:{searchParams:Products}) => {
 
   return (
       <>
-        <Suspense fallback={<p>loading...</p>}>
+        <Suspense fallback={<NavbarSkeleton/>}>
           <NavBar/>
         </Suspense>
 
         <div className="image-features-container">
             {/* image size,image, add to cart, quantity of product display*/}
-          <Suspense fallback={<p>loading...</p>}>
+          <Suspense fallback={<ImageDisplaySkeleton/>}>
             <ImageDisplay selectedImage={searchParams} />
           </Suspense>
+          
 
             {/* features display */}
-          <Suspense fallback={<p>loading...</p>}>
+          <Suspense fallback={<ImageDisplaySkeleton/>}>
             <ImageFeature selectedImage={searchParams} /> 
+            <ImageDisplaySkeleton/>
           </Suspense>
         </div>
 
         {/* similar products display */}
-        <Suspense fallback={<p>loading...</p>}>
+        <Suspense fallback={<SimilarProductsSkeleton/>}>
           <SimilarProducts selectedImage={searchParams} />
         </Suspense>
 

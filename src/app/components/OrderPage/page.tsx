@@ -1,8 +1,10 @@
 "use client";
 
+import { lazy,Suspense } from "react";
+import { Rings } from 'react-loading-icons';
 import { Provider } from "react-redux";
 import store from "../Redux/store";
-import OrderItems from "./OrderItems/page";
+const OrderItems = lazy(()=>import("./OrderItems/page"));
 import '@/app/styles/orderpage/orderpage.scss';
 
 const OrderPage = () => {
@@ -12,7 +14,9 @@ const OrderPage = () => {
       <title>Your Orders</title>
 
       <Provider store={store}>
-        <OrderItems />
+        <Suspense fallback={<Rings />}>
+          <OrderItems />
+        </Suspense>
       </Provider>
     </div>
   )

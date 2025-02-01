@@ -8,7 +8,7 @@ const SmallProductsSkeleton = () => {
         <div key={index} className="container-of-one-product col-6 col-md-4 col-xl-3">
             <h3><Skeleton height={25} width="60%" /></h3>
             <div className="product-details-display">
-              <div  style={{ display: 'flex', flexDirection: 'row',gap: '2px' ,backgroundColor:"black"}}>
+              <div  style={{ display: 'flex', flexDirection: 'row',gap: '2px'}}>
                 <Skeleton height={100} width={100} count={2}  style={{ display: 'inline-block'}}/>
                 <Skeleton height={100} width={100} count={2} style={{ display: 'inline-block' }}/>
               </div>

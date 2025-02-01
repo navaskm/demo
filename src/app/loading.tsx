@@ -1,11 +1,11 @@
-import React from 'react'
+import { ThreeDots   } from 'react-loading-icons';
 
-const loading = () => {
-  return (
-    <div>
-      <h1 style={{color:"red"}}>hellooooooooooooooooooo</h1>
+const Loading = () => (
+  <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+    <div style={{ animation: 'spin 2s linear infinite' }}>
+    <ThreeDots />
     </div>
-  )
-}
+  </div>
+);
 
-export default loading
+export default Loading;

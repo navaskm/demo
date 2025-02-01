@@ -2,8 +2,11 @@
 
 import { lazy,Suspense } from "react";
 import { useEffect,useState } from "react";
+import { Rings } from 'react-loading-icons';
 import { Provider } from "react-redux";
 import store from "../Redux/store";
+
+import NavbarSkeleton from "../HomePage/navbar/Skeleton/NavbarSkeleton";
 
 const CartItems = lazy(()=> import('./CartItems/page'));
 const PaymentPage = lazy(()=> import('./PaymentSection/page'));
@@ -31,13 +34,13 @@ const CartPage = () => {
 
       <title>Check Your Items</title>
 
-      <Suspense fallback={<p>loading...</p>}>
+      <Suspense fallback={<NavbarSkeleton/>}>
         <TopBarOfCartPage/>
       </Suspense>
 
       {screenWidth !== null && (
       <div className="cart-items-payment-section-container" style={{ display: 'flex' }}>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Rings />}>
           {screenWidth < 991 ? (
             <>
               <PaymentPage />

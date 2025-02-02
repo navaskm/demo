@@ -5,10 +5,33 @@ type Order = {
   order?: string,
 }
 
+type QuantityType = {
+  cart: {
+    cartBase: number;
+  }
+}
+
+type Products = {
+  id: string;
+  name: string;
+  image: string;
+  price: number;
+  quantity: number;
+  size: string;
+  selectedSize: string;
+};
+
+type CartItemType = {
+  selectedSize?: string;
+  cartItems: {
+    items: Products[];
+  }
+}
+
 const TopBarOfCartPage = ({order}:Order) => {
 
-  const checkoutItems = useSelector((state:any)=> state.cart.cartBase);
-  const carItems = useSelector((state: any) => state.cartItems.items);
+  const checkoutItems = useSelector((state:QuantityType)=> state.cart.cartBase);
+  const carItems = useSelector((state: CartItemType) => state.cartItems.items);
 
   return (
     <div className="top-bar">

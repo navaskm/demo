@@ -62,11 +62,11 @@ const CartItems = () => {
   
       if (existingItem) {
         // Instead of document.querySelector, compute delivery date in state
-        let deliveryDate = findDeliveryDate(
+        const deliveryDate = findDeliveryDate(
           selectedOption === "option1" ? 7 : selectedOption === "option2" ? 5 : 3
         );
   
-        let { name, image, price, quantity, selectedSize } = existingItem;
+        const { name, image, price, quantity, selectedSize } = existingItem;
   
         dispatch(
           addDeliveryDate({
@@ -109,7 +109,7 @@ const CartItems = () => {
       dispatch(addItem({ id, selectedSize }));
 
       const item = checkoutItems.find(
-        (item:any) => item.id === id && item.selectedSize === selectedSize
+        (item:Products) => item.id === id && item.selectedSize === selectedSize
       );
       if (item && item.quantity < 10) {
         dispatch(addToCart());
@@ -120,7 +120,7 @@ const CartItems = () => {
     } else if (value === "-") {
       dispatch(removeItemQuantity({ id, selectedSize }));
       const item = checkoutItems.find(
-        (item:any) => item.id === id && item.selectedSize === selectedSize
+        (item:Products) => item.id === id && item.selectedSize === selectedSize
       );
       if (item && item.quantity > 1) {
         dispatch(removeFromCart());
@@ -135,7 +135,7 @@ const CartItems = () => {
   const handleRemoveItem = (id: string, selectedSize: string, itemQuantity: number,selectedOption:string,dateId:string) => {
     dispatch(removeItem({ id, selectedSize }));
 
-    let productId = dateId.replace('.size-', '');
+    const productId = dateId.replace('.size-', '');
     dispatch(removeDeliveryDate({ productId, selectedOption }));
 
     dispatch(removeFromCartOfQuantityBase({ quantity: itemQuantity }));

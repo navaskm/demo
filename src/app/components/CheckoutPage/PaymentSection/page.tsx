@@ -10,18 +10,47 @@ import { removeAllItem } from "../../SelectedPage/ImageDisplay/AddToCartBtn/cart
 import { removeAllQuantity } from "../../HomePage/navbar/CartLogo/cartLogoSlice";
 import { hydrate } from "../../HomePage/navbar/CartLogo/cartLogoSlice";
 
+type Products = {
+  id: string;
+  name: string;
+  image: string;
+  price: number;
+  quantity: number;
+  size: string;
+  selectedSize: string;
+};
+
+type CartItemType = {
+  selectedSize?: string;
+  cartItems: {
+    items: Products[];
+  }
+}
+
+type QuantityType = {
+  cart: {
+    cartBase: number;
+  }
+}
+
+type ShippingType = {
+  deliveryDate: {
+    shippingCost: number;
+  }
+}
+
 const PaymentPage = () => {
 
   const dispatch = useDispatch();
-  const checkoutItems = useSelector((state:any)=> state.cart.cartBase);
-  const conformItems = useSelector((state:any)=> state.cartItems.items);
+  const checkoutItems = useSelector((state:QuantityType)=> state.cart.cartBase);
+  const conformItems = useSelector((state:CartItemType)=> state.cartItems.items);
 
   // get shipping cost
-  const shippingCost = useSelector((state:any) => state.deliveryDate.shippingCost);
+  const shippingCost = useSelector((state:ShippingType) => state.deliveryDate.shippingCost);
 
   // get total product price
   const productPriceCents = React.useMemo(() => {
-    return conformItems.reduce((total: number, cartItem: any) => {
+    return conformItems.reduce((total: number, cartItem: Products) => {
       return total + cartItem.quantity * cartItem.price;
     }, 0);
   }, [conformItems]);

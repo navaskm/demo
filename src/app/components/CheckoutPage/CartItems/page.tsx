@@ -52,7 +52,7 @@ const CartItems = () => {
 
       setSelectedOptions((prev) => ({ ...prev, ...defaultOptions }));
     }
-  }, [checkoutItems]);
+  }, [checkoutItems,selectedOptions]);
 
   useEffect(() => {
     Object.entries(selectedOptions).forEach(([key, selectedOption]) => {

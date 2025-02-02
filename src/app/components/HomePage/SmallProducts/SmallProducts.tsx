@@ -1,5 +1,5 @@
 //import '@/app/styles/homepage/SmallProducts/SmallProducts.scss'
-import '@/app/styles/homepage/SmallProducts/SmallProducts.scss'
+import '@/app/styles/homepage/SmallProducts/smallproducts.scss'
 
 import { fetchProduct } from "@/app/DataFetching/productData"
 import Link from "next/link";

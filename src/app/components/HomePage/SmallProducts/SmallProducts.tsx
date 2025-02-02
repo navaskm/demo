@@ -2,9 +2,6 @@ import '@/app/styles/homepage/smallProducts/smallproducts.scss';
 import { fetchProduct } from "@/app/DataFetching/productData"
 import Link from "next/link";
 
-import Skeleton from 'react-loading-skeleton';
-import 'react-loading-skeleton/dist/skeleton.css';
-
 type Products = {
   name: string,
   title:string,
@@ -20,7 +17,7 @@ type Products = {
   size:string,
 }
 
-const fourItems:Products[] | [] = [];
+const fourItems:Products[] | any[] = [];
 
 const response = await fetchProduct();
 const productWatch = response.filter((watch:Products) => watch.type === 'watch');

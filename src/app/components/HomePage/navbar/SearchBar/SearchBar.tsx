@@ -23,7 +23,7 @@ type Search = {
 
 const SearchBar =  () => {
 
-  const [scrolling, setScrolling] = useState([]);
+  const [scrolling, setScrolling] = useState<Search[]>([]);
   const [searchData, setSearchData] = useState('');
 
   useEffect(()=> {
@@ -34,7 +34,12 @@ const SearchBar =  () => {
 
         const homeProducts = await fetchProduct();
         const scrollingProducts  = await fetchScrollingProduct();
-        setScrolling([...homeProducts, ...scrollingProducts,...similarProducts]);
+        setScrolling([
+          ...(homeProducts  as Search[]),
+          ...(scrollingProducts  as Search[]),
+          ...(similarProducts  as any)
+        ]);
+        
 
       } catch (error) {
         console.error("Error fetching products:", error);
@@ -45,7 +50,7 @@ const SearchBar =  () => {
 
   },[])
 
-  const productName = scrolling.filter((product:object)=>
+  const productName = scrolling.filter((product:Search)=>
     product.name.toLocaleLowerCase().includes(searchData.toLocaleLowerCase())
   )
 

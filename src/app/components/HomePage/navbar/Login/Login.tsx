@@ -1,5 +1,4 @@
 import { SignInButton,UserButton,SignedIn,SignedOut } from "@clerk/nextjs"
-//<button title="Login" className="login-button">Login</button>
 const Login = () => {
   return(
     <>
@@ -7,7 +6,9 @@ const Login = () => {
         <UserButton/>
       </SignedIn>
       <SignedOut>
-        <SignInButton mode="modal" title="Login" className="login-button"/>
+      <SignInButton mode="modal">
+          <button className="login-button">Login</button>
+        </SignInButton>
       </SignedOut>
     </>
   )

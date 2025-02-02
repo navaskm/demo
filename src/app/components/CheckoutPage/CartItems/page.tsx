@@ -33,7 +33,7 @@ const CartItems = () => {
   // Initialize default delivery options
   useEffect(() => {
     if (checkoutItems.length > 0) {
-      const defaultOptions = checkoutItems.reduce((acc, item) => {
+      const defaultOptions = checkoutItems.reduce((acc:any, item:any) => {
         const productSize = item.selectedSize.replace(".size-", "");
         const key = `${item.id}-${productSize}`;
         if (!(key in acc)) {
@@ -49,7 +49,7 @@ const CartItems = () => {
   useEffect(() => {
     Object.entries(selectedOptions).forEach(([key, selectedOption]) => {
       const existingItem = checkoutItems.find(
-        (item) => `${item.id}-${item.selectedSize.replace(".size-", "")}` === key
+        (item:any) => `${item.id}-${item.selectedSize.replace(".size-", "")}` === key
       );
   
       if (existingItem) {
@@ -101,7 +101,7 @@ const CartItems = () => {
       dispatch(addItem({ id, selectedSize }));
 
       const item = checkoutItems.find(
-        (item) => item.id === id && item.selectedSize === selectedSize
+        (item:any) => item.id === id && item.selectedSize === selectedSize
       );
       if (item && item.quantity < 10) {
         dispatch(addToCart());
@@ -112,7 +112,7 @@ const CartItems = () => {
     } else if (value === "-") {
       dispatch(removeItemQuantity({ id, selectedSize }));
       const item = checkoutItems.find(
-        (item) => item.id === id && item.selectedSize === selectedSize
+        (item:any) => item.id === id && item.selectedSize === selectedSize
       );
       if (item && item.quantity > 1) {
         dispatch(removeFromCart());

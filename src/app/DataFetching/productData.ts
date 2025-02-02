@@ -15,5 +15,3 @@ export const fetchScrollingProduct = async () => {
   const scrollingProduct = await response.json();
   return scrollingProduct;
 }
-
-//?timestamp=${Date.now()}

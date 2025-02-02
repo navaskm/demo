@@ -86,7 +86,7 @@ const SimilarProducts = async ({selectedImage}:{selectedImage:Products}) => {
   let similarProduct = similarProducts.filter(product => product.type == selectedImage.type);
 
   // remove selectedImage in display in similar products
-  let similarFinalProduct = similarProduct.filter(product => product.id !== selectedImage.id);
+  let similarFinalProduct = similarProduct.filter(product => Number(product.id) !== selectedImage.id);
 
   return (
     <div className="container-of-similar-product">

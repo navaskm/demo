@@ -59,14 +59,13 @@ const SelectItemPage = ({searchParams}:{searchParams:Products}) => {
         <div className="image-features-container">
             {/* image size,image, add to cart, quantity of product display*/}
           <Suspense fallback={<ImageDisplaySkeleton/>}>
-            <ImageDisplay selectedImage={searchParams} />
+            <ImageDisplay/>
           </Suspense>
           
 
             {/* features display */}
           <Suspense fallback={<ImageDisplaySkeleton/>}>
-            <ImageFeature selectedImage={searchParams} /> 
-            <ImageDisplaySkeleton/>
+            <ImageFeature selectedImage={searchParams} />
           </Suspense>
         </div>
 

@@ -6,12 +6,21 @@ import { useState } from "react";
 import { addToCart } from "@/app/components/HomePage/navbar/CartLogo/cartLogoSlice";
 import { addItem } from "./cartSlice";
 
-const AddToCartBtn = ({name,image,price,id,size,selectedSize}) => {
+type Product = {
+  name:string|null,
+  image: string,
+  price: string|null,
+  id: string|null,
+  size: string[],
+  selectedSize: string,
+}
+
+const AddToCartBtn = ({name,image,price,id,size,selectedSize}:Product) => {
 
   const [isAdded, setIsAdded] = useState(false);
 
   const dispatch = useDispatch();
-  const checkoutItems = useSelector((state) => state.cartItems.items);
+  const checkoutItems = useSelector((state:any) => state.cartItems.items);
 
   const AddToCart = ()=>{
 
@@ -25,7 +34,7 @@ const AddToCartBtn = ({name,image,price,id,size,selectedSize}) => {
 
     // Check if the product is already in the cart
     const existingItem = checkoutItems.find(
-      (item) => item.id === id && item.selectedSize === selectedSize
+      (item:any) => item.id === id && item.selectedSize === selectedSize
     );
 
     // Prevent adding more than 10 of the same product

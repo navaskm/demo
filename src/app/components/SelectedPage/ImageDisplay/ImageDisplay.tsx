@@ -13,7 +13,7 @@ const ImageDisplay = () => {
   const [selectedSize, setSelectedSize] = useState('');
 
   const searchParams = useSearchParams();
-  const image:string|null = searchParams.get("image");
+  const image:string | any= searchParams.get("image");
   const size:string[]|null = searchParams.getAll("size");
   const name:string|null = searchParams.get("name");
   const priceCents:string|null = searchParams.get("priceCents");

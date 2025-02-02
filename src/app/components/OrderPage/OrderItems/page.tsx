@@ -18,6 +18,11 @@ type OrderItems = {
   size: string;
 }
 
+type GroupedItems = {
+  [date: string]: OrderItems[];
+};
+
+
 const OrderItems = () => {
 
   const [isClient, setIsClient] = useState(false);
@@ -48,7 +53,7 @@ const OrderItems = () => {
   }
 
   // Group items by `conformDate`
-  const groupedItems = conformDeliveryDate.reduce(
+  const groupedItems:GroupedItems = conformDeliveryDate.reduce(
     (acc: Record<string, OrderItems[]>, item: OrderItems) => {
 
       const date = item.conformDate;
@@ -65,7 +70,7 @@ const OrderItems = () => {
 
      // Check if the product is already in the cart
      const existingItem = checkoutItems.find(
-      (item) => item.id === id && item.selectedSize === selectedSize
+      (item:any) => item.id === id && item.selectedSize === selectedSize
     );
 
     // Prevent adding more than 10 of the same product
@@ -111,7 +116,7 @@ const OrderItems = () => {
       {Object.entries(groupedItems).map(([date, items], groupIndex) => {
 
         // Check if any item in the group has a past delivery date
-        const isReceived = items.some((item) => isPastDate(item.conformDate));
+        const isReceived = items.some((item:any) => isPastDate(item.conformDate));
 
         return (
 

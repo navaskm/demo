@@ -1,4 +1,4 @@
-import '@/app/styles/homepage/smallProducts/smallproducts.scss';
+import '@/app/styles/homepage/smallProducts/SmallProducts.scss';
 import { fetchProduct } from "@/app/DataFetching/productData"
 import Link from "next/link";
 

@@ -1,3 +1,4 @@
+'use client'
 import { useSelector, useDispatch } from "react-redux";
 import { useState, useEffect } from "react";
 import { MdRemoveShoppingCart } from "react-icons/md";

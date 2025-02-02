@@ -1,4 +1,3 @@
-//import '@/app/styles/homepage/SmallProducts/smallproducts.scss';
 import '@/app/Style/HomePage/SmallProducts/SmallProducts.scss';
 
 import { fetchProduct } from "@/app/DataFetching/productData"

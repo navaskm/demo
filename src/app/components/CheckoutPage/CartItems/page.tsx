@@ -18,9 +18,16 @@ type Products = {
   selectedSize: string;
 };
 
+type CartItemType = {
+  selectedSize?: string;
+  cartItems: {
+    items: Products[];
+  }
+}
+
 const CartItems = () => {
   const [selectedOptions, setSelectedOptions] = useState<{ [key: string]: string }>({});
-  const checkoutItems = useSelector((state: any) => state.cartItems.items);
+  const checkoutItems = useSelector((state: CartItemType) => state.cartItems.items);
   const dispatch = useDispatch();
 
   // add local storage in to the store
@@ -34,7 +41,7 @@ const CartItems = () => {
   // Initialize default delivery options
   useEffect(() => {
     if (checkoutItems.length > 0) {
-      const defaultOptions = checkoutItems.reduce((acc:any, item:any) => {
+      const defaultOptions = checkoutItems.reduce((acc: { [key: string]: string }, item:Products) => {
         const productSize = item.selectedSize.replace(".size-", "");
         const key = `${item.id}-${productSize}`;
         if (!(key in acc)) {
@@ -50,7 +57,7 @@ const CartItems = () => {
   useEffect(() => {
     Object.entries(selectedOptions).forEach(([key, selectedOption]) => {
       const existingItem = checkoutItems.find(
-        (item:any) => `${item.id}-${item.selectedSize.replace(".size-", "")}` === key
+        (item:Products) => `${item.id}-${item.selectedSize.replace(".size-", "")}` === key
       );
   
       if (existingItem) {

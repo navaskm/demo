@@ -35,6 +35,7 @@ export default function RootLayout({
             rel="stylesheet" 
             integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossOrigin="anonymous"
           />
+           <link rel="icon" href="/Logo/title.svg" type="image/svg+xml" /> 
         </head>
 
         <body className={`${geistSans.variable} ${geistMono.variable}`}>

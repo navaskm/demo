@@ -2,6 +2,7 @@ import '@/app/styles/homepage/twoproduct/twoproduct.scss';
 import { fetchProduct } from "@/app/DataFetching/productData";
 
 import  Link  from 'next/link';
+import Image from 'next/image';
 
 type Products = {
   name: string,
@@ -23,7 +24,7 @@ type ItemOne = {
   product?: string,
 }
 
-let smallItems:Products[] = [];
+const smallItems:Products[] = [];
 
 const response = await fetchProduct();
 
@@ -75,13 +76,13 @@ function TwoProducts({product}:ItemOne) {
           const findProduct = (productType:string) => {
             return smallItems.filter((product:Products) => product.type == productType);
           }
-          let Product = findProduct(item.type);
+          const Product = findProduct(item.type);
 
           // display not two time. only one item display logic
-          let displayOneItem = index % 2 === 0;
+          const displayOneItem = index % 2 === 0;
 
           // create classname for only medium device display 
-          let onlyMediumDevice = (item.type === 'umbrella' || item.type === 'chair')? 'only-medium-device': null;
+          const onlyMediumDevice = (item.type === 'umbrella' || item.type === 'chair')? 'only-medium-device': null;
 
           return displayOneItem && (
             
@@ -95,7 +96,7 @@ function TwoProducts({product}:ItemOne) {
                 Product && Product.map((Product:Products,index:number) => {
 
                   // create first image classname
-                  let marginBottom = index === 0 ? 'marginBottom' : null;
+                  const marginBottom = index === 0 ? 'marginBottom' : null;
 
                   return (
                     <div key={Product.id} className={`image-offer-display-of-two-product ${marginBottom}`}>
@@ -125,7 +126,7 @@ function TwoProducts({product}:ItemOne) {
                         }
                       }}>
 
-                        <img  src={Product.image} alt={Product.name} />
+                        <Image  src={Product.image} alt={Product.name} fill/>
                         <h5>{Product.offer}</h5>
 
                       </Link>
@@ -156,7 +157,7 @@ function TwoProducts({product}:ItemOne) {
         item && item.map((item:Products,index:number) => {
 
           // create first image classname
-          let marginBottom = index === 0 ? 'marginBottom' : null;
+          const marginBottom = index === 0 ? 'marginBottom' : null;
 
           return (
             <Link  key={item.id}

@@ -305,9 +305,11 @@
         margin: 5px 10px;
         border-radius: 5px;
         background-color: #ffffff;
+        position: relative;
   
         // image styles
         img{
+          position: relative;
           width: 97%;
           aspect-ratio: 1/1;
           object-fit: cover;

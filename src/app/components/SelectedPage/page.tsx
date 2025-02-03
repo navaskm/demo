@@ -37,7 +37,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Product
 
 const SelectItemPage = ({searchParams}:{searchParams:Products}) => {
 
-  let offerProductDisplay = searchParams.offer? true : false;
+  const offerProductDisplay = searchParams.offer? true : false;
 
   if (offerProductDisplay){
     return (

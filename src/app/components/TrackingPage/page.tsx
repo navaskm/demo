@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image";
 import '@/app/styles/trackingpage/tracking.scss';
 import TrackId from "./TrackId";
 
@@ -35,7 +36,7 @@ const diffInTime = selectedDate.getTime() - today.getTime();
 // Convert milliseconds to days
 const diffInDays = Math.ceil(diffInTime / (1000 * 60 * 60 * 24));
 
-let conformUser = {
+const conformUser = {
   width: '',
   heading: '',
 }
@@ -95,7 +96,7 @@ switch (diffInDays) {
         <Link href='/components/OrderPage'>View All Orders</Link>
         <h2>Arriving on : <span>{decodeURIComponent(searchParams.date)}</span></h2>
         <div className="product-content">
-          <img src={decodeURIComponent(searchParams.image)} alt="" />
+          <Image src={decodeURIComponent(searchParams.image)} alt="" height={200} width={200}/>
           <div>
             <p>Name : <span>{decodeURIComponent(searchParams.name)}</span></p>
             <p>Quantity : <span>{searchParams.quantity}</span></p>

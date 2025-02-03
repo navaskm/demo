@@ -3,6 +3,7 @@ import { fetchScrollingProduct } from "@/app/DataFetching/productData";
 import Link from "next/link";
 import similarProducts from '@/app/API/similar-product.json';
 import BackToTop from "./BackToTop/page";
+import Image from "next/image";
 
 // api similar product lines
 
@@ -74,19 +75,19 @@ const SimilarProducts = async ({selectedImage}:{selectedImage:Products}) => {
   const productTwo = similarProductTwo.filter((product:Products)=> product.type===selectedImage.type);
 
   // find which the product (scrolling api of dynamic api)
-  let product = productTwo.length === 0 ? productOne : productTwo;
+  const product = productTwo.length === 0 ? productOne : productTwo;
 
   // push product in to the products
   products = products.concat(product);
 
   // remove selectedImage in display
-  let finalProduct = products.filter((product:Products) => product.id !== selectedImage.id);
+  const finalProduct = products.filter((product:Products) => product.id !== selectedImage.id);
 
   // fetch similar products
-  let similarProduct = similarProducts.filter(product => product.type == selectedImage.type);
+  const similarProduct = similarProducts.filter(product => product.type == selectedImage.type);
 
   // remove selectedImage in display in similar products
-  let similarFinalProduct = similarProduct.filter(product => Number(product.id) !== selectedImage.id);
+  const similarFinalProduct = similarProduct.filter(product => Number(product.id) !== selectedImage.id);
 
   return (
     <div className="container-of-similar-product">
@@ -122,7 +123,7 @@ const SimilarProducts = async ({selectedImage}:{selectedImage:Products}) => {
                   size: product.size,
                 }
               }}>
-                  <img src={product.image} alt={product.name}/>
+                  <Image src={product.image} alt={product.name} fill/>
                   <h5>{product.name}</h5>
                   <b><span>₹</span>{product.priceCents}</b>
                   <p>{product.rating}&#9733;</p>
@@ -153,7 +154,7 @@ const SimilarProducts = async ({selectedImage}:{selectedImage:Products}) => {
                   size: product.size,
                 }
               }}>
-                <img src={product.image} alt={product.name}/>
+                <Image src={product.image} alt={product.name} fill/>
                 <h5>{product.name}</h5>
                 <b><span>₹</span>{product.priceCents}</b>
                 <p>{product.rating}&#9733;</p>

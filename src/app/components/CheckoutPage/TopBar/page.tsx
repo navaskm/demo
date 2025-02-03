@@ -28,7 +28,7 @@ type CartItemType = {
   }
 }
 
-const TopBarOfCartPage = ({order}:Order) => {
+const TopBarCartPage = ({order}:Order) => {
 
   const checkoutItems = useSelector((state:QuantityType)=> state.cart.cartBase);
   const carItems = useSelector((state: CartItemType) => state.cartItems.items);
@@ -59,4 +59,4 @@ const TopBarOfCartPage = ({order}:Order) => {
   )
 }
 
-export default TopBarOfCartPage
+export default TopBarCartPage

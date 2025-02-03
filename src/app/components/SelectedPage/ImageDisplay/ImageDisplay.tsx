@@ -3,6 +3,7 @@
 import { useSearchParams } from "next/navigation";
 import { lazy,Suspense } from "react";
 import { useState } from "react";
+import Image from "next/image";
 import { Provider } from "react-redux";
 import store from '../../Redux/store';
 
@@ -13,11 +14,15 @@ const ImageDisplay = () => {
   const [selectedSize, setSelectedSize] = useState('');
 
   const searchParams = useSearchParams();
-  const image:string | any= searchParams.get("image");
+  const image:string = searchParams.get("image")!;
   const size:string[]|null = searchParams.getAll("size");
   const name:string|null = searchParams.get("name");
   const priceCents:string|null = searchParams.get("priceCents");
   const id:string|null = searchParams.get("id");
+
+  // if (image !== null) {
+  //   const validImage: string = image;
+  // }
 
   // image size select code
   const selectSize = (isWhite: string) => {
@@ -62,7 +67,7 @@ const ImageDisplay = () => {
         {/* create image of product */}
         <div className="image-display">
           {/* <img src={decodeURIComponent(selectedImage.image)} alt={selectedImage.name} /> */}
-          <img src={decodeURIComponent(image)} alt='image' />
+          <Image src={decodeURIComponent(image)} alt='image' />
         </div>
 
         {/* create quantity and add to cart of product */}

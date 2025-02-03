@@ -180,7 +180,7 @@ function TwoProducts({product}:ItemOne) {
               }}>
 
               <div className={`last-products-display ${marginBottom}`}>
-                <img src={item.image} alt={item.name} />
+                <Image src={item.image} alt={item.name} fill/>
                 <h5>{item.offer}</h5>
               </div>
 

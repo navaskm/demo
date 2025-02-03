@@ -9,17 +9,19 @@ import similarProducts from '@/app/API/similar-product.json';
 import "@/app/styles/homepage/navbar/navbar.scss";
 
 type Search = {
-  id: number,
+  id: number | string,
   name: string,
   image: string,
-  size: string,
+  size?: string[],
   priceCents: string,
   rating: string,
   madein: string,
   Feature: string,
   type: string,
   company: string,
+  keyWords: string,
 }
+
 
 const SearchBar =  () => {
 
@@ -37,7 +39,7 @@ const SearchBar =  () => {
         setScrolling([
           ...(homeProducts  as Search[]),
           ...(scrollingProducts  as Search[]),
-          ...(similarProducts  as any)
+          ...(similarProducts as unknown as Search[])
         ]);
         
 

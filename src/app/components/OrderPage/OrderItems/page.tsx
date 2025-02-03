@@ -3,6 +3,7 @@
 import { useSelector,useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 import { addToCart } from "../../HomePage/navbar/CartLogo/cartLogoSlice";
 import { addItem } from "../../SelectedPage/ImageDisplay/AddToCartBtn/cartSlice";
@@ -25,12 +26,40 @@ type GroupedItems = {
 };
 
 
+type Products = {
+  id: string;
+  name: string;
+  image: string;
+  price: number;
+  quantity: number;
+  size: string;
+  selectedSize: string;
+};
+
+type CartItemType = {
+  selectedSize?: string;
+  cartItems: {
+    items: Products[];
+  }
+}
+
+type UserOrderType = {
+  deliveryDate: {
+    userOrder: OrderItems[];
+  }
+}
+
+type ConformType = {
+  conformDate: string
+}
+
+
 const OrderItems = () => {
 
   const [isClient, setIsClient] = useState(false);
   const [buttonState, setButtonState] = useState<{ [key: string]: string }>({});
 
-  const checkoutItems = useSelector((state:any) => state.cartItems.items);
+  const checkoutItems = useSelector((state:CartItemType) => state.cartItems.items);
   const dispatch = useDispatch();
 
   // add local storage in to the store
@@ -47,7 +76,7 @@ const OrderItems = () => {
     setIsClient(true);
   }, []);
 
-  const conformDeliveryDate = useSelector((state: any) => state.deliveryDate.userOrder);
+  const conformDeliveryDate = useSelector((state: UserOrderType) => state.deliveryDate.userOrder);
 
   // Render a loading or placeholder state until the client hydrates
   if (!isClient) {
@@ -72,7 +101,7 @@ const OrderItems = () => {
 
      // Check if the product is already in the cart
      const existingItem = checkoutItems.find(
-      (item:any) => item.id === id && item.selectedSize === selectedSize
+      (item:Products) => item.id === id && item.selectedSize === selectedSize
     );
 
     // Prevent adding more than 10 of the same product
@@ -118,7 +147,7 @@ const OrderItems = () => {
       {Object.entries(groupedItems).map(([date, items], groupIndex) => {
 
         // Check if any item in the group has a past delivery date
-        const isReceived = items.some((item:any) => isPastDate(item.conformDate));
+        const isReceived = items.some((item:ConformType) => isPastDate(item.conformDate));
 
         return (
 
@@ -143,7 +172,7 @@ const OrderItems = () => {
 
               <div className={`each-item-container ${index == 0?'item-first':null}`} key={index}>
 
-                <img src={item.image && decodeURIComponent(item.image)} alt={item.name} />
+                <Image src={item.image && decodeURIComponent(item.image)} alt={item.name} width={100} height={100}/>
 
                 <div className="item-details-display">
                   

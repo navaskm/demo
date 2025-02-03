@@ -2,6 +2,7 @@ import '@/app/Style/HomePage/SmallProducts/SmallProducts.scss';
 
 import { fetchProduct } from "@/app/DataFetching/productData"
 import Link from "next/link";
+import Image from 'next/image';
 
 type Products = {
   name: string,
@@ -18,7 +19,7 @@ type Products = {
   size:string,
 }
 
-const fourItems:Products[] | any[] = [];
+const fourItems:Products[] = [];
 
 const response = await fetchProduct();
 const productWatch = response.filter((watch:Products) => watch.type === 'watch');
@@ -43,7 +44,7 @@ function SmallProducts() {
           const findProduct = (productType:string) => {
             return fourItems.filter((item: Products) => item.type === productType);
           }
-          let oneProduct = findProduct(product.type);
+          const oneProduct = findProduct(product.type);
 
           // create only only product display
           let displayOneItem = index % 3 === 2;
@@ -84,7 +85,7 @@ function SmallProducts() {
                             size: item.size,
                           }
                           }}>
-                            <img src={item.image} alt={item.name}/>
+                            <Image src={item.image} alt={item.name} fill/>
                         </Link>
 
                           {/* this div click time pass value to selected page */}

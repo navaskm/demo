@@ -56,8 +56,6 @@ const TopBarOfCartPage = ({order}:Order) => {
         )
       }
 
-
-
     </div>
   )
 }

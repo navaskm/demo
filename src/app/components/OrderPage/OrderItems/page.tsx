@@ -191,7 +191,7 @@ const OrderItems = () => {
                         <strong>&#x2713; Added</strong>
                       ) : (
                         <>
-                          <img src="/ByItAgain/by-it-again.png" alt="" />
+                          <Image src="/ByItAgain/by-it-again.png" alt="" height={30} width={30} />
                           By it again
                         </>
                       )}

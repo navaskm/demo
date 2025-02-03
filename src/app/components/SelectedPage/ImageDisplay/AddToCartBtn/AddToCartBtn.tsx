@@ -15,12 +15,29 @@ type Product = {
   selectedSize: string,
 }
 
+type Products = {
+  id: string;
+  name: string;
+  image: string;
+  price: number;
+  quantity: number;
+  size: string;
+  selectedSize: string;
+};
+
+type CartItemType = {
+  selectedSize?: string;
+  cartItems: {
+    items: Products[];
+  }
+}
+
 const AddToCartBtn = ({name,image,price,id,size,selectedSize}:Product) => {
 
   const [isAdded, setIsAdded] = useState(false);
 
   const dispatch = useDispatch();
-  const checkoutItems = useSelector((state:any) => state.cartItems.items);
+  const checkoutItems = useSelector((state:CartItemType) => state.cartItems.items);
 
   const AddToCart = ()=>{
 
@@ -34,7 +51,7 @@ const AddToCartBtn = ({name,image,price,id,size,selectedSize}:Product) => {
 
     // Check if the product is already in the cart
     const existingItem = checkoutItems.find(
-      (item:any) => item.id === id && item.selectedSize === selectedSize
+      (item:Products) => item.id === id && item.selectedSize === selectedSize
     );
 
     // Prevent adding more than 10 of the same product

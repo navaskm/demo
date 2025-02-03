@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { useSelector } from "react-redux"
 
-type Order = {
+type TopBarProps = {
   order?: string,
 }
 
@@ -30,7 +30,7 @@ type CartItemType = {
   }
 }
 
-const TopBar = ({order}:Order) => {
+const TopBar = ({order}:TopBarProps) => {
 
   const checkoutItems = useSelector((state:QuantityType)=> state.cart.cartBase);
   const carItems = useSelector((state: CartItemType) => state.cartItems.items);

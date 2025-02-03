@@ -6,11 +6,15 @@
   }
 }
 
-.offer-image img {
-  display: none;
-  width: 100%;
-  height: 280px;
-}
+.offer-image{
+  position: relative;
+  img {
+    position: relative;
+    display: none;
+    width: 100%;
+    height: 280px;
+  }
+} 
 
 @media (max-width: 600px){
   .offer-image .image-one{

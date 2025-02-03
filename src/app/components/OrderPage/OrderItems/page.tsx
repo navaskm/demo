@@ -7,7 +7,7 @@ import Link from "next/link";
 import { addToCart } from "../../HomePage/navbar/CartLogo/cartLogoSlice";
 import { addItem } from "../../SelectedPage/ImageDisplay/AddToCartBtn/cartSlice";
 import { hydrateOrder } from "../../CheckoutPage/CartItems/cartItems";
-import TopBarOfCartPage from "../../CheckoutPage/TopBar/page";
+import TopBarOfCartPage from "../../CheckoutPage/TopBar/TopBar";
 import EmptyCart from "../../CheckoutPage/CartItems/EmptyCart/page";
 
 type OrderItems = {

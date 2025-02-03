@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { useSelector } from "react-redux"
+import Image from "next/image"
 
 type Order = {
   order?: string,
@@ -36,7 +37,7 @@ const TopBarOfCartPage = ({order}:Order) => {
   return (
     <div className="top-bar">
       <Link href='/'>
-         <img src="/Logo/app-logo.png"/>
+         <Image src="/Logo/app-logo.png" alt="back" width={200} height={90}/>
       </Link>
 
       {

@@ -43,9 +43,10 @@
           width: 90%;
           height: 100%;
           border-radius: 10px;
-         // background-color: green;
+          position: relative;
 
           img{
+            position: relative;
             width: 80%;
             height: 65%;
             border-radius: inherit;

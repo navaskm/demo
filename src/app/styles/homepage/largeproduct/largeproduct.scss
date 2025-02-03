@@ -35,8 +35,10 @@
       align-items: center;
       justify-content: center;
       padding-bottom: 12px;
+      position: relative;
 
       img{
+        position: relative;
         width: 90%;
         height: 60%;
         &:hover{

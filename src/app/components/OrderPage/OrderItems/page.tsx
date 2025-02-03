@@ -3,7 +3,6 @@
 import { useSelector,useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 
 import { addToCart } from "../../HomePage/navbar/CartLogo/cartLogoSlice";
 import { addItem } from "../../SelectedPage/ImageDisplay/AddToCartBtn/cartSlice";
@@ -172,7 +171,7 @@ const OrderItems = () => {
 
               <div className={`each-item-container ${index == 0?'item-first':null}`} key={index}>
 
-                <Image src={item.image && decodeURIComponent(item.image)} alt={item.name} width={100} height={100}/>
+                <img src={item.image && decodeURIComponent(item.image)} alt={item.name}/>
 
                 <div className="item-details-display">
                   
@@ -191,7 +190,7 @@ const OrderItems = () => {
                         <strong>&#x2713; Added</strong>
                       ) : (
                         <>
-                          <Image src="/ByItAgain/by-it-again.png" alt="" height={30} width={30} />
+                          <img src="/ByItAgain/by-it-again.png" alt=""/>
                           By it again
                         </>
                       )}

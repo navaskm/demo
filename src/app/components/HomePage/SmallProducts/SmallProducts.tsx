@@ -2,7 +2,6 @@ import '@/app/Style/HomePage/SmallProducts/SmallProducts.scss';
 
 import { fetchProduct } from "@/app/DataFetching/productData"
 import Link from "next/link";
-import Image from 'next/image';
 
 type Products = {
   name: string,
@@ -85,7 +84,7 @@ function SmallProducts() {
                             size: item.size,
                           }
                           }}>
-                            <Image src={item.image} alt={item.name} fill/>
+                            <img src={item.image} alt={item.name}/>
                         </Link>
 
                           {/* this div click time pass value to selected page */}

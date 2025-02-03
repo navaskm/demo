@@ -1,7 +1,6 @@
 import '@/app/styles/homepage/largeproduct/largeproduct.scss';
 import { fetchProduct } from "@/app/DataFetching/productData";
 import Link from 'next/link';
-import Image from 'next/image';
 
 type Products = {
   name: string,
@@ -94,7 +93,7 @@ function LargeProduct({product}:ItemOne) {
                           size: item.size,
                         }
                       }}>
-                        <Image src={item.image} alt={item.name} fill />
+                        <img src={item.image} alt={item.name} />
                       </Link>
                     </div>
                   )
@@ -140,7 +139,7 @@ function LargeProduct({product}:ItemOne) {
               }}>
 
                 <div className="last-large-product">
-                  <Image src={item.image} alt={item.name} fill />
+                  <img src={item.image} alt={item.name} />
                 </div>
 
             </Link>

@@ -3,7 +3,6 @@ import { fetchScrollingProduct } from "@/app/DataFetching/productData";
 import Link from "next/link";
 import similarProducts from '@/app/API/similar-product.json';
 import BackToTop from "./BackToTop/page";
-import Image from "next/image";
 
 // api similar product lines
 
@@ -123,7 +122,7 @@ const SimilarProducts = async ({selectedImage}:{selectedImage:Products}) => {
                   size: product.size,
                 }
               }}>
-                  <Image src={product.image} alt={product.name} fill/>
+                  <img src={product.image} alt={product.name}/>
                   <h5>{product.name}</h5>
                   <b><span>₹</span>{product.priceCents}</b>
                   <p>{product.rating}&#9733;</p>
@@ -154,7 +153,7 @@ const SimilarProducts = async ({selectedImage}:{selectedImage:Products}) => {
                   size: product.size,
                 }
               }}>
-                <Image src={product.image} alt={product.name} fill/>
+                <img src={product.image} alt={product.name}/>
                 <h5>{product.name}</h5>
                 <b><span>₹</span>{product.priceCents}</b>
                 <p>{product.rating}&#9733;</p>

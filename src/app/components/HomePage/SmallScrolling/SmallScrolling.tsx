@@ -2,7 +2,6 @@ import { fetchScrollingProduct } from '@/app/DataFetching/productData';
 import '@/app/styles/homepage/smallScrolling/smallScrolling.scss';
 
 import Link from 'next/link';
-import Image from 'next/image';
 
 type Products = {
   name: string,
@@ -67,7 +66,7 @@ function SmallScrolling({item}: Item) {
                 }}>
 
                  <div className='item-box'>
-                  <Image src={faceWash.image} alt={faceWash.name} fill/>
+                  <img src={faceWash.image} alt={faceWash.name}/>
                     <div>
                       <p>{faceWash.name}</p>
                     </div>
@@ -104,7 +103,7 @@ function SmallScrolling({item}: Item) {
                   }
                 }}>
                   <div className='item-box'>
-                    <Image src={phone.image} alt={phone.name} fill/>
+                    <img src={phone.image} alt={phone.name}/>
                     <div>
                       <p>{phone.name}</p>
                     </div>

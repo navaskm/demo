@@ -2,7 +2,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useState, useEffect } from "react";
 import { MdRemoveShoppingCart } from "react-icons/md";
-import Image from "next/image";
 
 import { cartItemHydrate, addItem, removeItemQuantity, removeItem } from "../../SelectedPage/ImageDisplay/AddToCartBtn/cartSlice";
 import { addDeliveryDate, removeDeliveryDate } from "./cartItems";
@@ -165,7 +164,7 @@ const CartItems = () => {
             </h5>
             <div className="cart-details-container">
               <div className="col-12 col-md-6 cart-details-display">
-                <Image src={decodeURIComponent(item.image)} alt={item.name} width={100} height={100} />
+                <img src={decodeURIComponent(item.image)} alt={item.name}/>
                 <div>
                   <h5>{decodeURIComponent(item.name)}</h5>
                   <b className="price-display">

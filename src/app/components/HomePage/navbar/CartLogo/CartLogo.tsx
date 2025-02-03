@@ -2,7 +2,6 @@ import { useSelector } from "react-redux";
 import Link from "next/link";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import Image from "next/image";
 
 import { hydrate } from "./cartLogoSlice";
 
@@ -32,10 +31,9 @@ const CartLogo = () => {
     href='/components/CheckoutPage'
     className="cart-logo">
       <h6>{numberOfItemsQuantity}</h6>
-      <Image
+      <img
         src='/Logo/cart-logo.png'
         alt="Logo"
-        fill
       />
     </Link>
   )

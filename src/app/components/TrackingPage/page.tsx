@@ -1,5 +1,4 @@
 import Link from "next/link"
-import Image from "next/image";
 import '@/app/styles/trackingpage/tracking.scss';
 import TrackId from "./TrackId";
 
@@ -96,7 +95,7 @@ switch (diffInDays) {
         <Link href='/components/OrderPage'>View All Orders</Link>
         <h2>Arriving on : <span>{decodeURIComponent(searchParams.date)}</span></h2>
         <div className="product-content">
-          <Image src={decodeURIComponent(searchParams.image)} alt="" height={200} width={200}/>
+          <img src={decodeURIComponent(searchParams.image)} alt=""/>
           <div>
             <p>Name : <span>{decodeURIComponent(searchParams.name)}</span></p>
             <p>Quantity : <span>{searchParams.quantity}</span></p>

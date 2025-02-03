@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
 
 type Products = {
   id:string;
@@ -86,7 +85,7 @@ function BagsSports({product,order}:BagsSports) {
                     }}>
                   
                     <div className="image-wrapper">
-                      <Image src={item.image} alt={item.name} fill />
+                      <img src={item.image} alt={item.name} />
                       <h5>{item.name}</h5>
                       <div className="scrolling-image-offer">
                         <h4>{item.offer}</h4>

@@ -2,7 +2,6 @@ import '@/app/styles/homepage/twoproduct/twoproduct.scss';
 import { fetchProduct } from "@/app/DataFetching/productData";
 
 import  Link  from 'next/link';
-import Image from 'next/image';
 
 type Products = {
   name: string,
@@ -126,7 +125,7 @@ function TwoProducts({product}:ItemOne) {
                         }
                       }}>
 
-                        <Image  src={Product.image} alt={Product.name} fill/>
+                        <img  src={Product.image} alt={Product.name}/>
                         <h5>{Product.offer}</h5>
 
                       </Link>
@@ -180,7 +179,7 @@ function TwoProducts({product}:ItemOne) {
               }}>
 
               <div className={`last-products-display ${marginBottom}`}>
-                <Image src={item.image} alt={item.name} fill/>
+                <img src={item.image} alt={item.name}/>
                 <h5>{item.offer}</h5>
               </div>
 

@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link"
 import { useSelector } from "react-redux"
 
@@ -28,7 +30,7 @@ type CartItemType = {
   }
 }
 
-const TopBarCartPage = ({order}:Order) => {
+const TopBar = ({order}:Order) => {
 
   const checkoutItems = useSelector((state:QuantityType)=> state.cart.cartBase);
   const carItems = useSelector((state: CartItemType) => state.cartItems.items);
@@ -59,4 +61,4 @@ const TopBarCartPage = ({order}:Order) => {
   )
 }
 
-export default TopBarCartPage
+export default TopBar

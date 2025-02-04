@@ -27,11 +27,15 @@ type Products = {
   offer?: string,
 }
 
+type PageProps = {
+  searchParams: Partial<Products>; // Make properties optional for query parameters
+};
+
 // Generate metadata dynamically based on searchParams
-export async function generateMetadata({ searchParams }: { searchParams: Products }) {
+export async function generateMetadata({ searchParams }: PageProps) {
   return {
-    title: `About ${decodeURIComponent(searchParams.name)}`,
-    description: `Explore details about ${decodeURIComponent(searchParams.name)} including features, price, and more.`,
+    title: `About ${decodeURIComponent(searchParams.name || 'Good Product')}`,
+    description: `Explore details about ${decodeURIComponent(searchParams.name || 'Good Product')} including features, price, and more.`,
   };
 }
 

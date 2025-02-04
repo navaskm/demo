@@ -36,9 +36,14 @@ export async function generateMetadata({ searchParams }: {searchParams: Promise<
   };
 }
 
-const SelectItemPage = ({searchParams}:{searchParams:Products}) => {
+const SelectItemPage = async ({SearchParams}:{SearchParams:Promise<Products>}) => {
 
-  const offerProductDisplay = searchParams.offer? true : false;
+  //const offerProductDisplay = searchParams.offer? true : false;
+
+  const {offer} = await SearchParams
+  const searchParams = await SearchParams;
+
+  const offerProductDisplay = offer? true : false;
 
   if (offerProductDisplay){
     return (

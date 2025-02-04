@@ -25,6 +25,9 @@ type Products = {
   Feature: string,
   size:string,
   offer?: string,
+  
+  params: { slug: string };
+  searchParams: { [key: string]: string | string[] | undefined };
 }
 
 // Generate metadata dynamically based on searchParams
@@ -36,14 +39,17 @@ export async function generateMetadata({ searchParams }: {searchParams: Promise<
   };
 }
 
-const SelectItemPage = async ({SearchParams}:{SearchParams:Promise<Products>}) => {
+// interface PageProps {
+//   params: { slug: string };
+//   searchParams: { [key: string]: string | string[] | undefined };
+// }
+// export default function Page({ params, searchParams }: PageProps) {
+//  // ...
+// }
 
-  //const offerProductDisplay = searchParams.offer? true : false;
+const SelectItemPage = async ({searchParams}:{searchParams:Products}) => {
 
-  const {offer} = await SearchParams
-  const searchParams = await SearchParams;
-
-  const offerProductDisplay = offer? true : false;
+  const offerProductDisplay = searchParams.offer? true : false;
 
   if (offerProductDisplay){
     return (

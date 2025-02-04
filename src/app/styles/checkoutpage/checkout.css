@@ -90,6 +90,8 @@
 .cart-items-payment-section-container .cart-items-container .cart-each-items .cart-details-container .cart-details-display img {
   -o-object-fit: contain;
      object-fit: contain;
+  width: 100px;
+  height: 100px;
 }
 .cart-items-payment-section-container .cart-items-container .cart-each-items .cart-details-container .cart-details-display div {
   margin-left: 30px;

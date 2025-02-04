@@ -1,4 +1,5 @@
 import { lazy,Suspense } from "react";
+import { use } from "react";
 
 import NavbarSkeleton from "../HomePage/navbar/Skeleton/NavbarSkeleton";
 import ImageDisplaySkeleton from "./ImageDisplay/Skeleton/ImageDisplaySkeleton";
@@ -27,15 +28,12 @@ type Products = {
   offer?: string,
 }
 
-type PageProps = {
-  searchParams: Partial<Products>; // Make properties optional for query parameters
-};
-
 // Generate metadata dynamically based on searchParams
-export async function generateMetadata({ searchParams }: PageProps) {
+export async function generateMetadata({ searchParams }: {searchParams: Promise<{name:string}>}) {
+  const {name} = use(searchParams);
   return {
-    title: `About ${decodeURIComponent(searchParams.name || 'Good Product')}`,
-    description: `Explore details about ${decodeURIComponent(searchParams.name || 'Good Product')} including features, price, and more.`,
+    title: `About ${decodeURIComponent(name || 'Good Product')}`,
+    description: `Explore details about ${decodeURIComponent(name||'Good Product')} including features, price, and more.`,
   };
 }
 

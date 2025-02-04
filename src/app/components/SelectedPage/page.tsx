@@ -25,7 +25,7 @@ type Products = {
   Feature: string,
   size:string,
   offer?: string,
-  
+
   params: { slug: string };
   searchParams: { [key: string]: string | string[] | undefined };
 }
@@ -47,7 +47,7 @@ export async function generateMetadata({ searchParams }: {searchParams: Promise<
 //  // ...
 // }
 
-const SelectItemPage = async ({searchParams}:{searchParams:Products}) => {
+const SelectItemPage = async (searchParams:Products) => {
 
   const offerProductDisplay = searchParams.offer? true : false;
 

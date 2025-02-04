@@ -1,5 +1,4 @@
 import { lazy,Suspense } from "react";
-import { use } from "react";
 
 import NavbarSkeleton from "../HomePage/navbar/Skeleton/NavbarSkeleton";
 import ImageDisplaySkeleton from "./ImageDisplay/Skeleton/ImageDisplaySkeleton";
@@ -30,7 +29,7 @@ type Products = {
 
 // Generate metadata dynamically based on searchParams
 export async function generateMetadata({ searchParams }: {searchParams: Promise<{name:string}>}) {
-  const {name} = use(searchParams);
+  const {name} = await searchParams
   return {
     title: `About ${decodeURIComponent(name || 'Good Product')}`,
     description: `Explore details about ${decodeURIComponent(name||'Good Product')} including features, price, and more.`,

@@ -42,8 +42,8 @@ type ShippingType = {
 const PaymentPage = () => {
 
   const dispatch = useDispatch();
-  const checkoutItems = useSelector((state:QuantityType)=> state.cart.cartBase);
-  const conformItems = useSelector((state:CartItemType)=> state.cartItems.items);
+  const checkoutItems = useSelector((state:QuantityType)=> state.cart.cartBase || 0);
+  const conformItems = useSelector((state:CartItemType)=> state.cartItems.items || {});
 
   // get shipping cost
   const shippingCost = useSelector((state:ShippingType) => state.deliveryDate.shippingCost);

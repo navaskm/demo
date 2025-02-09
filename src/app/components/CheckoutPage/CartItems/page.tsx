@@ -27,7 +27,7 @@ type CartItemType = {
 
 const CartItems = () => {
   const [selectedOptions, setSelectedOptions] = useState<{ [key: string]: string }>({});
-  const checkoutItems = useSelector((state: CartItemType) => state.cartItems.items);
+  const checkoutItems = useSelector((state: CartItemType) => state.cartItems.items || {});
   const dispatch = useDispatch();
 
   // add local storage in to the store

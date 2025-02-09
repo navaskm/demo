@@ -30,9 +30,9 @@ const ImageDisplay = () => {
     setSelectedSize(isWhite);
   };
 
-  let imageFix = size && size.length >2 ? 'size-fix' : null
-  let imageSizeFix = size && size.length >2 ? 'fix-size' : null
-  let heightContainer = size && size.length >2 ?  null: 'height-container'
+  const imageFix = size && size.length >2 ? 'size-fix' : null
+  const imageSizeFix = size && size.length >2 ? 'fix-size' : null
+  const heightContainer = size && size.length >2 ?  null: 'height-container'
 
   return (
     <div className={`image-select-display-item col-12 col-md-6 ${heightContainer}`}>

@@ -57,13 +57,15 @@ type Products = {
   company: string,
   madein: string,
   Feature: string,
-  size:string,
+  size?:string,
   offer?: string,
 }
 
 const SimilarProducts = async ({selectedImage}:{selectedImage:Products}) => {
 
   let products : Products[] =  []
+
+  console.log(selectedImage);
 
   //fetch product
   const similarProductOne = await fetchProduct();
@@ -101,11 +103,12 @@ const SimilarProducts = async ({selectedImage}:{selectedImage:Products}) => {
       <div className="container-of-each-similar-product">
         {
           finalProduct?.map((product:Products) => {
+
             return (
               <Link 
               key={product.id} 
               style={{textDecoration:"none"}}
-              className="col-4 col-sm-5 col-md-3 col-lg-2 each-similar-product"
+              className='col-4 col-sm-5 col-md-3 col-lg-2 each-similar-product'
               href={{
                 pathname: "/components/SelectedPage",
                 query: {

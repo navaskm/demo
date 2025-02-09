@@ -17,7 +17,7 @@
     background-color: #fff;
 
     @media (max-width:505px) {
-      height: 550px;
+      height: 500px;
     }
 
     .container-product-size{
@@ -82,13 +82,31 @@
       .image-display{
         height: 500px;
         margin-top: 10px;
-
         img{
           width: 100%;
           height: 80%;
           border-radius: 15px;
           margin-top: 10px;
           padding: 5px;
+          @media (max-width:450px) {
+            height: 50%;
+          }
+        }
+      }
+
+      .fix-size{
+        img{
+          width: 100%;
+          height: 80%;
+          border-radius: 15px;
+          margin-top: 10px;
+          padding: 5px;
+          @media (max-width:450px) {
+            height: 40%;
+          }
+        }
+        @media (max-width:450px) {
+          margin-top: 50px;
         }
       }
 
@@ -123,14 +141,49 @@
             font-size: 28;
           }
 
+          @media (max-width:450px) {
+            padding: 0;
+            margin-top: 20px;
+            font-size: 22;
+            font-weight: 800;
+            width: 100% !important;
+          }
+
         }
 
+        @media (max-width:600px) {
+          .size-yes{
+            padding: 0;
+            margin-top: 20px;
+            font-size: 22;
+            font-weight: 800;
+            width: 100% !important;
+          }
+        }
+
+        @media (max-width:450px) {
+          transform: translate(10px, -200px);
+          width: 100%;
+        }
+
+      }
+
+      @media (max-width:600px) {
+        .size-fix{
+          transform: translate(-30px, -50px);
+          width: 100%;
+        }
       }
 
     }
 
   }
 
+  @media (max-width:450px) {
+    .height-container{
+      height: 350px;
+    }
+  }
 
 
 
@@ -303,6 +356,7 @@
         margin: 5px 10px;
         border-radius: 5px;
         background-color: #ffffff;
+        overflow: hidden;
   
         // image styles
         img{

@@ -1,6 +1,6 @@
 import '@/app/Style/HomePage/SmallProducts/SmallProducts.scss';
 
-import { fetchProduct } from "@/app/DataFetching/productData"
+import { fetchProduct } from "@/app/DataFetching/productData";
 import Link from "next/link";
 
 type Products = {
@@ -54,7 +54,7 @@ function SmallProducts() {
           const largeDeviseDisplay = (product.type === 'toys' || product.type === 'sunglass')? 'only-large-device':null;
 
           return displayOneItem && (
-            <div className={`container-of-one-product col-6 col-md-4 col-xl-3 ${largeDeviseDisplay}`}
+            <div className={`container-of-one-product col-12 col-md-4 col-xl-3 ${largeDeviseDisplay}`}
             key={product.id}>
 
               <div className='title'>
@@ -127,4 +127,4 @@ function SmallProducts() {
   )
 }
 
-export default SmallProducts
+export default SmallProducts;

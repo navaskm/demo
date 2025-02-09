@@ -30,13 +30,17 @@ const ImageDisplay = () => {
     setSelectedSize(isWhite);
   };
 
+  let imageFix = size && size.length >2 ? 'size-fix' : null
+  let imageSizeFix = size && size.length >2 ? 'fix-size' : null
+  let heightContainer = size && size.length >2 ?  null: 'height-container'
+
   return (
-    <div className="image-select-display-item col-12 col-md-6">
+    <div className={`image-select-display-item col-12 col-md-6 ${heightContainer}`}>
     
       {/* create size list of product */}
       {
         size && size.length >1 && (
-        <div className="container-product-size col-2">
+        <div className="container-product-size col-4">
           <h5>Select Size</h5>
           <div className="container-size-list">
             {
@@ -57,16 +61,16 @@ const ImageDisplay = () => {
       }
     
       {/* create image,quantity, add to cart of product */}
-      <div className="col-10 container-of-image-cart-another-image">
+      <div className="col-8 container-of-image-cart-another-image">
 
         {/* create image of product */}
-        <div className="image-display">
+        <div className={`image-display ${imageSizeFix}`}>
           {/* <img src={decodeURIComponent(selectedImage.image)} alt={selectedImage.name} /> */}
           <img src={decodeURIComponent(image)} alt='image' />
         </div>
 
         {/* create quantity and add to cart of product */}
-        <div className='container-item-quantity-cart-button'>
+        <div className={`container-item-quantity-cart-button ${imageFix}`}>
 
           {/* create add to cart button of product */}
           <Suspense fallback={<p>loading....</p>}>

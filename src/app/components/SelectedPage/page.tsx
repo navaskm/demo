@@ -39,15 +39,7 @@ export async function generateMetadata({ searchParams }: {searchParams: Promise<
   };
 }
 
-// interface PageProps {
-//   params: { slug: string };
-//   searchParams: { [key: string]: string | string[] | undefined };
-// }
-// export default function Page({ params, searchParams }: PageProps) {
-//  // ...
-// }
-
-const SelectItemPage = async (searchParams:Products) => {
+const SelectItemPage = async ( {searchParams}:{searchParams:Products}) => {
 
   const offerProductDisplay = searchParams.offer? true : false;
 

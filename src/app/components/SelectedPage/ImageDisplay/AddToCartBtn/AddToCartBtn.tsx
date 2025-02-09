@@ -70,14 +70,16 @@ const AddToCartBtn = ({name,image,price,id,size,selectedSize}:Product) => {
     }, 2000);
   }
 
+  const imageFix = size.length>2 ? 'size-yes' : null
+
   return (
     <>
-    {
-      isAdded&&<p>Added to Cart</p>
-    }
+      {
+        isAdded&&<p>Added to Cart</p>
+      }
       <button 
       onClick={AddToCart}
-      className="add-cart-button"
+      className={`add-cart-button ${imageFix}`}
       title="add to cart">
         <span>
           <TiShoppingCart /> 

@@ -3,7 +3,7 @@
 import { lazy,Suspense } from "react";
 import { Rings } from 'react-loading-icons';
 import { Provider } from "react-redux";
-import store from "../../Redux/store";
+import store from "../Redux/store";
 const OrderItems = lazy(()=>import("./OrderItems/page"));
 import '@/app/styles/orderpage/orderpage.scss';
 

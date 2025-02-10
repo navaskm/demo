@@ -4,7 +4,7 @@ import { useSearchParams } from "next/navigation";
 import { lazy,Suspense } from "react";
 import { useState } from "react";
 import { Provider } from "react-redux";
-import store from '../../../Redux/store';
+import store from '../../Redux/store';
 
 const AddToCartBtn = lazy(()=> import('./AddToCartBtn/addtocartbtn'));
 

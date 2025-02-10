@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { lazy,Suspense } from "react";
 
 import NavbarSkeleton from "../HomePage/navbar/Skeleton/navbarskeleton";

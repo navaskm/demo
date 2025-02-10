@@ -3,7 +3,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { useState, useEffect } from "react";
 import { MdRemoveShoppingCart } from "react-icons/md";
 
-import { cartItemHydrate, addItem, removeItemQuantity, removeItem } from "../../SelectedPage/ImageDisplay/AddToCartBtn/cartslice";
+import { cartItemHydrate,addItem,removeItemQuantity,removeItem } from "../../SelectedPage/ImageDisplay/AddToCartBtn/cartslice";
+
 import { addDeliveryDate, removeDeliveryDate } from "./cartitems";
 import { addToCart, removeFromCart, removeFromCartOfQuantityBase } from "../../HomePage/navbar/CartLogo/cartlogoslice";
 import EmptyCart from "./EmptyCart/page";

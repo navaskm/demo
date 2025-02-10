@@ -6,11 +6,11 @@ import { Rings } from 'react-loading-icons';
 import { Provider } from "react-redux";
 import store from "../Redux/store";
 
-import NavbarSkeleton from "../HomePage/navbar/Skeleton/NavbarSkeleton";
+import NavbarSkeleton from "../HomePage/navbar/Skeleton/navbarskeleton";
 
 const CartItems = lazy(()=> import('./CartItems/page'));
 const PaymentPage = lazy(()=> import('./PaymentSection/page'));
-const TopBarOfCartPage = lazy(()=> import('./TopBar/TopBar'));
+const TopBarOfCartPage = lazy(()=> import('./TopBar/topbar'));
 import "@/app/styles/checkoutpage/checkout.scss";
 
 const CartPage = () => {

@@ -5,10 +5,10 @@ import React from "react";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
-import { userOrder } from "../CartItems/cartItems";
-import { removeAllItem } from "../../SelectedPage/ImageDisplay/AddToCartBtn/cartSlice";
-import { removeAllQuantity } from "../../HomePage/navbar/CartLogo/cartLogoSlice";
-import { hydrate } from "../../HomePage/navbar/CartLogo/cartLogoSlice";
+import { userOrder } from "../CartItems/cartitems";
+import { removeAllItem } from "../../SelectedPage/ImageDisplay/AddToCartBtn/cartslice";
+import { removeAllQuantity } from "../../HomePage/navbar/CartLogo/cartlogoslice";
+import { hydrate } from "../../HomePage/navbar/CartLogo/cartlogoslice";
 
 type Products = {
   id: string;

@@ -6,7 +6,7 @@ import { useState } from "react";
 import { Provider } from "react-redux";
 import store from '../../Redux/store';
 
-const AddToCartBtn = lazy(()=> import('./AddToCartBtn/AddToCartBtn'));
+const AddToCartBtn = lazy(()=> import('./AddToCartBtn/addtocartbtn'));
 
 const ImageDisplay = () => {
 

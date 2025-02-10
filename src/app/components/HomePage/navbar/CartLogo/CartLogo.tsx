@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 
-import { hydrate } from "./cartLogoSlice";
+import { hydrate } from "./cartlogoslice";
 
 type Quantity = {
   cart:{

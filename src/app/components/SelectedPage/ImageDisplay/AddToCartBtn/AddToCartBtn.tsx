@@ -3,8 +3,8 @@
 import { TiShoppingCart } from "react-icons/ti";
 import { useDispatch,useSelector } from "react-redux";
 import { useState } from "react";
-import { addToCart } from "@/app/components/HomePage/navbar/CartLogo/cartLogoSlice";
-import { addItem } from "./cartSlice";
+import { addToCart } from "@/app/components/HomePage/navbar/CartLogo/cartlogoslice";
+import { addItem } from "./cartslice";
 
 type Product = {
   name:string|null,

@@ -4,10 +4,10 @@ import { useSelector,useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
-import { addToCart } from "../../HomePage/navbar/CartLogo/cartLogoSlice";
-import { addItem } from "../../SelectedPage/ImageDisplay/AddToCartBtn/cartSlice";
-import { hydrateOrder } from "../../CheckoutPage/CartItems/cartItems";
-import TopBarOfCartPage from "../../CheckoutPage/TopBar/TopBar";
+import { addToCart } from "../../HomePage/navbar/CartLogo/cartlogoslice";
+import { addItem } from "../../SelectedPage/ImageDisplay/AddToCartBtn/cartslice";
+import { hydrateOrder } from "../../CheckoutPage/CartItems/cartitems";
+import TopBarOfCartPage from "../../CheckoutPage/TopBar/topbar";
 import EmptyCart from "../../CheckoutPage/CartItems/EmptyCart/page";
 
 type OrderItems = {

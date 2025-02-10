@@ -4,17 +4,17 @@ import { Provider } from "react-redux";
 import store from '../../Redux/store';
 
 // loading imports
-import AppLogSkeleton from "./AppLogo/AppLogSkeleton";
-import SearchBarSkeleton from "./SearchBar/Skeleton/SearchBarSkeleton";
-import LinksSkeleton from "./Links/skeleton/LinksSkeleton";
-import CartLogoSkelton from "./CartLogo/Skeleton/CartLogoSkelton";
+import AppLogSkeleton from "./AppLogo/applogskeleton";
+import SearchBarSkeleton from "./SearchBar/Skeleton/searchbarskeleton";
+import LinksSkeleton from "./Links/skeleton/linksskeleton";
+import CartLogoSkelton from "./CartLogo/Skeleton/cartlogoskelton";
 
-const AppLogs = lazy(() => import('./AppLogo/AppLogs'));
-const SearchBar = lazy(() => import("./SearchBar/SearchBar"));
-const Links = lazy(() => import("./Links/Links"));
-const Login = lazy(() => import("./Login/Login"));
-const CartLogo = lazy(() => import("./CartLogo/CartLogo"));
-const MobilHamburger = lazy(() => import("./MobilHamburger/MobilHamburger"));
+const AppLogs = lazy(() => import('./AppLogo/applogs'));
+const SearchBar = lazy(() => import("./SearchBar/searchbar"));
+const Links = lazy(() => import("./Links/links"));
+const Login = lazy(() => import("./Login/login"));
+const CartLogo = lazy(() => import("./CartLogo/cartlogo"));
+const MobilHamburger = lazy(() => import("./MobilHamburger/mobilhamburger"));
 
 import "@/app/styles/homepage/navbar/navbar.scss";
 

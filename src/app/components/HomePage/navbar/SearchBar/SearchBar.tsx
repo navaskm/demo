@@ -4,7 +4,7 @@ import { CiSearch } from "react-icons/ci";
 import { useState,useEffect } from "react";
 import Link from "next/link";
 
-import { fetchProduct,fetchScrollingProduct } from "@/app/DataFetching/productData";
+import { fetchProduct,fetchScrollingProduct } from "@/app/DataFetching/productdata";
 import similarProducts from '@/app/API/similar-product.json';
 import "@/app/styles/homepage/navbar/navbar.scss";
 

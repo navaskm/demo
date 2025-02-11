@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.scss";
 
 const geistSans = localFont({
@@ -25,24 +24,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
-      <html lang="en">
+    <html lang="en">
 
-        <head>
-          <meta name="description"/>
-          <link 
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
-            rel="stylesheet" 
-            integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossOrigin="anonymous"
-          />
-           <link rel="icon" href="/Logo/title.svg" type="image/svg+xml" /> 
-        </head>
+      <head>
+        <meta name="description"/>
+        <link 
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+          rel="stylesheet" 
+          integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossOrigin="anonymous"
+        />
+          <link rel="icon" href="/Logo/title.svg" type="image/svg+xml" /> 
+      </head>
 
-        <body className={`${geistSans.variable} ${geistMono.variable}`}>
-          {children}
-        </body>
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        {children}
+      </body>
 
-      </html>
-    </ClerkProvider>
+    </html>
   );
 }
